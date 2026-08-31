@@ -1,0 +1,14 @@
+# Vercel
+.vercel
+node_modules
+
+# Python / Scraper
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db

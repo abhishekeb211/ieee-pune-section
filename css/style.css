@@ -1,0 +1,1023 @@
+/* ==========================================================================
+   IEEE PUNE SECTION - MASTER STYLESHEET
+   Accurately cloned & transformed from IEEE India (https://india.ieee.org/)
+   Enhanced with Modern High-Performance Vanilla CSS, Glassmorphism, & Fluid UX
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* IEEE Official & Pune Section Color Palette */
+  --ieee-blue: #006699;
+  --ieee-blue-dark: #004b75;
+  --ieee-blue-deep: #002855;
+  --ieee-navy: #001e3d;
+  --ieee-cyan: #0099d8;
+  --ieee-accent: #00b4d8;
+  --ieee-gold: #ffb81c;
+  --ieee-gold-dark: #e09b00;
+  
+  /* Neutral Palette */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-dark: #091a2b;
+  --bg-dark-secondary: #05101d;
+  
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+  
+  --border-light: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --border-blue: rgba(0, 102, 153, 0.2);
+  
+  /* Shadows & Glass */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 30px rgba(0, 40, 85, 0.12);
+  --shadow-hover: 0 20px 40px rgba(0, 40, 85, 0.18);
+  --glass-bg: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  
+  /* Typography */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Dimensions */
+  --max-width: 1280px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--ieee-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--ieee-cyan);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   1. TOP UTILITY HEADER (IEEE Global Bar)
+   ========================================================================== */
+.top-utility-bar {
+  background-color: var(--ieee-navy);
+  color: #d1d5db;
+  font-size: 0.8125rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1001;
+}
+
+.top-utility-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 38px;
+}
+
+.utility-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.utility-links a {
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.utility-links a:hover {
+  color: #ffffff;
+}
+
+.utility-social {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.utility-social a {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.utility-social a:hover {
+  color: #ffffff;
+  background-color: var(--ieee-blue);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   2. MAIN BRAND HEADER & SEARCH BAR
+   ========================================================================== */
+.main-header {
+  background-color: var(--bg-primary);
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+}
+
+.main-header.scrolled {
+  padding: 0.75rem 0;
+  box-shadow: var(--shadow-md);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Brand Identity */
+.brand-identity {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-decoration: none;
+}
+
+.brand-logo-ieee {
+  height: 52px;
+  width: auto;
+}
+
+.brand-divider {
+  width: 2px;
+  height: 42px;
+  background-color: var(--border-light);
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ieee-blue-deep);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.brand-subtitle {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--ieee-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.brand-tagline {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Header Action & Search */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1;
+  max-width: 480px;
+  justify-content: flex-end;
+}
+
+.header-search {
+  position: relative;
+  width: 100%;
+}
+
+.header-search input {
+  width: 100%;
+  height: 42px;
+  padding: 0 2.75rem 0 1.25rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 30px;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.header-search input:focus {
+  outline: none;
+  border-color: var(--ieee-blue);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 102, 153, 0.15);
+}
+
+.header-search-btn {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: var(--ieee-blue);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.header-search-btn:hover {
+  background-color: var(--ieee-blue-dark);
+}
+
+.btn-join-ieee {
+  background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-blue-deep));
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.6rem 1.35rem;
+  border-radius: 30px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 102, 153, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.btn-join-ieee:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 102, 153, 0.35);
+  background: linear-gradient(135deg, var(--ieee-cyan), var(--ieee-blue));
+}
+
+/* ==========================================================================
+   3. HERO BANNER SLIDER
+   ========================================================================== */
+.hero-slider-section {
+  position: relative;
+  background-color: var(--ieee-navy);
+  overflow: hidden;
+  min-height: 520px;
+}
+
+.hero-slider-container {
+  position: relative;
+  height: 520px;
+  width: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transform: scale(1.03);
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 30, 61, 0.94) 0%, rgba(0, 40, 85, 0.75) 50%, rgba(0, 40, 85, 0.4) 100%);
+  z-index: 1;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(0, 180, 216, 0.2);
+  border: 1px solid rgba(0, 180, 216, 0.5);
+  color: var(--ieee-accent);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: #e2e8f0;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-cyan));
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 153, 216, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 153, 216, 0.45);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Slider Controls */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(0, 30, 61, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slider-arrow:hover {
+  background-color: var(--ieee-blue);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.slider-arrow.prev { left: 1.5rem; }
+.slider-arrow.next { right: 1.5rem; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slider-dot.active {
+  background-color: var(--ieee-accent);
+  width: 32px;
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+   4. SECTION: LATEST FROM IEEE PUNE SECTION
+   ========================================================================== */
+.section-latest-news {
+  padding: 4.5rem 0;
+  background-color: var(--bg-secondary);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--ieee-blue-deep);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.85rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ieee-blue), var(--ieee-accent));
+  border-radius: 2px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.news-card {
+  background-color: #ffffff;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-blue);
+}
+
+.news-card-img {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--ieee-navy);
+}
+
+.news-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.news-date {
+  font-size: 0.775rem;
+  color: var(--ieee-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.news-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.news-card-text {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.news-card-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ieee-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: gap var(--transition-fast);
+}
+
+.news-card-link:hover {
+  gap: 0.6rem;
+  color: var(--ieee-cyan);
+}
+
+/* ==========================================================================
+   5. SECTION: MESSAGE FROM SECTION CHAIR
+   ========================================================================== */
+.section-chair-message {
+  padding: 4.5rem 0;
+  background-color: #ffffff;
+}
+
+.chair-message-wrapper {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, var(--bg-secondary) 100%);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.chair-portrait-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.chair-portrait {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 4px solid #ffffff;
+}
+
+.chair-badge {
+  margin-top: 1rem;
+}
+
+.chair-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ieee-blue-deep);
+}
+
+.chair-designation {
+  font-size: 0.85rem;
+  color: var(--ieee-blue);
+  font-weight: 600;
+}
+
+.chair-affiliation {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+}
+
+.chair-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.chair-heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ieee-blue-deep);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.chair-quote {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+}
+
+.chair-quote-footer {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  border-left: 3px solid var(--ieee-blue);
+  padding-left: 1rem;
+  margin-top: 0.75rem;
+}
+
+/* ==========================================================================
+   6. SECTION: ACTIVITIES IN PUNE SECTION
+   ========================================================================== */
+.section-activities {
+  padding: 4.5rem 0;
+  background-color: var(--bg-secondary);
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.activity-card {
+  background-color: #ffffff;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-blue);
+}
+
+.activity-card-header {
+  height: 160px;
+  background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-navy));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card-header.blp { background: linear-gradient(135deg, #0077b6, #0096c7); }
+.activity-card-header.xplore { background: linear-gradient(135deg, #e65c00, #f9d423); }
+.activity-card-header.philanthropy { background: linear-gradient(135deg, #00509d, #00296b); }
+.activity-card-header.standards { background: linear-gradient(135deg, #006699, #003366); }
+
+.activity-header-title {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.activity-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.activity-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ieee-blue-deep);
+  margin-bottom: 0.75rem;
+}
+
+.activity-card-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+/* ==========================================================================
+   7. SECTION: PUNE SECTION AT A GLANCE (METRIC COUNTERS)
+   ========================================================================== */
+.section-glance {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--ieee-navy) 0%, var(--ieee-blue-deep) 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-glance .section-title {
+  color: #ffffff;
+}
+
+.section-glance .section-title::after {
+  background: linear-gradient(90deg, var(--ieee-accent), var(--ieee-gold));
+}
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem 1.5rem;
+  margin-top: 3rem;
+}
+
+.glance-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-md);
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-normal);
+}
+
+.glance-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  border-color: rgba(0, 180, 216, 0.4);
+}
+
+.glance-icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 180, 216, 0.2), rgba(0, 102, 153, 0.4));
+  border: 1px solid rgba(0, 180, 216, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ieee-accent);
+  margin-bottom: 1.25rem;
+}
+
+.glance-number {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.glance-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   8. SECTION: LIFE AT IEEE PUNE SECTION (GALLERY CAROUSEL)
+   ========================================================================== */
+.section-gallery {
+  padding: 4.5rem 0;
+  background-color: #ffffff;
+}
+
+.gallery-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-item {
+  flex: 0 0 calc(33.333% - 1rem);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  aspect-ratio: 16 / 10;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  background: linear-gradient(to top, rgba(0, 30, 61, 0.9) 0%, transparent 100%);
+  color: #ffffff;
+  padding: 1.5rem 1rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   9. MASTER FOOTER
+   ========================================================================== */
+.site-footer {
+  background-color: var(--bg-dark);
+  color: #cbd5e1;
+  padding: 4.5rem 0 0;
+  border-top: 4px solid var(--ieee-blue);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr) 1.25fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background-color: var(--ieee-blue);
+}
+
+.footer-about-text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: #94a3b8;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.85rem;
+}
+
+.footer-contact-item svg {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: var(--ieee-accent);
+}
+
+.footer-bottom-bar {
+  background-color: var(--bg-dark-secondary);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.85rem;
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  font-size: 0.8125rem;
+}
+
+.footer-legal-links a {
+  color: #94a3b8;
+}
+
+.footer-legal-links a:hover {
+  color: #ffffff;
+}
+
+.footer-copyright {
+  font-size: 0.8125rem;
+  color: #64748b;
+  line-height: 1.5;
+  max-width: 900px;
+}

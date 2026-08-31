@@ -1,0 +1,245 @@
+/* ==========================================================================
+   IEEE PUNE SECTION - MEGA MENU & NAVIGATION STYLESHEET
+   Accurately cloned & transformed from IEEE India (https://india.ieee.org/)
+   ========================================================================== */
+
+.main-navigation-bar {
+  background-color: var(--ieee-blue-deep);
+  position: relative;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 40, 85, 0.15);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-item {
+  position: static; /* Required for full-width mega menus */
+}
+
+.nav-item.dropdown-relative {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.95rem 1.1rem;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.925rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover,
+.nav-item:hover > .nav-link,
+.nav-item.active > .nav-link {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-bottom-color: var(--ieee-accent);
+}
+
+.nav-arrow {
+  font-size: 0.65rem;
+  transition: transform var(--transition-fast);
+}
+
+.nav-item:hover .nav-arrow {
+  transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   MEGA MENU DROPDOWN PANEL
+   ========================================================================== */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 16px 32px rgba(0, 30, 61, 0.18);
+  border-top: 3px solid var(--ieee-accent);
+  border-bottom: 2px solid var(--border-light);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 1002;
+}
+
+.nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mega-menu-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+}
+
+.mega-menu-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+}
+
+.mega-link-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.mega-link-item:hover {
+  background-color: var(--bg-secondary);
+  transform: translateX(4px);
+}
+
+.mega-link-icon {
+  color: var(--ieee-blue);
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.mega-link-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-link-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--ieee-blue-deep);
+  line-height: 1.3;
+}
+
+.mega-link-desc {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+}
+
+/* Mega Menu Featured Info Card */
+.mega-menu-featured {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mega-featured-badge {
+  display: inline-block;
+  background-color: rgba(0, 102, 153, 0.1);
+  color: var(--ieee-blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  margin-bottom: 0.85rem;
+  align-self: flex-start;
+}
+
+.mega-featured-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ieee-blue-deep);
+  margin-bottom: 0.5rem;
+}
+
+.mega-featured-text {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.mega-featured-btn {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--ieee-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+}
+
+/* ==========================================================================
+   STANDARD SIMPLE DROPDOWN (For non-mega menus)
+   ========================================================================== */
+.simple-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 28px rgba(0, 30, 61, 0.15);
+  border-top: 3px solid var(--ieee-accent);
+  border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 1002;
+  padding: 0.5rem 0;
+}
+
+.nav-item.dropdown-relative:hover .simple-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.simple-dropdown-link {
+  display: block;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.simple-dropdown-link:hover {
+  background-color: var(--bg-secondary);
+  color: var(--ieee-blue);
+  padding-left: 1.5rem;
+}
+
+/* Mobile Hamburger Toggle */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+}

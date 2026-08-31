@@ -1,0 +1,221 @@
+/* ==========================================================================
+   IEEE PUNE SECTION - RESPONSIVE STYLESHEET
+   Accurately cloned & transformed from IEEE India (https://india.ieee.org/)
+   ========================================================================== */
+
+/* Large Tablets & Small Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .chair-message-wrapper {
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .footer-grid > div:first-child {
+    grid-column: span 3;
+  }
+  
+  .gallery-item {
+    flex: 0 0 calc(50% - 0.75rem);
+  }
+}
+
+/* Tablets & Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+  /* Utility Bar */
+  .top-utility-bar {
+    display: none;
+  }
+
+  /* Header */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    max-width: none;
+    flex-wrap: wrap;
+  }
+
+  .header-search {
+    width: 100%;
+  }
+
+  .btn-join-ieee {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Navigation */
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .nav-container {
+    padding: 0;
+  }
+
+  .main-nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--ieee-navy);
+  }
+
+  .main-nav-menu.open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-link {
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mega-menu,
+  .simple-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 0;
+    display: none;
+  }
+
+  .nav-item.active-mobile .mega-menu,
+  .nav-item.active-mobile .simple-dropdown {
+    display: block;
+  }
+
+  .mega-menu-inner {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .mega-menu-links {
+    grid-template-columns: 1fr;
+  }
+
+  .mega-link-item {
+    padding: 0.5rem 0;
+  }
+
+  .mega-link-title {
+    color: #ffffff;
+  }
+
+  .mega-link-desc {
+    color: #cbd5e1;
+  }
+
+  .simple-dropdown-link {
+    color: #cbd5e1;
+    padding: 0.75rem 2rem;
+  }
+
+  .simple-dropdown-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+  }
+
+  /* Hero Section */
+  .hero-slider-section {
+    min-height: 440px;
+  }
+
+  .hero-slider-container {
+    height: 440px;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .slider-arrow {
+    display: none;
+  }
+
+  /* Section Chair Message */
+  .chair-message-wrapper {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .chair-portrait {
+    height: 280px;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .chair-quote-footer {
+    border-left: none;
+    padding-left: 0;
+    border-top: 2px solid var(--ieee-blue);
+    padding-top: 0.75rem;
+  }
+
+  /* Glance Metrics */
+  .glance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Gallery */
+  .gallery-item {
+    flex: 0 0 100%;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: span 1;
+  }
+}
+
+/* Small Mobile Devices (<= 480px) */
+@media (max-width: 480px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    justify-content: center;
+  }
+
+  .glance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+}
