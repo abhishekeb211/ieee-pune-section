@@ -1,7 +1,7 @@
 {
-  "name": "ieee-pune-section-portal",
+  "name": "ieee-blockchain-pune-section",
   "version": "1.0.0",
-  "description": "IEEE Pune Section Official Web Portal - Advancing Technology for Humanity",
+  "description": "IEEE Blockchain Pune Section Official Web Portal - Advancing Trusted Decentralized Systems",
   "main": "index.html",
   "scripts": {
     "dev": "serve .",
@@ -10,13 +10,14 @@
   },
   "keywords": [
     "ieee",
-    "ieee-pune",
-    "ieee-india",
-    "engineering",
-    "technology",
-    "education"
+    "ieee-blockchain",
+    "ieee-pune-section",
+    "smart-contracts",
+    "cryptography",
+    "dlt",
+    "web3"
   ],
-  "author": "IEEE Pune Section",
+  "author": "IEEE Blockchain Pune Section",
   "license": "MIT",
   "devDependencies": {
     "serve": "^14.2.4"

@@ -1021,3 +1021,337 @@ ul {
   line-height: 1.5;
   max-width: 900px;
 }
+
+/* ==========================================================================
+   10. IEEE BLOCKCHAIN SPECIFIC COMPONENTS & CARDS
+   ========================================================================== */
+.brand-badge {
+  background: linear-gradient(135deg, #006699, #00b4d8);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.brand-titles .brand-main {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--ieee-blue-deep);
+  display: block;
+  line-height: 1.1;
+}
+
+.brand-titles .brand-sub {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ieee-blue);
+  font-weight: 600;
+  display: block;
+}
+
+.section-timeline {
+  padding: 4.5rem 0;
+  background-color: #ffffff;
+}
+
+.timeline-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.timeline-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--ieee-blue);
+  border-radius: var(--border-radius-md);
+  padding: 1.25rem;
+  transition: all var(--transition-normal);
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  border-left-color: var(--ieee-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ieee-blue);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Track Cards Grid */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.track-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--ieee-accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.track-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 102, 153, 0.1), rgba(0, 180, 216, 0.15));
+  color: var(--ieee-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.track-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ieee-blue-deep);
+  margin-bottom: 0.75rem;
+}
+
+.track-card-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.track-card-examples {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  border-left: 3px solid var(--ieee-accent);
+}
+
+/* Committee Cards */
+.committee-group-section {
+  margin-bottom: 3.5rem;
+}
+
+.committee-group-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ieee-blue-deep);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.committee-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.committee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--ieee-blue);
+}
+
+.committee-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-accent));
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 102, 153, 0.25);
+}
+
+.committee-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.committee-role {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ieee-blue);
+  margin-bottom: 0.5rem;
+}
+
+.committee-affiliation {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Speakers Grid */
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.speaker-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.speaker-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--ieee-accent);
+}
+
+.speaker-card-header {
+  padding: 1.75rem;
+  background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));
+  color: #ffffff;
+  text-align: center;
+}
+
+.speaker-card-body {
+  padding: 1.5rem;
+}
+
+.speaker-card-topic {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--text-main);
+  border-left: 3px solid var(--ieee-gold);
+  margin-top: 0.75rem;
+}
+
+/* Sponsors & Partners Strip */
+.section-sponsors {
+  padding: 3.5rem 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sponsor-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.sponsor-pill {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 50px;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ieee-blue-deep);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sponsor-pill:hover {
+  border-color: var(--ieee-blue);
+  color: var(--ieee-blue);
+  transform: translateY(-2px);
+}
+
+/* Data Table */
+.data-table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.data-table th {
+  background-color: var(--ieee-blue-deep);
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.data-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-main);
+}
+
+.data-table tr:nth-child(even) {
+  background-color: var(--bg-secondary);
+}
+
+.data-table tr:hover {
+  background-color: rgba(0, 102, 153, 0.05);
+}
+
