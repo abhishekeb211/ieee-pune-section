@@ -1,65 +1,190 @@
 /* ==========================================================================
-   IEEE PUNE SECTION - RESPONSIVE STYLESHEET
-   Accurately cloned & transformed from IEEE India (https://india.ieee.org/)
+   IEEE PUNE SECTION - RESPONSIVE STYLESHEET (FULL REWRITE)
+   5 Breakpoints: 1200px / 1024px / 768px / 480px / 360px
+   Covers ALL components across all 11 pages
    ========================================================================== */
 
-/* Large Tablets & Small Laptops (<= 1024px) */
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 2.25rem;
+/* ==========================================================================
+   BREAKPOINT 1: Large Desktop (≤ 1200px)
+   Slight compression for 1366px laptop screens
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
-  
+
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .content-sidebar {
+    gap: 2rem;
+  }
+
+  .content-sidebar.reverse {
+    gap: 2rem;
+  }
+}
+
+/* ==========================================================================
+   BREAKPOINT 2: Tablets Landscape / Small Laptops (≤ 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Hero */
+  .hero-slider-section {
+    min-height: 460px;
+  }
+
+  .hero-slider-container {
+    height: 460px;
+  }
+
+  /* Chair Message */
   .chair-message-wrapper {
     grid-template-columns: 300px 1fr;
     gap: 2rem;
   }
-  
+
+  /* Footer */
   .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-  
+
   .footer-grid > div:first-child {
-    grid-column: span 3;
+    grid-column: 1 / -1;
   }
-  
+
+  /* Gallery */
   .gallery-item {
     flex: 0 0 calc(50% - 0.75rem);
   }
+
+  /* Content Sidebar */
+  .content-sidebar {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .content-sidebar.reverse {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Page Banner */
+  .page-banner {
+    padding: 3rem 0 2.5rem;
+  }
+
+  /* Section Padding */
+  .section-activities,
+  .section-latest-news,
+  .section-timeline,
+  .section-glance,
+  .section-gallery,
+  .section-sponsors,
+  .section-chair-message {
+    padding: 3.5rem 0;
+  }
+
+  /* CTA Box */
+  .cta-box {
+    padding: 2.5rem;
+  }
+
+  /* Content Narrow */
+  .content-narrow {
+    gap: 2.5rem;
+  }
+
+  /* Tracks Grid */
+  .tracks-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  /* Sponsor Strip */
+  .sponsor-strip {
+    gap: 1.5rem;
+  }
+
+  .sponsor-pill {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.875rem;
+  }
 }
 
-/* Tablets & Mobile Devices (<= 768px) */
+/* ==========================================================================
+   BREAKPOINT 3: Tablets Portrait / Large Phones (≤ 768px)
+   Major layout shifts happen here
+   ========================================================================== */
 @media (max-width: 768px) {
-  /* Utility Bar */
+  /* ---- UTILITY BAR ---- */
   .top-utility-bar {
     display: none;
   }
 
-  /* Header */
+  /* ---- HEADER (static; nav bar is sticky instead) ---- */
+  .main-header {
+    position: static;
+  }
+
   .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
   }
 
   .header-actions {
-    width: 100%;
+    width: auto;
     max-width: none;
-    flex-wrap: wrap;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
   }
 
   .header-search {
-    width: 100%;
+    display: none;
   }
 
   .btn-join-ieee {
-    width: 100%;
+    width: auto;
     text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 
-  /* Navigation */
+  /* Brand Identity */
+  .brand-divider {
+    height: 32px;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.65rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  /* ---- STICKY NAV BAR + FULL-SCREEN OVERLAY ---- */
+  .main-navigation-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+  }
+
+  body.nav-open .main-navigation-bar {
+    z-index: 10000;
+  }
+
   .mobile-nav-toggle {
-    display: block;
+    display: flex;
   }
 
   .nav-container {
@@ -67,14 +192,25 @@
   }
 
   .main-nav-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
     background-color: var(--ieee-navy);
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 4.5rem 0 2rem;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: transform 0.28s ease;
   }
 
   .main-nav-menu.open {
-    display: flex;
+    transform: translateX(0);
+    pointer-events: auto;
   }
 
   .nav-item {
@@ -86,10 +222,16 @@
     padding: 1rem 1.5rem;
     justify-content: space-between;
     width: 100%;
+    font-size: 1rem;
+    min-height: 52px;
   }
 
-  .mega-menu,
-  .simple-dropdown {
+  .nav-item.active-mobile > .nav-link .nav-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Mobile Dropdowns — animatable accordion */
+  .mega-menu {
     position: static;
     opacity: 1;
     visibility: visible;
@@ -98,12 +240,48 @@
     background-color: rgba(0, 0, 0, 0.2);
     border: none;
     padding: 0;
-    display: none;
+    border-top: none;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+    pointer-events: none;
+    width: 100%;
+    min-width: 0;
   }
 
-  .nav-item.active-mobile .mega-menu,
-  .nav-item.active-mobile .simple-dropdown {
+  .mega-menu > .container {
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .nav-item.active-mobile .mega-menu {
+    grid-template-rows: 1fr;
+    pointer-events: auto;
+  }
+
+  .simple-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-top: none;
+    border-radius: 0;
     display: block;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease;
+    pointer-events: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .nav-item.active-mobile .simple-dropdown {
+    max-height: 480px;
+    pointer-events: auto;
   }
 
   .mega-menu-inner {
@@ -114,10 +292,12 @@
 
   .mega-menu-links {
     grid-template-columns: 1fr;
+    order: 1;
   }
 
   .mega-link-item {
-    padding: 0.5rem 0;
+    padding: 0.65rem 0;
+    min-height: 44px;
   }
 
   .mega-link-title {
@@ -128,38 +308,91 @@
     color: #cbd5e1;
   }
 
+  /* Featured card stacks below links (not hidden) */
+  .mega-menu-featured {
+    display: flex;
+    order: 2;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .mega-featured-badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+
+  .mega-featured-title {
+    color: #ffffff;
+  }
+
+  .mega-featured-text {
+    color: #cbd5e1;
+  }
+
+  .mega-featured-btn {
+    color: var(--ieee-cyan);
+  }
+
   .simple-dropdown-link {
     color: #cbd5e1;
-    padding: 0.75rem 2rem;
+    padding: 0.85rem 2rem;
+    min-height: 48px;
   }
 
   .simple-dropdown-link:hover {
     background-color: rgba(255, 255, 255, 0.05);
     color: #ffffff;
+    padding-left: 2rem;
   }
 
-  /* Hero Section */
+  /* ---- HERO SECTION ---- */
   .hero-slider-section {
-    min-height: 440px;
+    min-height: 400px;
   }
 
   .hero-slider-container {
-    height: 440px;
+    height: auto;
+    min-height: 400px;
   }
 
-  .hero-title {
-    font-size: 1.75rem;
+  .hero-content {
+    padding: 2.5rem 0;
   }
 
   .hero-description {
     font-size: 0.95rem;
   }
 
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
   .slider-arrow {
     display: none;
   }
 
-  /* Section Chair Message */
+  .slider-dots {
+    bottom: 1.5rem;
+  }
+
+  /* ---- SECTIONS ---- */
+  .section-activities,
+  .section-latest-news,
+  .section-timeline,
+  .section-glance,
+  .section-gallery,
+  .section-sponsors,
+  .section-chair-message,
+  .section-padded {
+    padding: 3rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  /* ---- CHAIR MESSAGE ---- */
   .chair-message-wrapper {
     grid-template-columns: 1fr;
     padding: 1.5rem;
@@ -179,17 +412,83 @@
     padding-top: 0.75rem;
   }
 
-  /* Glance Metrics */
+  /* ---- GRIDS (All card grids collapse) ---- */
+  .activities-grid,
+  .news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .tracks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .committee-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .speakers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .timeline-compact {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
   .glance-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
-  /* Gallery */
-  .gallery-item {
-    flex: 0 0 100%;
+  .info-grid {
+    grid-template-columns: 1fr;
   }
 
-  /* Footer */
+  /* ---- CONTENT LAYOUTS ---- */
+  .content-2col {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .content-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .content-sidebar.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .content-narrow {
+    gap: 2rem;
+  }
+
+  /* ---- PAGE BANNER ---- */
+  .page-banner {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .page-banner-desc {
+    font-size: 1rem;
+  }
+
+  /* ---- CONTENT CARDS ---- */
+  .content-card {
+    padding: 1.75rem;
+  }
+
+  .content-card-text {
+    font-size: 1rem;
+  }
+
+  /* ---- CTA BOX ---- */
+  .cta-box {
+    padding: 2rem;
+  }
+
+  /* ---- FOOTER ---- */
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -197,10 +496,105 @@
   .footer-grid > div:first-child {
     grid-column: span 1;
   }
+
+  .site-footer {
+    padding: 3rem 0 0;
+  }
+
+  /* ---- GALLERY ---- */
+  .gallery-item {
+    flex: 0 0 100%;
+  }
+
+  /* ---- SPONSOR STRIP ---- */
+  .sponsor-strip {
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .sponsor-pill {
+    padding: 0.5rem 1rem;
+    font-size: 0.825rem;
+  }
+
+  /* ---- DATA TABLE ---- */
+  .data-table-wrapper {
+    margin: 1rem 0;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  /* ---- PROPOSAL CARD ---- */
+  .proposal-card {
+    padding: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  /* ---- LOCAL IDENTITY ---- */
+  .local-identity-title {
+    font-size: 1.75rem;
+  }
+
+  /* ---- SIDEBAR CTA ---- */
+  .sidebar-cta {
+    padding: 1.5rem;
+  }
+
+  /* ---- MILESTONES ---- */
+  .milestones-card {
+    padding: 1.75rem;
+  }
 }
 
-/* Small Mobile Devices (<= 480px) */
+/* ==========================================================================
+   BREAKPOINT 4: Small Phones (≤ 480px)
+   Everything goes single-column, buttons stack
+   ========================================================================== */
 @media (max-width: 480px) {
+  /* Container */
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Header: search returns on its own line */
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .header-search {
+    display: block;
+    width: 100%;
+    order: -1;
+    margin-bottom: 0.25rem;
+  }
+
+  .btn-join-ieee {
+    width: auto;
+  }
+
+  /* Hero */
+  .hero-slider-section {
+    min-height: 360px;
+  }
+
+  .hero-slider-container {
+    min-height: 360px;
+  }
+
+  .hero-content {
+    padding: 2rem 0;
+  }
+
   .hero-buttons {
     flex-direction: column;
     align-items: stretch;
@@ -209,13 +603,269 @@
   .btn-primary,
   .btn-secondary {
     justify-content: center;
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  /* Grids go single-column */
+  .activities-grid,
+  .news-grid,
+  .committee-grid,
+  .speakers-grid {
+    grid-template-columns: 1fr;
   }
 
   .glance-grid {
     grid-template-columns: 1fr;
   }
 
+  .timeline-compact {
+    grid-template-columns: 1fr;
+  }
+
+  /* Section padding */
+  .section-activities,
+  .section-latest-news,
+  .section-timeline,
+  .section-glance,
+  .section-gallery,
+  .section-sponsors,
+  .section-chair-message,
+  .section-padded {
+    padding: 2rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  /* Page Banner */
+  .page-banner {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .page-banner-desc {
+    font-size: 0.925rem;
+  }
+
+  /* Content Card */
+  .content-card {
+    padding: 1.5rem;
+  }
+
+  .content-card-title {
+    font-size: 1.25rem;
+  }
+
+  /* CTA Box */
+  .cta-box {
+    padding: 1.5rem;
+  }
+
+  .cta-box-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Proposal Card */
+  .proposal-card {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  /* Button Group */
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-group .btn-primary,
+  .btn-group .btn-secondary {
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer-bottom-inner {
+    padding: 1rem 0;
+  }
+
+  .footer-legal-links {
+    gap: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.75rem;
+  }
+
+  /* Glance numbers */
+  .glance-number {
+    font-size: 2.25rem;
+  }
+
+  .glance-item {
+    padding: 1.25rem;
+  }
+
+  /* Sponsor strip */
+  .sponsor-strip {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sponsor-pill {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Info Grid */
+  .info-grid {
+    gap: 1rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  /* Form controls */
+  .form-submit {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+  }
+
+  /* Milestones */
+  .milestones-card {
+    padding: 1.5rem;
+  }
+
+  /* Header */
+  .brand-logo-ieee {
+    height: 42px;
+  }
+}
+
+/* ==========================================================================
+   BREAKPOINT 5: Extra Small Devices (≤ 360px)
+   Tightest squeeze — minimal padding, compact everything
+   ========================================================================== */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
   .brand-title {
-    font-size: 1.15rem;
+    font-size: 1rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.65rem;
+  }
+
+  .brand-logo-ieee {
+    height: 38px;
+  }
+
+  .brand-divider {
+    height: 28px;
+  }
+
+  .hero-content {
+    padding: 1.5rem 0;
+  }
+
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .content-card {
+    padding: 1.25rem;
+  }
+
+  .page-banner {
+    padding: 1.5rem 0 1.25rem;
+  }
+
+  .section-activities,
+  .section-latest-news,
+  .section-timeline,
+  .section-glance,
+  .section-gallery,
+  .section-sponsors,
+  .section-padded {
+    padding: 1.5rem 0;
+  }
+
+  .cta-box {
+    padding: 1.25rem;
+  }
+
+  .news-card-img {
+    height: 150px;
+  }
+
+  .activity-card-header {
+    height: 120px;
+    padding: 1rem;
+  }
+
+  .slider-dots {
+    bottom: 1rem;
+  }
+
+  .slider-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .slider-dot.active {
+    width: 24px;
+  }
+}
+
+/* ==========================================================================
+   LANDSCAPE PHONE GUARD
+   Prevent hero from consuming the entire short viewport
+   ========================================================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-slider-section,
+  .hero-slider-container {
+    min-height: 320px;
+    height: auto;
+  }
+
+  .hero-content {
+    padding: 1.5rem 0;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+@media print {
+  .top-utility-bar,
+  .main-navigation-bar,
+  .hero-slider-section,
+  .mobile-nav-toggle,
+  .slider-arrow,
+  .slider-dots,
+  .header-search {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

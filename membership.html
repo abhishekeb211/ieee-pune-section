@@ -72,8 +72,9 @@
   <!-- Navigation -->
   <nav class="main-navigation-bar" aria-label="Main Navigation">
     <div class="container nav-container">
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
       <ul class="main-nav-menu">
@@ -91,41 +92,41 @@
   </nav>
 
   <!-- Header Banner -->
-  <section class="section-header" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue)); color: #ffffff; padding: 4rem 0 3.5rem; text-align: center;">
+  <section class="page-banner">
     <div class="container">
-      <span class="brand-badge" style="margin-bottom: 1rem;">Join the Community</span>
-      <h1 style="font-family: var(--font-heading); font-size: 2.75rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Membership &amp; Registration</h1>
-      <p style="max-width: 750px; margin: 0 auto; color: #cbd5e1; font-size: 1.15rem; line-height: 1.6;">
+      <span class="brand-badge">Join the Community</span>
+      <h1 class="page-banner-title">Membership &amp; Registration</h1>
+      <p class="page-banner-desc">
         Information regarding IEEE membership benefits, student chapter categories, Solidity &amp; Rust developer bootcamps, and registration guides.
       </p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="section-activities" style="background-color: var(--bg-secondary);">
+  <main class="section-activities section-alt">
     <div class="container">
 
-      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2.5rem; align-items: start;">
+      <div class="content-sidebar">
         
-        <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+        <div class="content-sidebar-stack">
           
           <!-- Join Card -->
-          <article style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2.25rem; box-shadow: var(--shadow-sm);">
-            <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1rem;">
+          <article class="content-card">
+            <h2 class="content-card-title sm">
               Join IEEE &amp; Blockchain Pune Section
             </h2>
-            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.5rem;">
+            <p class="content-card-text">
               Membership applications are handled directly through the official global IEEE portal. You can choose to join both the IEEE main community and the local Pune Section technical activities.
             </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="btn-group">
               <a href="https://www.ieee.org/membership/join.html" target="_blank" rel="noopener" class="btn-primary">Join IEEE Global Now &rarr;</a>
-              <a href="contact.html" class="btn-secondary" style="border-color: var(--ieee-blue); color: var(--ieee-blue);">Contact Local Chapter</a>
+              <a href="contact.html" class="btn-secondary btn-outline">Contact Local Chapter</a>
             </div>
           </article>
 
           <!-- Membership Categories Table -->
-          <article style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2.25rem; box-shadow: var(--shadow-sm);">
-            <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1.25rem;">
+          <article class="content-card">
+            <h2 class="content-card-title sm">
               Membership Categories &amp; Access
             </h2>
             
@@ -141,17 +142,17 @@
                 <tbody>
                   <tr>
                     <td><strong>IEEE Student Member</strong></td>
-                    <td><span class="brand-badge" style="background: var(--ieee-accent);">Highly Discounted Rates</span></td>
+                    <td><span class="brand-badge accent">Highly Discounted Rates</span></td>
                     <td>Full access to all workshops, Solidity labs, BlockHack hackathons, plus IEEE publications and student travel grants.</td>
                   </tr>
                   <tr>
                     <td><strong>IEEE Professional Member</strong></td>
-                    <td><span class="brand-badge" style="background: var(--ieee-blue);">Standard IEEE Rates</span></td>
+                    <td><span class="brand-badge blue">Standard IEEE Rates</span></td>
                     <td>Leadership opportunities, publishing rights, IEEE Senior Member pathways, and invitations to technical roundtable panels.</td>
                   </tr>
                   <tr>
                     <td><strong>Non-IEEE Member (Affiliated)</strong></td>
-                    <td><span class="brand-badge" style="background: var(--ieee-gold); color: var(--ieee-blue-deep);">Free Community Access</span></td>
+                    <td><span class="brand-badge gold">Free Community Access</span></td>
                     <td>Access to select public workshops, open industry guest lectures, and local Web3 developer networking meets.</td>
                   </tr>
                 </tbody>
@@ -162,29 +163,29 @@
         </div>
 
         <!-- Sidebar: Perks & Highlights -->
-        <aside style="display: flex; flex-direction: column; gap: 2rem;">
+        <aside class="sidebar-stack">
           
-          <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2rem; box-shadow: var(--shadow-sm); border-top: 4px solid var(--ieee-accent);">
-            <span class="brand-badge" style="margin-bottom: 0.75rem;">Member Perks</span>
-            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1rem;">
+          <div class="content-card accent-top">
+            <span class="brand-badge">Member Perks</span>
+            <h3 class="content-card-title xs xs-spaced">
               What Membership Covers
             </h3>
-            <ul style="display: flex; flex-direction: column; gap: 0.85rem; padding-left: 1.2rem; font-size: 0.95rem; color: var(--text-main);">
+            <ul class="list-spaced">
               <li>Hands-on Solidity, Rust &amp; DApp developer bootcamps</li>
               <li>Opportunities to work on local Web3 development projects</li>
               <li>Certificates signed by IEEE Pune Section leaders</li>
               <li>Access to global technical publications and research papers</li>
               <li>Discounted entry to NSBC 2026 and international symposia</li>
             </ul>
-            <p style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted);">
+            <p class="content-card-muted spaced-top">
               Policies are subject to final section executive committee updates.
             </p>
           </div>
 
-          <div style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue)); border-radius: var(--border-radius-md); padding: 2rem; color: #ffffff; text-align: center;">
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Need Help Joining?</h3>
-            <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 1.25rem;">Reach out to our membership coordinator for student branch onboarding.</p>
-            <a href="contact.html" class="btn-primary" style="background: var(--ieee-accent); border-color: var(--ieee-accent); font-size: 0.85rem; padding: 0.6rem 1.2rem;">Contact Membership Team</a>
+          <div class="sidebar-cta">
+            <h3 class="sidebar-cta-title">Need Help Joining?</h3>
+            <p class="sidebar-cta-text">Reach out to our membership coordinator for student branch onboarding.</p>
+            <a href="contact.html" class="btn-primary btn-accent btn-sm">Contact Membership Team</a>
           </div>
 
         </aside>

@@ -72,8 +72,9 @@
   <!-- Navigation -->
   <nav class="main-navigation-bar" aria-label="Main Navigation">
     <div class="container nav-container">
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
       <ul class="main-nav-menu">
@@ -91,33 +92,33 @@
   </nav>
 
   <!-- Header Banner -->
-  <section class="section-header" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue)); color: #ffffff; padding: 4rem 0 3.5rem; text-align: center;">
+  <section class="page-banner">
     <div class="container">
-      <span class="brand-badge" style="margin-bottom: 1rem;">Get in Touch</span>
-      <h1 style="font-family: var(--font-heading); font-size: 2.75rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Contact IEEE Blockchain Pune Section</h1>
-      <p style="max-width: 750px; margin: 0 auto; color: #cbd5e1; font-size: 1.15rem; line-height: 1.6;">
+      <span class="brand-badge">Get in Touch</span>
+      <h1 class="page-banner-title">Contact IEEE Blockchain Pune Section</h1>
+      <p class="page-banner-desc">
         For research cooperation, workshop collaborations, speaking proposals, and membership inquiries, reach out to us below.
       </p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="section-activities" style="background-color: var(--bg-secondary);">
+  <main class="section-activities section-alt">
     <div class="container">
 
-      <div style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 2.5rem; align-items: start;">
+      <div class="content-sidebar reverse">
         
         <!-- Left: Contact Details & Quick Links -->
-        <div style="display: flex; flex-direction: column; gap: 2rem;">
+        <div class="sidebar-stack">
           
-          <article style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2rem; box-shadow: var(--shadow-sm); border-left: 4px solid var(--ieee-blue);">
-            <h2 style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1.25rem;">
+          <article class="content-card accent-left">
+            <h2 class="content-card-title xs">
               Chapter Coordinates
             </h2>
-            <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.95rem; color: var(--text-main);">
+            <div class="contact-details">
               <div>
                 <strong>Email:</strong><br>
-                <a href="mailto:info@ieeepunesection.org" style="color: var(--ieee-blue); font-weight: 600;">info@ieeepunesection.org</a>
+                <a href="mailto:info@ieeepunesection.org" class="link-strong">info@ieeepunesection.org</a>
               </div>
               <div>
                 <strong>Chapter Coordinator:</strong><br>
@@ -129,20 +130,20 @@
               </div>
               <div>
                 <strong>Official Pune Section Portal:</strong><br>
-                <a href="https://ieeepunesection.org/" target="_blank" rel="noopener" style="color: var(--ieee-blue); font-weight: 600;">ieeepunesection.org &rarr;</a>
+                <a href="https://ieeepunesection.org/" target="_blank" rel="noopener" class="link-strong">ieeepunesection.org &rarr;</a>
               </div>
               <div>
                 <strong>IEEE Blockchain Global:</strong><br>
-                <a href="https://blockchain.ieee.org/" target="_blank" rel="noopener" style="color: var(--ieee-blue); font-weight: 600;">blockchain.ieee.org &rarr;</a>
+                <a href="https://blockchain.ieee.org/" target="_blank" rel="noopener" class="link-strong">blockchain.ieee.org &rarr;</a>
               </div>
             </div>
           </article>
 
-          <article style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2rem; box-shadow: var(--shadow-sm);">
-            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1rem;">
+          <article class="content-card">
+            <h3 class="content-card-title xs">
               Quick Navigation
             </h3>
-            <ul style="display: flex; flex-direction: column; gap: 0.75rem; padding-left: 1.2rem; font-size: 0.95rem;">
+            <ul class="list-nav">
               <li><a href="membership.html">Membership Benefits &amp; Bootcamp Access</a></li>
               <li><a href="venue.html">Venue &amp; Travel Logistics in Pune</a></li>
               <li><a href="events.html">Upcoming Activities &amp; BlockHack 2026</a></li>
@@ -153,37 +154,37 @@
         </div>
 
         <!-- Right: Inquiry Form -->
-        <article style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2.5rem; box-shadow: var(--shadow-md);">
-          <span class="brand-badge" style="margin-bottom: 0.75rem;">Send a Message</span>
-          <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 0.75rem;">
+        <article class="content-card elevated">
+          <span class="brand-badge">Send a Message</span>
+          <h2 class="content-card-title sm">
             Inquiry &amp; Collaboration Form
           </h2>
-          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.75rem;">
+          <p class="content-card-muted spaced">
             Use the form below for speaking slots, workshop signups, student branch engagements, or support questions.
           </p>
 
-          <form action="mailto:info@ieeepunesection.org" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <form action="mailto:info@ieeepunesection.org" method="post" enctype="text/plain" class="form-group">
             <div>
-              <label for="name" style="display: block; font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.35rem;">Full Name *</label>
-              <input id="name" name="name" type="text" autocomplete="name" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle); border-radius: var(--border-radius-sm); font-family: var(--font-body); font-size: 0.95rem;">
+              <label for="name" class="form-label">Full Name *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required class="form-input">
             </div>
 
             <div>
-              <label for="email" style="display: block; font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.35rem;">Email Address *</label>
-              <input id="email" name="email" type="email" autocomplete="email" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle); border-radius: var(--border-radius-sm); font-family: var(--font-body); font-size: 0.95rem;">
+              <label for="email" class="form-label">Email Address *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required class="form-input">
             </div>
 
             <div>
-              <label for="subject" style="display: block; font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.35rem;">Inquiry Subject *</label>
-              <input id="subject" name="subject" type="text" placeholder="e.g. BlockHack 2026, Workshop, Speaking Slot" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle); border-radius: var(--border-radius-sm); font-family: var(--font-body); font-size: 0.95rem;">
+              <label for="subject" class="form-label">Inquiry Subject *</label>
+              <input id="subject" name="subject" type="text" placeholder="e.g. BlockHack 2026, Workshop, Speaking Slot" required class="form-input">
             </div>
 
             <div>
-              <label for="message" style="display: block; font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.35rem;">Message *</label>
-              <textarea id="message" name="message" rows="5" placeholder="Your questions or collaboration details..." required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle); border-radius: var(--border-radius-sm); font-family: var(--font-body); font-size: 0.95rem;"></textarea>
+              <label for="message" class="form-label">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your questions or collaboration details..." required class="form-textarea"></textarea>
             </div>
 
-            <button type="submit" class="btn-primary" style="align-self: flex-start; cursor: pointer; padding: 0.85rem 1.75rem; border: none; font-size: 1rem; border-radius: var(--border-radius-sm); font-family: var(--font-heading); font-weight: 700;">
+            <button type="submit" class="btn-primary form-submit">
               Send Message &rarr;
             </button>
           </form>

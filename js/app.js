@@ -1,6 +1,7 @@
 /**
  * IEEE Pune Section - Core Application Controller
  * Handles Navigation, Header Dynamics, Search Bar, and UI Interactions
+ * Enhanced with scroll lock, resize handler, and mobile optimizations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +22,7 @@ function initStickyHeader() {
     } else {
       header.classList.remove('scrolled');
     }
-  });
+  }, { passive: true });
 }
 
 /* Mobile Responsive Navigation Drawer & Accordion */
@@ -30,14 +31,40 @@ function initMobileNavigation() {
   const navMenu = document.querySelector('.main-nav-menu');
   const navItemsWithChildren = document.querySelectorAll('.nav-item.has-children');
 
+  // Store scroll position for scroll lock
+  let scrollPosition = 0;
+
+  function openNav() {
+    if (!navMenu || !toggleBtn) return;
+    scrollPosition = window.pageYOffset;
+    navMenu.classList.add('open');
+    document.body.classList.add('nav-open');
+    document.body.style.top = `-${scrollPosition}px`;
+    toggleBtn.classList.add('is-open');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeNav() {
+    if (!navMenu || !toggleBtn) return;
+    navMenu.classList.remove('open');
+    document.body.classList.remove('nav-open');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollPosition);
+    toggleBtn.classList.remove('is-open');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+
+    // Close all accordion sub-menus
+    navItemsWithChildren.forEach(item => item.classList.remove('active-mobile'));
+  }
+
   if (toggleBtn && navMenu) {
     toggleBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-      const isExpanded = navMenu.classList.contains('open');
-      toggleBtn.setAttribute('aria-expanded', isExpanded);
-      toggleBtn.innerHTML = isExpanded 
-        ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'
-        : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+      const isOpen = navMenu.classList.contains('open');
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
     });
   }
 
@@ -48,9 +75,40 @@ function initMobileNavigation() {
       link.addEventListener('click', (e) => {
         if (window.innerWidth <= 768) {
           e.preventDefault();
+          // Close other open items
+          navItemsWithChildren.forEach(other => {
+            if (other !== item) other.classList.remove('active-mobile');
+          });
           item.classList.toggle('active-mobile');
         }
       });
+    }
+  });
+
+  // Close mobile nav when resizing back to desktop
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (window.innerWidth > 768 && navMenu && navMenu.classList.contains('open')) {
+        closeNav();
+      }
+    }, 100);
+  });
+
+  // Close mobile nav when clicking outside (on the overlay background)
+  if (navMenu) {
+    navMenu.addEventListener('click', (e) => {
+      if (e.target === navMenu) {
+        closeNav();
+      }
+    });
+  }
+
+  // Close mobile nav on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu && navMenu.classList.contains('open')) {
+      closeNav();
     }
   });
 }
@@ -84,20 +142,22 @@ function initSearch() {
   }
 }
 
-/* Smooth Scroll for Anchor Links */
+/* Smooth Scroll for Anchor Links (offset by sticky nav on mobile) */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#' || targetId === '#content') return;
-      
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+        const navBar = document.querySelector('.main-navigation-bar');
+        const offset = (window.innerWidth <= 768 && navBar)
+          ? navBar.offsetHeight + 8
+          : 0;
+        const top = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });

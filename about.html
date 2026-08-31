@@ -72,8 +72,9 @@
   <!-- 3. Navigation -->
   <nav class="main-navigation-bar" aria-label="Main Navigation">
     <div class="container nav-container">
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
       <ul class="main-nav-menu">
@@ -91,102 +92,104 @@
   </nav>
 
   <!-- Page Header Banner -->
-  <section class="section-header" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue)); color: #ffffff; padding: 4rem 0 3.5rem; text-align: center;">
+  <section class="page-banner">
     <div class="container">
-      <span class="brand-badge" style="margin-bottom: 1rem;">Chapter Profile</span>
-      <h1 style="font-family: var(--font-heading); font-size: 2.75rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">About IEEE Blockchain Pune Section</h1>
-      <p style="max-width: 750px; margin: 0 auto; color: #cbd5e1; font-size: 1.15rem; line-height: 1.6;">
+      <span class="brand-badge">Chapter Profile</span>
+      <h1 class="page-banner-title">About IEEE Blockchain Pune Section</h1>
+      <p class="page-banner-desc">
         The official technical chapter and specialized activity group under IEEE Pune Section, promoting blockchain research and developer ecosystems across the region.
       </p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="section-activities" style="background-color: #ffffff;">
+  <main class="section-activities section-plain">
     <div class="container">
-      <div style="max-width: 950px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem;">
+      <div class="content-narrow">
         
         <!-- Overview Card -->
-        <article style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm);">
-          <h2 style="font-family: var(--font-heading); font-size: 1.85rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1.25rem;">
+        <article class="content-card alt">
+          <h2 class="content-card-title">
             About the Chapter
           </h2>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-main); margin-bottom: 1.25rem;">
+          <p class="content-card-text">
             IEEE Blockchain Pune Section is the official technical chapter and specialized activity group under the IEEE Pune Section, promoting blockchain research, cryptographic protocol design, and developer ecosystems across Pune and the wider Maharashtra region.
           </p>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-main);">
+          <p class="content-card-text">
             We support student and professional capability-building, technical exchange, research publications, and hands-on workshops in cryptography, smart contract auditing, and decentralized architectures.
           </p>
         </article>
 
         <!-- Affiliation & Regional Node -->
-        <article id="milestones" style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm);">
-          <h2 style="font-family: var(--font-heading); font-size: 1.85rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1.25rem;">
+        <article id="milestones" class="content-card">
+          <h2 class="content-card-title">
             IEEE Pune Section and Region 10 Affiliation
           </h2>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-main); margin-bottom: 1.25rem;">
+          <p class="content-card-text">
             Established on <strong>June 26, 2010</strong>, the IEEE Pune Section belongs to <strong>IEEE Region 10 (Asia-Pacific)</strong> and serves as a premier catalyst for technical growth in the Pune metropolitan area. Pune is a major technology hub with over 100+ engineering institutions and a massive IT, cybersecurity, and fintech services ecosystem.
           </p>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-main);">
-            The Blockchain Group was established to leverage Pune’s dense academic and industry network, promoting structured research and engineering practice in blockchain, consensus algorithms, cryptographic protocols, and smart contract verification.
+          <p class="content-card-text">
+            The Blockchain Group was established to leverage Pune's dense academic and industry network, promoting structured research and engineering practice in blockchain, consensus algorithms, cryptographic protocols, and smart contract verification.
           </p>
         </article>
 
         <!-- Relationship with Global IEEE -->
-        <article style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm);">
-          <h2 style="font-family: var(--font-heading); font-size: 1.85rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1.25rem;">
+        <article class="content-card alt">
+          <h2 class="content-card-title">
             Relationship with Global IEEE
           </h2>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-main);">
+          <p class="content-card-text">
             By organizing hands-on workshops, technical symposiums, and local developer meetups, IEEE Blockchain Pune Section connects local engineering students and professionals with the global <strong>IEEE Blockchain Technical Community</strong>, the <strong>IEEE Standards Association</strong>, and the <strong>IEEE Computer Society</strong>.
           </p>
         </article>
 
         <!-- Mission and Vision -->
-        <article style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm);">
-          <h2 style="font-family: var(--font-heading); font-size: 1.85rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1.5rem;">
+        <article class="content-card">
+          <h2 class="content-card-title spaced">
             Mission and Vision
           </h2>
-          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <div style="background: rgba(0, 102, 153, 0.1); color: var(--ieee-blue); padding: 0.5rem; border-radius: 8px; font-weight: 800;">01</div>
+          <div class="numbered-list">
+            <div class="numbered-item">
+              <div class="numbered-item-num">01</div>
               <div>
-                <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 0.35rem;">Research Excellence</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">Promote scholarly submissions, transaction papers, and technical development in cryptography and distributed ledger systems.</p>
+                <h3 class="numbered-item-title">Research Excellence</h3>
+                <p class="numbered-item-text">Promote scholarly submissions, transaction papers, and technical development in cryptography and distributed ledger systems.</p>
               </div>
             </div>
 
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <div style="background: rgba(0, 102, 153, 0.1); color: var(--ieee-blue); padding: 0.5rem; border-radius: 8px; font-weight: 800;">02</div>
+            <div class="numbered-item">
+              <div class="numbered-item-num">02</div>
               <div>
-                <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 0.35rem;">Skill Development</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">Organize hands-on smart contract engineering, scripting, and protocol development bootcamps to equip students with professional Web3 skills.</p>
+                <h3 class="numbered-item-title">Skill Development</h3>
+                <p class="numbered-item-text">Organize hands-on smart contract engineering, scripting, and protocol development bootcamps to equip students with professional Web3 skills.</p>
               </div>
             </div>
 
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <div style="background: rgba(0, 102, 153, 0.1); color: var(--ieee-blue); padding: 0.5rem; border-radius: 8px; font-weight: 800;">03</div>
+            <div class="numbered-item">
+              <div class="numbered-item-num">03</div>
               <div>
-                <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 0.35rem;">Regional Collaboration</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">Serve as an active channel connecting students, academia, and industry leaders in the distributed ledger technology space.</p>
+                <h3 class="numbered-item-title">Regional Collaboration</h3>
+                <p class="numbered-item-text">Serve as an active channel connecting students, academia, and industry leaders in the distributed ledger technology space.</p>
               </div>
             </div>
           </div>
         </article>
 
         <!-- CTA Box -->
-        <div style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue)); border-radius: var(--border-radius-md); padding: 3rem; text-align: center; color: #ffffff;">
-          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">Meet the Leadership &amp; Committee</h2>
-          <p style="max-width: 600px; margin: 0 auto 1.5rem; color: #cbd5e1; font-size: 1.05rem;">Discover the faculty advisors, student branch officers, and technical leads driving the chapter.</p>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="committee.html" class="btn-secondary" style="background: #ffffff; color: var(--ieee-blue-deep); border-color: #ffffff;">View Full Committee Roster &rarr;</a>
-            <a href="membership.html" class="btn-primary" style="background: var(--ieee-accent); border-color: var(--ieee-accent);">Join Chapter Today</a>
+        <div class="cta-box">
+          <h2 class="cta-box-title">Meet the Leadership &amp; Committee</h2>
+          <p class="cta-box-desc">Discover the faculty advisors, student branch officers, and technical leads driving the chapter.</p>
+          <div class="cta-box-actions">
+            <a href="committee.html" class="btn-secondary btn-on-dark">View Full Committee Roster &rarr;</a>
+            <a href="membership.html" class="btn-primary btn-accent">Join Chapter Today</a>
           </div>
         </div>
 
       </div>
     </div>
   </main>
+
+
 
   <!-- Master Footer -->
   <footer class="site-footer" id="footer">

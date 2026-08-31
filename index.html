@@ -95,8 +95,9 @@
        ========================================================================== -->
   <nav class="main-navigation-bar" aria-label="Main Navigation">
     <div class="container nav-container">
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
       <ul class="main-nav-menu">
@@ -267,7 +268,7 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">About IEEE Blockchain Pune Section</h2>
-        <p style="max-width: 800px; margin: 1rem auto 0; color: var(--text-muted); font-size: 1.05rem;">
+        <p class="section-lead">
           IEEE Blockchain Pune Section connects student talent and faculty expertise with global IEEE technical activities, creating a focused space for learning, collaboration, and research dissemination across Maharashtra.
         </p>
       </div>
@@ -327,31 +328,31 @@
   <!-- ==========================================================================
        6. LOCAL IDENTITY & SECTION MILESTONES
        ========================================================================== -->
-  <section class="section-latest-news" style="background-color: #ffffff;">
+  <section class="section-latest-news section-plain">
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: center;">
+      <div class="content-2col">
         <div>
-          <span class="brand-badge" style="margin-bottom: 0.75rem;">Local Identity</span>
-          <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--ieee-blue-deep); margin-bottom: 1.25rem; line-height: 1.2;">
+          <span class="brand-badge local-identity-badge">Local Identity</span>
+          <h2 class="local-identity-title">
             IEEE Pune Section &amp; Regional Ecosystem
           </h2>
-          <p style="font-size: 1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.25rem;">
+          <p class="local-identity-text">
             Established on <strong>June 26, 2010</strong>, the IEEE Pune Section belongs to <strong>IEEE Region 10 (Asia-Pacific)</strong>, serving the vibrant Pune metropolitan area. Pune is a premier academic and technological epicentre, hosting over 100+ engineering colleges, major IT services companies, and FinTech centers.
           </p>
-          <p style="font-size: 1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.5rem;">
+          <p class="local-identity-text">
             The Blockchain Group operates at the intersection of Pune's research institutes and software industry. By focusing on distributed consensus protocols, smart contract analysis, and decentralized identity systems, we connect local student talent and professional members with global research standards and enterprise DLT networks.
           </p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="about.html" class="btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">About Chapter &rarr;</a>
-            <a href="committee.html" class="btn-secondary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem; border-color: var(--ieee-blue); color: var(--ieee-blue);">View Committee</a>
+          <div class="btn-group">
+            <a href="about.html" class="btn-primary">About Chapter &rarr;</a>
+            <a href="committee.html" class="btn-secondary btn-outline">View Committee</a>
           </div>
         </div>
 
-        <div style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2.25rem; box-shadow: var(--shadow-md);">
-          <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 1.25rem; border-bottom: 2px solid var(--border-light); padding-bottom: 0.5rem;">
+        <div class="milestones-card">
+          <h3 class="milestones-title">
             Section Milestones &amp; Node
           </h3>
-          <ul style="display: flex; flex-direction: column; gap: 1rem; padding-left: 1.2rem;">
+          <ul class="milestones-list">
             <li><strong>June 26, 2010:</strong> Official establishment of the IEEE Pune Section.</li>
             <li><strong>Region 10 Node:</strong> Directly connected with Asia-Pacific research pathways, student branches, and technical activities.</li>
             <li><strong>Blockchain Focus:</strong> Collaborative programs covering secure smart contract engineering, zero-knowledge proofs, and cryptographic algorithms.</li>
@@ -415,7 +416,7 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Important Dates &amp; Timeline</h2>
-        <p style="max-width: 600px; margin: 0.75rem auto 0; color: var(--text-muted);">Key milestones for the current 2026 conference, hackathon, and workshop cycle.</p>
+        <p class="section-lead sm">Key milestones for the current 2026 conference, hackathon, and workshop cycle.</p>
       </div>
 
       <div class="timeline-compact">
@@ -501,9 +502,9 @@
        ========================================================================== -->
   <section class="section-sponsors">
     <div class="container">
-      <div class="section-header" style="margin-bottom: 1.5rem;">
+      <div class="section-header">
         <h2 class="section-title">Network &amp; Institutional Partners</h2>
-        <p style="color: var(--text-muted); margin-top: 0.5rem;">Institutions and communities supporting the IEEE Blockchain Pune Section initiative.</p>
+        <p class="page-banner-desc muted">Institutions and communities supporting the IEEE Blockchain Pune Section initiative.</p>
       </div>
 
       <div class="sponsor-strip">
@@ -587,8 +588,8 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             <span>Pune, Maharashtra, India</span>
           </div>
-          <div style="margin-top: 1rem;">
-            <a href="contact.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem; display: inline-block;">Get in Touch &rarr;</a>
+          <div class="mt-1">
+            <a href="contact.html" class="btn-primary btn-sm btn-block-sm">Get in Touch &rarr;</a>
           </div>
         </div>
       </div>

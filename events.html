@@ -72,8 +72,9 @@
   <!-- Navigation -->
   <nav class="main-navigation-bar" aria-label="Main Navigation">
     <div class="container nav-container">
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
       <ul class="main-nav-menu">
@@ -91,38 +92,38 @@
   </nav>
 
   <!-- Header Banner -->
-  <section class="section-header" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue)); color: #ffffff; padding: 4rem 0 3.5rem; text-align: center;">
+  <section class="page-banner">
     <div class="container">
-      <span class="brand-badge" style="margin-bottom: 1rem;">Conferences, Hackathons &amp; Bootcamps</span>
-      <h1 style="font-family: var(--font-heading); font-size: 2.75rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Events &amp; Activities</h1>
-      <p style="max-width: 750px; margin: 0 auto; color: #cbd5e1; font-size: 1.15rem; line-height: 1.6;">
+      <span class="brand-badge">Conferences, Hackathons &amp; Bootcamps</span>
+      <h1 class="page-banner-title">Events &amp; Activities</h1>
+      <p class="page-banner-desc">
         Major chapter activities including the national blockchain symposium, BlockHack hackathons, and developer bootcamps in Pune.
       </p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="section-activities" style="background-color: var(--bg-secondary);">
+  <main class="section-activities section-alt">
     <div class="container">
 
       <!-- Events Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+      <div class="events-grid">
         
         <!-- Event 1: BlockHack 2026 -->
         <article class="news-card">
           <img class="news-card-img" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="BlockHack 2026">
           <div class="news-card-body">
             <span class="news-date">October 10–12, 2026 &bull; In-Person / Hybrid</span>
-            <h2 class="news-card-title" style="font-size: 1.35rem;">IEEE Pune Section Blockchain Hackathon (BlockHack 2026)</h2>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            <h2 class="news-card-title lg">IEEE Pune Section Blockchain Hackathon (BlockHack 2026)</h2>
+            <p class="news-card-meta">
               <strong>Venue:</strong> IEEE Pune Section Partner Labs &bull; <strong>Format:</strong> In-person / Hybrid
             </p>
             <p class="news-card-text">
               A 48-hour student hackathon focusing on cryptographic protocols, smart contracts, decentralized identity systems, and social impact applications of distributed ledgers.
             </p>
-            <div style="margin-top: auto; padding-top: 1rem; display: flex; gap: 0.75rem;">
-              <a href="membership.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Register / Join &rarr;</a>
-              <a href="tracks.html" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; border-color: var(--ieee-blue); color: var(--ieee-blue);">View Tracks</a>
+            <div class="news-card-actions">
+              <a href="membership.html" class="btn-primary btn-sm">Register / Join &rarr;</a>
+              <a href="tracks.html" class="btn-secondary btn-sm btn-outline">View Tracks</a>
             </div>
           </div>
         </article>
@@ -132,16 +133,16 @@
           <img class="news-card-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="NSBC 2026">
           <div class="news-card-body">
             <span class="news-date">November 15, 2026 &bull; In-Person</span>
-            <h2 class="news-card-title" style="font-size: 1.35rem;">National Symposium on Blockchain &amp; Cyber Security (NSBC 2026)</h2>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            <h2 class="news-card-title lg">National Symposium on Blockchain &amp; Cyber Security (NSBC 2026)</h2>
+            <p class="news-card-meta">
               <strong>Venue:</strong> IEEE Pune Section Partner Auditorium &bull; <strong>Format:</strong> In-person
             </p>
             <p class="news-card-text">
               Keynote talks, research presentations, and panel discussions on zero-knowledge proofs, sharding, consensus algorithms, and decentralized security.
             </p>
-            <div style="margin-top: auto; padding-top: 1rem; display: flex; gap: 0.75rem;">
-              <a href="speakers.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Speakers Lineup &rarr;</a>
-              <a href="venue.html" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; border-color: var(--ieee-blue); color: var(--ieee-blue);">Venue Info</a>
+            <div class="news-card-actions">
+              <a href="speakers.html" class="btn-primary btn-sm">Speakers Lineup &rarr;</a>
+              <a href="venue.html" class="btn-secondary btn-sm btn-outline">Venue Info</a>
             </div>
           </div>
         </article>
@@ -151,16 +152,16 @@
           <img class="news-card-img" src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=600&q=80" alt="Solidity Workshop">
           <div class="news-card-body">
             <span class="news-date">September 5, 2026 &bull; In-Person</span>
-            <h2 class="news-card-title" style="font-size: 1.35rem;">Hands-on Workshop: Smart Contract Development with Solidity</h2>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            <h2 class="news-card-title lg">Hands-on Workshop: Smart Contract Development with Solidity</h2>
+            <p class="news-card-meta">
               <strong>Venue:</strong> IEEE Pune Section Partner Computer Labs &bull; <strong>Format:</strong> In-person
             </p>
             <p class="news-card-text">
               Practical training sessions covering smart contract design, deployment on Ethereum testnets, and security testing using Hardhat and Remix.
             </p>
-            <div style="margin-top: auto; padding-top: 1rem; display: flex; gap: 0.75rem;">
-              <a href="membership.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Sign Up &rarr;</a>
-              <a href="contact.html" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; border-color: var(--ieee-blue); color: var(--ieee-blue);">Inquire</a>
+            <div class="news-card-actions">
+              <a href="membership.html" class="btn-primary btn-sm">Sign Up &rarr;</a>
+              <a href="contact.html" class="btn-secondary btn-sm btn-outline">Inquire</a>
             </div>
           </div>
         </article>
@@ -168,11 +169,11 @@
       </div>
 
       <!-- Important Dates Timeline Section -->
-      <section style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm);">
-        <h2 style="font-family: var(--font-heading); font-size: 1.85rem; font-weight: 700; color: var(--ieee-blue-deep); margin-bottom: 0.5rem;">
+      <section class="milestones-panel">
+        <h2 class="milestones-panel-title">
           Important Dates &amp; Milestones
         </h2>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">Mark your calendar for upcoming registration deadlines and symposium milestones.</p>
+        <p class="milestones-panel-desc">Mark your calendar for upcoming registration deadlines and symposium milestones.</p>
 
         <div class="timeline-compact">
           <div class="timeline-card">
