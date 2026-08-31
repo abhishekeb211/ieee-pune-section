@@ -1,6 +1,6 @@
 /**
- * IEEE Pune Section - High-Performance Slider Engine
- * Manages Hero Banner Carousel and Life at Pune Section Gallery Stream
+ * IEEE Blockchain Pune Section - High-Performance Slider Engine
+ * Manages Hero Banner Carousel and IEEE Blockchain Pune Section Gallery Stream
  */
 
 document.addEventListener('DOMContentLoaded', () => {

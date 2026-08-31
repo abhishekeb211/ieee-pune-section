@@ -1,5 +1,5 @@
 /**
- * IEEE Pune Section - Core Application Controller
+ * IEEE Blockchain Pune Section - Core Application Controller
  * Handles Navigation, Header Dynamics, Search Bar, and UI Interactions
  * Enhanced with scroll lock, resize handler, and mobile optimizations
  */
@@ -121,7 +121,7 @@ function initSearch() {
   function handleSearch() {
     const query = searchInput ? searchInput.value.trim() : '';
     if (query) {
-      alert(`Searching IEEE Pune Section archives for: "${query}"...`);
+      alert(`Searching IEEE Blockchain Pune Section archives for: "${query}"...`);
     }
   }
 

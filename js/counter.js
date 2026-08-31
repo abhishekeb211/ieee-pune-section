@@ -1,5 +1,5 @@
 /**
- * IEEE Pune Section - Metric Counter Engine
+ * IEEE Blockchain Pune Section - Metric Counter Engine
  * Uses IntersectionObserver to smoothly trigger numeric counters when scrolled into view
  */
 
