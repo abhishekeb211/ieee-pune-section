@@ -221,6 +221,14 @@ ul {
   width: auto;
 }
 
+.brand-logo-img {
+  height: 52px;
+  max-width: 240px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .brand-divider {
   width: 2px;
   height: 42px;
@@ -1223,6 +1231,28 @@ ul {
   border-color: var(--ieee-blue);
 }
 
+.committee-photo-wrap {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  margin: 0 auto 1.15rem;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 40, 85, 0.16);
+  position: relative;
+  background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.committee-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .committee-avatar {
   width: 64px;
   height: 64px;
@@ -1237,6 +1267,36 @@ ul {
   justify-content: center;
   margin: 0 auto 1.25rem;
   box-shadow: 0 4px 12px rgba(0, 102, 153, 0.25);
+}
+
+.committee-social {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.committee-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f0f7fb;
+  color: var(--ieee-blue);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: 1px solid rgba(0, 102, 153, 0.15);
+}
+
+.committee-social a:hover {
+  background: var(--ieee-blue);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 102, 153, 0.25);
 }
 
 .committee-name {
