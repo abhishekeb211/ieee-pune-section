@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mega-menu.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/compact-ux.css">
 </head>
 <body>
 
@@ -154,123 +155,118 @@
     </div>
   </section>
 
+
   <!-- Main Content -->
-  <main class="section-activities section-plain">
+  <main class="section-padded">
     <div class="container">
-      <div class="content-narrow">
-        
-        <!-- Overview Card -->
-        <article class="content-card alt">
-          <h2 class="content-card-title">
-            Organizational Identity &amp; Scope
-          </h2>
-          <p class="content-card-text">
-            <strong>IEEE Blockchain Pune Section</strong> represents the collective blockchain initiatives operating under the <strong>IEEE Pune Blockchain Group</strong> — a recognized local community within the global <strong>IEEE Blockchain Technical Community (BCTC)</strong> in <strong>IEEE Region 10 (Asia-Pacific)</strong>.
-          </p>
-          <p class="content-card-text">
-            Chaired by <strong>Dr. Sonali D. Patil</strong> (who also serves as the Region 10 Coordinator for IEEE Blockchain Groups), the group bridges IEEE's global blockchain standardisation efforts, regional conferences (ICBDS, ICDLT, ICCUBEA), and leading academic engineering institutions across Pune and Maharashtra.
-          </p>
-        </article>
+      <div class="ux-tabs-wrapper">
+        <div class="ux-tab-nav" role="tablist">
+          <button type="button" class="ux-tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+          <button type="button" class="ux-tab-btn" data-tab="mission" role="tab" aria-selected="false">Mission &amp; Vision</button>
+          <button type="button" class="ux-tab-btn" data-tab="milestones" role="tab" aria-selected="false">Milestones</button>
+        </div>
 
-        <!-- Affiliation & Regional Node -->
-        <article id="milestones" class="content-card">
-          <h2 class="content-card-title">
-            IEEE Pune Section and Regional Context
-          </h2>
-          <p class="content-card-text">
-            Established on <strong>June 26, 2010</strong>, the <strong>IEEE Pune Section</strong> belongs to <strong>IEEE Region 10 (Asia-Pacific)</strong> and serves as a premier catalyst for technical advancement across the Pune metropolitan area and Maharashtra. Pune Section encompasses:
-          </p>
-          <ul class="milestones-list" style="margin: 1rem 0;">
-            <li><strong>2,500+ Active Members</strong> spanning academia, research labs, and technology enterprises</li>
-            <li><strong>24+ Student Branches</strong> across premier autonomous and affiliated colleges</li>
-            <li><strong>15+ Technical Society Chapters &amp; Affinity Groups</strong> including Computer Society, Communications Society, and WIE</li>
-            <li>A region hosting <strong>100+ engineering institutions</strong> and major IT, automotive, cybersecurity, and FinTech centers</li>
-          </ul>
-        </article>
-
-        <!-- Key Pillars and Programs -->
-        <article class="content-card alt">
-          <h2 class="content-card-title">
-            Core Activities &amp; Infrastructure
-          </h2>
-          <div class="numbered-list">
-            <div class="numbered-item">
-              <div class="numbered-item-num">01</div>
-              <div>
-                <h3 class="numbered-item-title">Flagship Conferences &amp; Publications</h3>
-                <p class="numbered-item-text">Annual IEEE conferences including ICBDS (International Conference on Blockchain and Distributed Systems Security) and ICDLT (International Conference on Distributed Ledger Technologies) with proceedings indexed in IEEE Xplore and Scopus.</p>
+        <!-- Overview -->
+        <div class="ux-tab-pane active" id="overview" role="tabpanel">
+          <div class="ux-grid-compact">
+            <article class="ux-card-modern">
+              <div class="ux-card-header-row">
+                <span class="ux-tag cyan">Identity</span>
               </div>
-            </div>
+              <h2 class="ux-card-title">Organizational Identity &amp; Scope</h2>
+              <ul class="ux-bullet-list">
+                <li><strong>IEEE Blockchain Pune Section</strong> — collective blockchain initiatives under the IEEE Pune Blockchain Group</li>
+                <li>Recognized local community within the global <strong>IEEE Blockchain Technical Community (BCTC)</strong></li>
+                <li>Operates in <strong>IEEE Region 10 (Asia-Pacific)</strong></li>
+                <li>Chaired by <strong>Dr. Sonali D. Patil</strong> (also Region 10 Coordinator for IEEE Blockchain Groups)</li>
+                <li>Bridges IEEE global blockchain standardisation, regional conferences (ICBDS, ICDLT, ICCUBEA), and Pune/Maharashtra engineering institutions</li>
+              </ul>
+            </article>
 
-            <div class="numbered-item">
-              <div class="numbered-item-num">02</div>
-              <div>
-                <h3 class="numbered-item-title">Standards Development &amp; IEEE SA Collaboration</h3>
-                <p class="numbered-item-text">Engagement with the IEEE Blockchain &amp; Distributed Ledgers Standards Committee (C/BDLSC) on published standards (IEEE 2418.2, 2418.7) and 30+ active standards projects (P3201–P3230).</p>
+            <article class="ux-card-modern">
+              <div class="ux-card-header-row">
+                <span class="ux-tag gold">Activities</span>
               </div>
-            </div>
-
-            <div class="numbered-item">
-              <div class="numbered-item-num">03</div>
-              <div>
-                <h3 class="numbered-item-title">Institutional Labs &amp; Centers of Excellence</h3>
-                <p class="numbered-item-text">Collaborations with regional academic institutions including PCCOE, VIIT, and MMCOE's dedicated Blockchain Technology Lab for applied research and prototyping.</p>
-              </div>
-            </div>
-
-            <div class="numbered-item">
-              <div class="numbered-item-num">04</div>
-              <div>
-                <h3 class="numbered-item-title">Pan-India Network &amp; Student Ecosystem</h3>
-                <p class="numbered-item-text">Active connection with 10 India-based IEEE Blockchain Groups and student communities at premier IITs (Bombay, Delhi, Kharagpur, Madras, Roorkee).</p>
-              </div>
-            </div>
+              <h2 class="ux-card-title">Core Activities &amp; Infrastructure</h2>
+              <ul class="ux-bullet-list">
+                <li><strong>Flagship Conferences:</strong> ICBDS &amp; ICDLT — proceedings in IEEE Xplore and Scopus</li>
+                <li><strong>Standards:</strong> IEEE C/BDLSC — IEEE 2418.2, 2418.7; 30+ active projects (P3201–P3230)</li>
+                <li><strong>Labs &amp; CoE:</strong> PCCOE, VIIT, MMCOE Blockchain Technology Lab</li>
+                <li><strong>Pan-India Network:</strong> 10 India IEEE Blockchain Groups; IIT Bombay, Delhi, Kharagpur, Madras, Roorkee student communities</li>
+              </ul>
+            </article>
           </div>
-        </article>
-
-        <!-- Mission and Vision -->
-        <article class="content-card">
-          <h2 class="content-card-title spaced">
-            Mission and Objectives
-          </h2>
-          <div class="numbered-list">
-            <div class="numbered-item">
-              <div class="numbered-item-num">01</div>
-              <div>
-                <h3 class="numbered-item-title">Scholarly &amp; Technical Leadership</h3>
-                <p class="numbered-item-text">Foster high-impact research, peer-reviewed publications, and technical discourse in decentralized systems, smart contracts, cryptographic protocols, and blockchain security.</p>
-              </div>
+          <div class="ux-card-modern ux-mt-1">
+            <div class="ux-card-header-row"><span class="ux-tag green">Next Steps</span></div>
+            <h2 class="ux-card-title">Explore Section Committee &amp; Ecosystem</h2>
+            <p class="ux-card-desc">Connect with the executive committee, browse IEEE blockchain standards, or join the section.</p>
+            <div class="ux-card-footer">
+              <a href="committee.html" class="btn-secondary btn-sm btn-outline">Executive Committee</a>
+              <a href="standards.html" class="btn-secondary btn-sm btn-outline">IEEE Standards</a>
+              <a href="membership.html" class="btn-primary btn-sm">Join IEEE / BCTC</a>
             </div>
-
-            <div class="numbered-item">
-              <div class="numbered-item-num">02</div>
-              <div>
-                <h3 class="numbered-item-title">Workforce &amp; Student Capability</h3>
-                <p class="numbered-item-text">Equip students and practitioners with industry-aligned skills through Faculty Development Programs (FDPs), hands-on smart contract laboratories, and hackathons.</p>
-              </div>
-            </div>
-
-            <div class="numbered-item">
-              <div class="numbered-item-num">03</div>
-              <div>
-                <h3 class="numbered-item-title">Trusted Ecosystem Integration</h3>
-                <p class="numbered-item-text">Promote the adoption of open, interoperable, and standards-compliant blockchain technologies across governance, finance, supply chains, healthcare, and energy sectors.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- CTA Box -->
-        <div class="cta-box">
-          <h2 class="cta-box-title">Explore Section Committee &amp; Ecosystem</h2>
-          <p class="cta-box-desc">Connect with our executive committee, browse IEEE blockchain standards, or join the section.</p>
-          <div class="cta-box-actions">
-            <a href="committee.html" class="btn-secondary btn-on-dark">Executive Committee &rarr;</a>
-            <a href="standards.html" class="btn-secondary btn-on-dark">IEEE Standards</a>
-            <a href="membership.html" class="btn-primary btn-accent">Join IEEE / BCTC</a>
           </div>
         </div>
 
+        <!-- Mission & Vision -->
+        <div class="ux-tab-pane" id="mission" role="tabpanel">
+          <div class="ux-grid-compact">
+            <article class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag cyan">Mission 01</span></div>
+              <h2 class="ux-card-title">Scholarly &amp; Technical Leadership</h2>
+              <p class="ux-card-desc">Foster high-impact research, peer-reviewed publications, and technical discourse in decentralized systems, smart contracts, cryptographic protocols, and blockchain security.</p>
+            </article>
+            <article class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag gold">Mission 02</span></div>
+              <h2 class="ux-card-title">Workforce &amp; Student Capability</h2>
+              <p class="ux-card-desc">Equip students and practitioners with industry-aligned skills through Faculty Development Programs (FDPs), hands-on smart contract laboratories, and hackathons.</p>
+            </article>
+            <article class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag green">Mission 03</span></div>
+              <h2 class="ux-card-title">Trusted Ecosystem Integration</h2>
+              <p class="ux-card-desc">Promote open, interoperable, standards-compliant blockchain technologies across governance, finance, supply chains, healthcare, and energy.</p>
+            </article>
+          </div>
+          <div class="ux-chip-row ux-mt-1">
+            <span class="ux-tag cyan">Decentralized Systems</span>
+            <span class="ux-tag gold">Smart Contracts</span>
+            <span class="ux-tag green">Standards-Compliant</span>
+            <span class="ux-tag">FDPs &amp; Labs</span>
+            <span class="ux-tag">Region 10</span>
+          </div>
+        </div>
+
+        <!-- Milestones (deep-link: about.html#milestones) -->
+        <div class="ux-tab-pane" id="milestones" role="tabpanel">
+          <div class="ux-milestone-ribbon">
+            <div class="ux-milestone-header">
+              <div class="ux-milestone-title">IEEE Pune Section — Regional Context</div>
+            </div>
+            <div class="ux-milestone-grid">
+              <div class="ux-milestone-item">
+                <div class="ux-milestone-date">26 Jun 2010</div>
+                <div class="ux-milestone-desc">IEEE Pune Section established</div>
+              </div>
+              <div class="ux-milestone-item">
+                <div class="ux-milestone-date">Region 10</div>
+                <div class="ux-milestone-desc">Asia-Pacific IEEE Region</div>
+              </div>
+              <div class="ux-milestone-item">
+                <div class="ux-milestone-date">2,500+</div>
+                <div class="ux-milestone-desc">Active members</div>
+              </div>
+              <div class="ux-milestone-item">
+                <div class="ux-milestone-date">24+</div>
+                <div class="ux-milestone-desc">Student Branches</div>
+              </div>
+            </div>
+          </div>
+          <ul class="ux-bullet-list">
+            <li><strong>15+ Technical Society Chapters &amp; Affinity Groups</strong> — including Computer Society, Communications Society, and WIE</li>
+            <li>Region hosting <strong>100+ engineering institutions</strong> and major IT, automotive, cybersecurity, and FinTech centers</li>
+            <li>Premier catalyst for technical advancement across the Pune metropolitan area and Maharashtra</li>
+          </ul>
+        </div>
       </div>
     </div>
   </main>
@@ -345,5 +341,6 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/compact-ux.js"></script>
 </body>
 </html>

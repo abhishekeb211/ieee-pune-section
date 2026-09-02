@@ -64,6 +64,12 @@
         </a>
 
         <div class="header-actions">
+          <div class="header-search">
+            <input type="text" placeholder="Search standards, conferences, papers..." aria-label="Search">
+            <button type="button" class="header-search-btn" aria-label="Search Button">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+          </div>
           <a href="membership.html" class="btn-join-ieee">Join Section</a>
         </div>
       </div>
@@ -71,6 +77,9 @@
   </header>
 
   <!-- Navigation -->
+    <!-- ==========================================================================
+       3. MEGA MENU NAVIGATION BAR
+       ========================================================================== -->
   <nav class="main-navigation-bar" aria-label="Main Navigation">
     <div class="container nav-container">
       <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -80,12 +89,99 @@
 
       <ul class="main-nav-menu">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="committee.html" class="nav-link">Committee</a></li>
-        <li class="nav-item"><a href="tracks.html" class="nav-link">Focus Areas</a></li>
-        <li class="nav-item active"><a href="events.html" class="nav-link">Events</a></li>
-        <li class="nav-item"><a href="speakers.html" class="nav-link">Speakers</a></li>
+        
+        <!-- About Dropdown -->
+        <li class="nav-item dropdown-relative has-children">
+          <a href="about.html" class="nav-link">
+            About <span class="nav-arrow">&#9662;</span>
+          </a>
+          <ul class="simple-dropdown">
+            <li><a href="about.html" class="simple-dropdown-link">About IEEE Blockchain Pune</a></li>
+            <li><a href="committee.html" class="simple-dropdown-link">Executive Committee</a></li>
+            <li><a href="about.html#milestones" class="simple-dropdown-link">Section Milestones &amp; Charter</a></li>
+            <li><a href="india-ecosystem.html" class="simple-dropdown-link">India Blockchain Ecosystem</a></li>
+            <li><a href="contact.html" class="simple-dropdown-link">Contact Section Office</a></li>
+          </ul>
+        </li>
+
+        <!-- Focus Areas / Tracks Dropdown -->
+        <li class="nav-item dropdown-relative has-children">
+          <a href="tracks.html" class="nav-link">
+            Focus Areas <span class="nav-arrow">&#9662;</span>
+          </a>
+          <ul class="simple-dropdown">
+            <li><a href="tracks.html#systems" class="simple-dropdown-link">Blockchain Components &amp; Systems</a></li>
+            <li><a href="tracks.html#integration" class="simple-dropdown-link">Technology Integration</a></li>
+            <li><a href="tracks.html#applications" class="simple-dropdown-link">Blockchain Applications</a></li>
+            <li><a href="tracks.html#security" class="simple-dropdown-link">Security &amp; Privacy</a></li>
+            <li><a href="tracks.html#distributed" class="simple-dropdown-link">Distributed Computing Systems</a></li>
+            <li><a href="tracks.html#management" class="simple-dropdown-link">System Design &amp; Management</a></li>
+          </ul>
+        </li>
+
+        <!-- Events Mega Menu -->
+        <li class="nav-item has-children active"><a href="events.html" class="nav-link">
+            Events <span class="nav-arrow">&#9662;</span>
+          </a>
+          <div class="mega-menu">
+            <div class="container">
+              <div class="mega-menu-inner">
+                <div class="mega-menu-links">
+                  <a href="events.html#icbds" class="mega-link-item">
+                    <span class="mega-link-icon">&#9658;</span>
+                    <div class="mega-link-text">
+                      <span class="mega-link-title">IEEE ICBDS 2026</span>
+                      <span class="mega-link-desc">5th Intl. Conference on Blockchain &amp; Distributed Systems Security</span>
+                    </div>
+                  </a>
+                  <a href="events.html#iccubea" class="mega-link-item">
+                    <span class="mega-link-icon">&#9658;</span>
+                    <div class="mega-link-text">
+                      <span class="mega-link-title">IEEE ICCUBEA 2026</span>
+                      <span class="mega-link-desc">10th Intl. Conference — Blockchain &amp; Cyber Security Track</span>
+                    </div>
+                  </a>
+                  <a href="events.html#icdlt" class="mega-link-item">
+                    <span class="mega-link-icon">&#9658;</span>
+                    <div class="mega-link-text">
+                      <span class="mega-link-title">IEEE ICDLT 2025</span>
+                      <span class="mega-link-desc">Intl. Conference on Distributed Ledger Technologies, MCCIA Pune</span>
+                    </div>
+                  </a>
+                  <a href="speakers.html" class="mega-link-item">
+                    <span class="mega-link-icon">&#9658;</span>
+                    <div class="mega-link-text">
+                      <span class="mega-link-title">Speakers &amp; Presenters</span>
+                      <span class="mega-link-desc">Distinguished keynote speakers &amp; blockchain researchers</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-featured">
+                  <span class="mega-featured-badge">Upcoming 2026</span>
+                  <h4 class="mega-featured-title">IEEE ICBDS 2026</h4>
+                  <p class="mega-featured-text">5th IEEE International Conference on Blockchain and Distributed Systems Security — 23–25 October 2026, Pune, India. Hybrid mode. IEEE Conference Record #71591.</p>
+                  <a href="events.html#icbds" class="mega-featured-btn">View Conference Details &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Standards & Research Dropdown -->
+        <li class="nav-item dropdown-relative has-children">
+          <a href="standards.html" class="nav-link">
+            Standards <span class="nav-arrow">&#9662;</span>
+          </a>
+          <ul class="simple-dropdown">
+            <li><a href="standards.html" class="simple-dropdown-link">Published IEEE Standards</a></li>
+            <li><a href="standards.html#developing" class="simple-dropdown-link">Active Standards Projects (P3201–P3230)</a></li>
+            <li><a href="proceedings.html" class="simple-dropdown-link">Conference Proceedings</a></li>
+            <li><a href="resources.html" class="simple-dropdown-link">Full Resource Directory</a></li>
+          </ul>
+        </li>
+
         <li class="nav-item"><a href="membership.html" class="nav-link">Membership</a></li>
+        <li class="nav-item"><a href="speakers.html" class="nav-link">Speakers</a></li>
         <li class="nav-item"><a href="venue.html" class="nav-link">Venue</a></li>
         <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -99,13 +195,13 @@
       <span class="brand-badge">IEEE Conferences &amp; Events</span>
       <h1 class="page-banner-title">Events &amp; Conferences</h1>
       <p class="page-banner-desc">
-        IEEE Blockchain conferences, symposia, and events â€” Pune flagship conferences (ICBDS, ICDLT, ICCUBEA), India-based blockchain summits, and global IEEE blockchain events.
+        IEEE Blockchain conferences, symposia, and events — Pune flagship conferences (ICBDS, ICDLT, ICCUBEA), India-based blockchain summits, and global IEEE blockchain events.
       </p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="section-activities section-alt" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+  <main class="section-activities section-alt ux-section-tight">
     <div class="container">
 
       <!-- ICBDS 2026 Milestone Ribbon -->
@@ -115,7 +211,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
             5th IEEE ICBDS 2026 Milestone Timeline &bull; Pune
           </div>
-          <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm" style="background: rgba(0, 180, 216, 0.2); border: 1px solid rgba(0, 180, 216, 0.6); color: #fff;">
+          <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm ux-btn-ghost-cyan">
             Conf Record #71591 &rarr;
           </a>
         </div>
@@ -168,7 +264,7 @@
             <article class="ux-card-modern" id="icbds">
               <div class="ux-card-header-row">
                 <span class="ux-tag cyan">IEEE Record #71591</span>
-                <span class="news-date" style="font-size:0.75rem">Oct 23–25, 2026</span>
+                <span class="news-date ux-fs-sm">Oct 23–25, 2026</span>
               </div>
               <h2 class="ux-card-title">5th IEEE ICBDS 2026</h2>
               <p class="ux-card-desc">
@@ -195,7 +291,7 @@
             <article class="ux-card-modern" id="iccubea">
               <div class="ux-card-header-row">
                 <span class="ux-tag gold">IEEE Record #69821</span>
-                <span class="news-date" style="font-size:0.75rem">Aug 21–22, 2026</span>
+                <span class="news-date ux-fs-sm">Aug 21–22, 2026</span>
               </div>
               <h2 class="ux-card-title">10th IEEE ICCUBEA 2026</h2>
               <p class="ux-card-desc">
@@ -222,7 +318,7 @@
             <article class="ux-card-modern" id="icdlt">
               <div class="ux-card-header-row">
                 <span class="ux-tag green">200+ Attendees</span>
-                <span class="news-date" style="font-size:0.75rem">Nov 5–7, 2025</span>
+                <span class="news-date ux-fs-sm">Nov 5–7, 2025</span>
               </div>
               <h2 class="ux-card-title">IEEE ICDLT 2025</h2>
               <p class="ux-card-desc">
@@ -266,7 +362,7 @@
             <div class="ux-card-modern ux-filterable-card" data-category="india">
               <div class="ux-card-header-row">
                 <span class="ux-tag cyan">IIT Bombay</span>
-                <span class="news-date" style="font-size:0.75rem">Dec 4–6, 2025</span>
+                <span class="news-date ux-fs-sm">Dec 4–6, 2025</span>
               </div>
               <h3 class="ux-card-title">Blockchain Kaigi 2025</h3>
               <p class="ux-card-desc">IEEE BCTC Knowledge Partner event at IIT Bombay covering research, industry panels, and student workshops.</p>
@@ -278,7 +374,7 @@
             <div class="ux-card-modern ux-filterable-card" data-category="india">
               <div class="ux-card-header-row">
                 <span class="ux-tag gold">IIT Kharagpur</span>
-                <span class="news-date" style="font-size:0.75rem">Jan 17–18, 2026</span>
+                <span class="news-date ux-fs-sm">Jan 17–18, 2026</span>
               </div>
               <h3 class="ux-card-title">East India Blockchain Summit 2.0</h3>
               <p class="ux-card-desc">IEEE BCTC Knowledge Partner summit at IIT Kharagpur focusing on blockchain adoption in eastern India.</p>
@@ -290,7 +386,7 @@
             <div class="ux-card-modern ux-filterable-card" data-category="international">
               <div class="ux-card-header-row">
                 <span class="ux-tag green">IEEE ComSoc</span>
-                <span class="news-date" style="font-size:0.75rem">June 1–5, 2026</span>
+                <span class="news-date ux-fs-sm">June 1–5, 2026</span>
               </div>
               <h3 class="ux-card-title">IEEE ICBC 2026 — Brisbane</h3>
               <p class="ux-card-desc">IEEE International Conference on Blockchain and Cryptocurrency, hosted in Brisbane, Australia.</p>
@@ -302,7 +398,7 @@
             <div class="ux-card-modern ux-filterable-card" data-category="international">
               <div class="ux-card-header-row">
                 <span class="ux-tag cyan">BCTC Flagship</span>
-                <span class="news-date" style="font-size:0.75rem">Dec 3–5, 2026</span>
+                <span class="news-date ux-fs-sm">Dec 3–5, 2026</span>
               </div>
               <h3 class="ux-card-title">IEEE ICDLT 2026 — Portugal</h3>
               <p class="ux-card-desc">IEEE BCTC flagship ecosystem conference on Distributed Ledger Technologies hosted in Alcobaça, Portugal.</p>
@@ -315,12 +411,12 @@
 
         <!-- Tab 3: Calendars -->
         <div class="ux-tab-pane" id="tab-calendar" role="tabpanel">
-          <div class="ux-card-modern" style="text-align:center; padding: 2.5rem 1.5rem;">
-            <h3 class="ux-card-title" style="font-size: 1.35rem; margin-bottom: 0.75rem;">Official IEEE Blockchain Global Calendars</h3>
-            <p class="ux-card-desc" style="max-width: 600px; margin: 0 auto 1.5rem auto;">
+          <div class="ux-card-modern ux-text-center ux-pad-lg">
+            <h3 class="ux-card-title ux-title-md ux-mb-sm">Official IEEE Blockchain Global Calendars</h3>
+            <p class="ux-card-desc ux-max-600 ux-mx-auto ux-mb-md">
               Stay synchronized with IEEE Blockchain Technical Community (BCTC) events, symposia, and committee meetings across all global regions.
             </p>
-            <div class="btn-group" style="justify-content:center;">
+            <div class="btn-group ux-justify-center">
               <a href="https://blockchain.ieee.org/events/" target="_blank" rel="noopener" class="btn-primary">BCTC Global Calendar &rarr;</a>
               <a href="https://events.vtools.ieee.org/tego_/event/search?q=blockchain" target="_blank" rel="noopener" class="btn-secondary btn-outline">IEEE vTools Search</a>
             </div>

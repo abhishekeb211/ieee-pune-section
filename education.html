@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mega-menu.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/compact-ux.css">
 </head>
 <body>
 
@@ -154,94 +155,85 @@
     </div>
   </section>
 
+
   <!-- Main Content -->
-  <main class="section-activities section-alt">
+  <main class="section-padded">
     <div class="container">
-      
-      <div class="tracks-grid">
-        
-        <!-- Edu 1: FDPs -->
-        <article class="track-card">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
-          </div>
-          <h2 class="track-card-title">Faculty Development Programs (FDP)</h2>
-          <p class="track-card-desc">Equipping engineering faculty across Pune and Maharashtra with curriculum frameworks in distributed ledger technologies, consensus models, smart contract security, and IEEE standards integration.</p>
-          <div class="track-card-examples">
-            <strong>Key Elements:</strong> Syllabus design, research methodologies, IEEE Xplore publishing, hands-on lab exercises
-          </div>
-        </article>
+      <div class="ux-tabs-wrapper">
+        <div class="ux-tab-nav" role="tablist">
+          <button type="button" class="ux-tab-btn active" data-tab="bootcamps" role="tab" aria-selected="true">Bootcamps</button>
+          <button type="button" class="ux-tab-btn" data-tab="fdp" role="tab" aria-selected="false">FDP</button>
+          <button type="button" class="ux-tab-btn" data-tab="certifications" role="tab" aria-selected="false">Certifications</button>
+        </div>
 
-        <!-- Edu 2: MMCOE Blockchain Lab -->
-        <article class="track-card">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </div>
-          <h2 class="track-card-title">MMCOE Blockchain Technology Lab</h2>
-          <p class="track-card-desc">Centre of Excellence established at Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune, in collaboration with the IEEE Pune Blockchain Group for hands-on student projects and testnet deployment.</p>
-          <div class="track-card-examples">
-            <strong>Key Elements:</strong> Smart contract prototyping, node setup, enterprise ledger testbeds, research fellowships
-          </div>
-        </article>
+        <!-- Bootcamps -->
+        <div class="ux-tab-pane active" id="bootcamps" role="tabpanel">
+          <div class="ux-grid-compact">
+            <article class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag cyan">Lab / CoE</span></div>
+              <h2 class="ux-card-title">MMCOE Blockchain Technology Lab</h2>
+              <p class="ux-card-desc">Centre of Excellence at Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune, with IEEE Pune Blockchain Group — student projects and testnet deployment.</p>
+              <div class="ux-chip-row">
+                <span class="ux-tag">Smart contract prototyping</span>
+                <span class="ux-tag">Node setup</span>
+                <span class="ux-tag">Enterprise ledger testbeds</span>
+                <span class="ux-tag">Research fellowships</span>
+              </div>
+            </article>
 
-        <!-- Edu 3: BCTC Education & eLearning -->
-        <article class="track-card">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <article class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag gold">Symposium Materials</span></div>
+              <h2 class="ux-card-title">IEEE Pune Blockchain Symposium 2024</h2>
+              <ul class="ux-bullet-list">
+                <li>2 February 2024 &bull; PCCOE, Pune</li>
+                <li>115 total participants</li>
+              </ul>
+              <div class="ux-card-footer">
+                <a href="https://blockchain.ieee.org/images/files/pdf/2024/india/pune/2_Ramesh_Ramadoss.pdf" target="_blank" rel="noopener" class="btn-primary btn-sm">Ramadoss PDF</a>
+                <a href="https://blockchain.ieee.org/images/files/pdf/2024/india/pune/5_Dr_BK_Murthy.pdf" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">Murthy PDF</a>
+              </div>
+            </article>
           </div>
-          <h2 class="track-card-title">IEEE BCTC Global Education</h2>
-          <p class="track-card-desc">eLearning courses, webinar archives, technical briefs, and continuing education modules with IEEE CEU/PDH credits offered through the IEEE Blockchain Technical Community and IEEE Learning Network.</p>
-          <div class="track-card-examples">
-            <strong>Key Elements:</strong> <a href="https://blockchain.ieee.org/education" target="_blank" rel="noopener">blockchain.ieee.org/education</a> &bull; Technical Briefs 2025 &bull; Certification
-          </div>
-        </article>
+        </div>
 
+        <!-- FDP -->
+        <div class="ux-tab-pane" id="fdp" role="tabpanel">
+          <div class="ux-grid-compact">
+            <article class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag cyan">Faculty Development</span></div>
+              <h2 class="ux-card-title">Faculty Development Programs (FDP)</h2>
+              <p class="ux-card-desc">Equipping engineering faculty across Pune and Maharashtra with curriculum frameworks in DLTs, consensus models, smart contract security, and IEEE standards integration.</p>
+              <div class="ux-chip-row">
+                <span class="ux-tag gold">Syllabus design</span>
+                <span class="ux-tag">Research methodologies</span>
+                <span class="ux-tag">IEEE Xplore publishing</span>
+                <span class="ux-tag green">Hands-on labs</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="ux-tab-pane" id="certifications" role="tabpanel">
+          <div class="ux-grid-compact">
+            <article class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag green">IEEE BCTC</span></div>
+              <h2 class="ux-card-title">IEEE BCTC Global Education</h2>
+              <p class="ux-card-desc">eLearning courses, webinar archives, technical briefs, and continuing education modules with IEEE CEU/PDH credits via BCTC and the IEEE Learning Network.</p>
+              <div class="ux-chip-row">
+                <span class="ux-tag cyan">Technical Briefs 2025</span>
+                <span class="ux-tag">Certification</span>
+                <span class="ux-tag gold">CEU / PDH</span>
+              </div>
+              <div class="ux-card-footer">
+                <a href="https://blockchain.ieee.org/education" target="_blank" rel="noopener" class="btn-primary btn-sm">BCTC Education Portal</a>
+                <a href="resources.html" class="btn-secondary btn-sm btn-outline">Resource Directory</a>
+                <a href="standards.html" class="btn-secondary btn-sm btn-outline">IEEE Standards</a>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
-
-      <!-- Symposium Presentations Downloads -->
-      <section class="committee-group-section" style="margin-top: 2.5rem;">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          IEEE Pune Blockchain Symposium 2024 — Presentation Materials
-        </h2>
-        <p class="content-card-text" style="margin-bottom: 1.5rem;">
-          Download tutorial presentations from the IEEE Pune Blockchain Symposium held on 2 February 2024 at PCCOE, Pune (115 total participants).
-        </p>
-
-        <div class="news-grid">
-          <article class="news-card">
-            <div class="news-card-body">
-              <span class="news-date">Speaker: Dr. Ramesh Ramadoss &bull; Chair, IEEE BCTC</span>
-              <h3 class="news-card-title">Blockchain Landscape Overview</h3>
-              <p class="news-card-text">Comprehensive slide deck covering global blockchain developments, IEEE BCTC standards initiatives, enterprise adoption trends, and academic research pathways.</p>
-              <a href="https://blockchain.ieee.org/images/files/pdf/2024/india/pune/2_Ramesh_Ramadoss.pdf" target="_blank" rel="noopener" class="news-card-link">Download PDF Presentation &rsaquo;</a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <div class="news-card-body">
-              <span class="news-date">Speaker: Dr. B. K. Murthy &bull; Distinguished Researcher</span>
-              <h3 class="news-card-title">NFT and Tokenization of Real-World Assets</h3>
-              <p class="news-card-text">In-depth technical presentation on non-fungible tokens, digital asset classification, tokenization architectures, and regulatory considerations in India.</p>
-              <a href="https://blockchain.ieee.org/images/files/pdf/2024/india/pune/5_Dr_BK_Murthy.pdf" target="_blank" rel="noopener" class="news-card-link">Download PDF Presentation &rsaquo;</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Educational Portal CTA -->
-      <section class="proposal-card align-left" style="margin-top: 2rem;">
-        <h2 class="proposal-card-title">Access Global IEEE Blockchain Learning Resources</h2>
-        <p class="content-card-text">
-          Explore the full suite of educational materials, technical briefs, podcasts, and standards documentation provided by the IEEE Blockchain Technical Community.
-        </p>
-        <div class="btn-group">
-          <a href="https://blockchain.ieee.org/education" target="_blank" rel="noopener" class="btn-primary">BCTC Education Portal &rarr;</a>
-          <a href="resources.html" class="btn-secondary btn-outline">Full Resource Directory</a>
-          <a href="standards.html" class="btn-secondary btn-outline">IEEE Standards</a>
-        </div>
-      </section>
-
     </div>
   </main>
 
@@ -311,5 +303,6 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/compact-ux.js"></script>
 </body>
 </html>

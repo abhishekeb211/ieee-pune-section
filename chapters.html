@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mega-menu.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/compact-ux.css">
 </head>
 <body>
 
@@ -155,96 +156,122 @@
   </section>
 
   <!-- Main Content -->
-  <main class="section-activities section-alt">
+  <main class="section-activities section-alt ux-section-tight">
     <div class="container">
-      
-      <div class="tracks-grid">
-        
-        <!-- Group 1: IEEE Pune Blockchain Group -->
-        <article class="track-card">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+
+      <div class="ux-filter-toolbar" data-filter-target="#chapters-grid .ux-filterable-card">
+        <div class="ux-filter-pills">
+          <button type="button" class="ux-filter-pill active" data-category="all">All</button>
+          <button type="button" class="ux-filter-pill" data-category="sigs">SIGs</button>
+          <button type="button" class="ux-filter-pill" data-category="chapters">Chapters</button>
+          <button type="button" class="ux-filter-pill" data-category="students">Student Branches</button>
+        </div>
+        <div class="ux-search-box">
+          <svg class="ux-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Search chapters, SIGs, branches..." aria-label="Filter chapters">
+        </div>
+      </div>
+
+      <div class="ux-grid-compact" id="chapters-grid">
+
+        <article class="ux-card-modern ux-filterable-card" data-category="sigs">
+          <div class="ux-card-header-row">
+            <span class="ux-tag cyan">SIG</span>
           </div>
-          <h2 class="track-card-title">IEEE Pune Blockchain Group</h2>
-          <p class="track-card-desc">Recognized local blockchain community under the IEEE Blockchain Technical Community (BCTC) in Region 10. Chaired by Dr. Sonali D. Patil, driving standards, symposia, and academic integration across Maharashtra.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> BCTC Region 10 coordination, IEEE standards adoption, Pune Blockchain Symposium
+          <h2 class="ux-card-title">IEEE Pune Blockchain Group</h2>
+          <p class="ux-card-desc">BCTC Region 10 local group. Chair: Dr. Sonali D. Patil.</p>
+          <ul class="ux-bullet-list">
+            <li>BCTC Region 10 coordination</li>
+            <li>IEEE standards adoption</li>
+            <li>Pune Blockchain Symposium</li>
+          </ul>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="chapters">
+          <div class="ux-card-header-row">
+            <span class="ux-tag gold">Chapter</span>
+          </div>
+          <h2 class="ux-card-title">IEEE Computer Society Pune Chapter</h2>
+          <p class="ux-card-desc">Chair: Dr. Rajesh Ingle. Hosts IEEE ICBDS; collaborates with BCTC.</p>
+          <ul class="ux-bullet-list">
+            <li>IEEE ICBDS 2026</li>
+            <li>IEEE Xplore / Scopus proceedings</li>
+            <li>Technical tutorials</li>
+          </ul>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="sigs">
+          <div class="ux-card-header-row">
+            <span class="ux-tag cyan">CoE / SIG</span>
+          </div>
+          <h2 class="ux-card-title">MMCOE Blockchain Technology Lab</h2>
+          <p class="ux-card-desc">Centre of Excellence at MMCOE Pune with IEEE Pune Blockchain Group.</p>
+          <ul class="ux-bullet-list">
+            <li>Applied blockchain research</li>
+            <li>Smart contract testing</li>
+            <li>Institutional testnets</li>
+          </ul>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="students">
+          <div class="ux-card-header-row">
+            <span class="ux-tag green">Student Branches</span>
+          </div>
+          <h2 class="ux-card-title">24+ Pune Student Branches (SAC)</h2>
+          <p class="ux-card-desc">Network across PCCOE, VIIT, MMCOE, COEP, MIT, PICT, and more.</p>
+          <ul class="ux-bullet-list">
+            <li>Student hackathons</li>
+            <li>Web3 workshops</li>
+            <li>IEEE student paper tracks</li>
+          </ul>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="sigs">
+          <div class="ux-card-header-row">
+            <span class="ux-tag cyan">India SIGs</span>
+          </div>
+          <h2 class="ux-card-title">10 India-Based Blockchain Groups</h2>
+          <p class="ux-card-desc">BCTC Region 10 groups collaborating on national forums and summits.</p>
+          <div class="ux-chip-row">
+            <span class="brand-badge">Pune</span>
+            <span class="brand-badge">Bangalore</span>
+            <span class="brand-badge">Chennai</span>
+            <span class="brand-badge">Delhi</span>
+            <span class="brand-badge">Gujarat</span>
+            <span class="brand-badge">Hyderabad</span>
+            <span class="brand-badge">Kerala</span>
+            <span class="brand-badge">Maharashtra</span>
+            <span class="brand-badge">Raipur</span>
+            <span class="brand-badge">CU Kengeri</span>
+          </div>
+          <div class="ux-card-footer">
+            <a href="india-ecosystem.html" class="btn-primary btn-sm">India Ecosystem &rarr;</a>
           </div>
         </article>
 
-        <!-- Group 2: IEEE Computer Society Pune Chapter -->
-        <article class="track-card">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        <article class="ux-card-modern ux-filterable-card" data-category="students">
+          <div class="ux-card-header-row">
+            <span class="ux-tag green">IIT Students</span>
           </div>
-          <h2 class="track-card-title">IEEE Computer Society Pune Chapter</h2>
-          <p class="track-card-desc">Chaired by Dr. Rajesh Ingle, this flagship chapter organizes the annual IEEE ICBDS conference series and collaborates closely with BCTC on blockchain research and publications.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> IEEE ICBDS 2026, IEEE Xplore proceedings, Scopus indexing, technical tutorials
-          </div>
-        </article>
-
-        <!-- Group 3: MMCOE Blockchain Technology Lab -->
-        <article class="track-card">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </div>
-          <h2 class="track-card-title">MMCOE Blockchain Technology Lab</h2>
-          <p class="track-card-desc">Centre of Excellence established at Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune, in collaboration with the IEEE Pune Blockchain Group for research, smart contract testing, and node deployment.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> Applied blockchain research, smart contract testing, institutional testnets
-          </div>
-        </article>
-
-        <!-- Group 4: 24+ Pune Student Branches -->
-        <article class="track-card">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-          </div>
-          <h2 class="track-card-title">24+ Pune Student Branches (SAC)</h2>
-          <p class="track-card-desc">Student branch network across PCCOE, VIIT, MMCOE, COEP, MIT, PICT, and other Pune engineering institutions driving blockchain bootcamps, workshops, and student paper tracks.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> Student hackathons, Web3 workshops, IEEE student paper tracks
-          </div>
-        </article>
-
-        <!-- Group 5: 10 India-Based Blockchain Groups -->
-        <article class="track-card">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          </div>
-          <h2 class="track-card-title">10 India-Based Blockchain Groups</h2>
-          <p class="track-card-desc">IEEE BCTC Region 10 groups across Pune, Bangalore, Chennai, Delhi, Gujarat, Hyderabad, Kerala, Maharashtra, Raipur, and CU Kengeri collaborating on national initiatives and forums.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> IEEE India Blockchain Forums, cross-section collaboration, national summits
-          </div>
-        </article>
-
-        <!-- Group 6: IIT Student Blockchain Groups -->
-        <article class="track-card">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-          </div>
-          <h2 class="track-card-title">IIT Student Blockchain Communities</h2>
-          <p class="track-card-desc">Student blockchain organizations at India's premier technology institutes — IIT Bombay (Blockchain Kaigi), IIT Kharagpur (East India Summit), IIT Delhi, IIT Madras, and IIT Roorkee.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> Blockchain Kaigi 2025, East India Blockchain Summit 2.0, collegiate research
-          </div>
+          <h2 class="ux-card-title">IIT Student Blockchain Communities</h2>
+          <p class="ux-card-desc">Student orgs at IIT Bombay, Delhi, Kharagpur, Madras, and Roorkee.</p>
+          <ul class="ux-bullet-list">
+            <li>Blockchain Kaigi 2025 (IIT Bombay)</li>
+            <li>East India Blockchain Summit 2.0 (IIT Kharagpur)</li>
+            <li>Collegiate research networks</li>
+          </ul>
         </article>
 
       </div>
 
-      <!-- Quick Link to India Ecosystem -->
-      <section class="proposal-card align-left" style="margin-top: 2rem;">
-        <h2 class="proposal-card-title">Explore the Full India Blockchain Ecosystem</h2>
-        <p class="content-card-text">
-          For detailed listings of all 10 India-based IEEE Blockchain groups, student organizations, India Blockchain Forums (2023–2024), and event timelines, visit the dedicated India Ecosystem page.
-        </p>
-        <div class="btn-group">
-          <a href="india-ecosystem.html" class="btn-primary">India Blockchain Ecosystem &rarr;</a>
-          <a href="about.html" class="btn-secondary btn-outline">About Pune Section</a>
+      <div class="ux-card-modern ux-mb-md">
+        <h2 class="ux-card-title">Explore the Full India Blockchain Ecosystem</h2>
+        <p class="ux-card-desc">All 10 India groups, IIT student orgs, India Blockchain Forums (2023–2024), and event timelines.</p>
+        <div class="ux-chip-row">
+          <a href="india-ecosystem.html" class="btn-primary btn-sm">India Blockchain Ecosystem &rarr;</a>
+          <a href="about.html" class="btn-secondary btn-sm btn-outline">About Pune Section</a>
         </div>
-      </section>
+      </div>
 
     </div>
   </main>
@@ -314,5 +341,6 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/compact-ux.js"></script>
 </body>
 </html>

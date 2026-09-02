@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mega-menu.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/compact-ux.css">
 </head>
 <body>
 
@@ -154,171 +155,170 @@
     </div>
   </section>
 
+
   <!-- Main Content -->
-  <main class="section-activities section-alt">
+  <main class="section-padded">
     <div class="container">
-      
-      <div class="speakers-grid">
-        
-        <!-- Speaker 1: Dr. Ramesh Ramadoss -->
-        <article class="speaker-card">
-          <div class="speaker-card-header">
-            <div class="committee-avatar speaker-avatar-margin" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));">RR</div>
-            <h2 class="speaker-name">Dr. Ramesh Ramadoss</h2>
-            <span class="brand-badge speaker-badge gold">Keynote Speaker</span>
+      <div class="ux-filter-toolbar" data-filter-target="#speakers-grid .ux-filterable-card">
+        <div class="ux-filter-pills">
+          <button type="button" class="ux-filter-pill active" data-category="all">All</button>
+          <button type="button" class="ux-filter-pill" data-category="keynote">Keynote</button>
+          <button type="button" class="ux-filter-pill" data-category="panel">Panel</button>
+          <button type="button" class="ux-filter-pill" data-category="workshop">Workshop</button>
+        </div>
+        <div class="ux-search-box">
+          <svg class="ux-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Search speakers, roles, topics..." aria-label="Search speakers">
+        </div>
+      </div>
+
+      <div class="ux-grid-compact" id="speakers-grid">
+
+        <article class="ux-card-modern ux-filterable-card" data-category="keynote">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">RR</div>
+            <span class="ux-tag gold">Keynote</span>
           </div>
-          <div class="speaker-card-body">
-            <p class="content-card-info">
-              <strong>Affiliation:</strong> Chair, IEEE Blockchain Technical Community (BCTC)
-            </p>
-            <div class="speaker-card-topic">
-              <strong>Keynote Topic:</strong> Global Blockchain Landscape &amp; IEEE Technical Community Initiatives
+          <h2 class="ux-card-title">Dr. Ramesh Ramadoss</h2>
+          <p class="ux-card-desc"><strong>Chair, IEEE Blockchain Technical Community (BCTC)</strong></p>
+          <div class="ux-chip-row">
+            <span class="ux-tag cyan">Global Landscape</span>
+            <span class="ux-tag">IEEE BCTC</span>
+          </div>
+          <div class="ux-expandable">
+            <button type="button" class="ux-expand-trigger" aria-expanded="false">
+              <span>Topic &amp; materials</span>
+              <span class="ux-expand-icon">&#9662;</span>
+            </button>
+            <div class="ux-expand-content">
+              Keynote: Global Blockchain Landscape &amp; IEEE Technical Community Initiatives
             </div>
-            <div class="mt-1">
-              <a href="https://blockchain.ieee.org/images/files/pdf/2024/india/pune/2_Ramesh_Ramadoss.pdf" target="_blank" rel="noopener" class="news-card-link">Download Presentation PDF &rsaquo;</a>
-            </div>
+          </div>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/images/files/pdf/2024/india/pune/2_Ramesh_Ramadoss.pdf" target="_blank" rel="noopener" class="btn-primary btn-sm">Presentation PDF</a>
           </div>
         </article>
 
-        <!-- Speaker 2: Dr. B. K. Murthy -->
-        <article class="speaker-card">
-          <div class="speaker-card-header">
-            <div class="committee-avatar speaker-avatar-margin" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));">BM</div>
-            <h2 class="speaker-name">Dr. B. K. Murthy</h2>
-            <span class="brand-badge speaker-badge gold">Keynote Speaker</span>
+        <article class="ux-card-modern ux-filterable-card" data-category="keynote">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">BM</div>
+            <span class="ux-tag gold">Keynote</span>
           </div>
-          <div class="speaker-card-body">
-            <p class="content-card-info">
-              <strong>Affiliation:</strong> Distinguished Blockchain Researcher &amp; Advisor &bull; Former MeitY
-            </p>
-            <div class="speaker-card-topic">
-              <strong>Keynote Topic:</strong> NFT and Tokenization of Real-World Assets (RWA)
+          <h2 class="ux-card-title">Dr. B. K. Murthy</h2>
+          <p class="ux-card-desc"><strong>Distinguished Blockchain Researcher &amp; Advisor</strong> &bull; Former MeitY</p>
+          <div class="ux-chip-row">
+            <span class="ux-tag cyan">NFT / RWA</span>
+            <span class="ux-tag">Tokenization</span>
+          </div>
+          <div class="ux-expandable">
+            <button type="button" class="ux-expand-trigger" aria-expanded="false">
+              <span>Topic &amp; materials</span>
+              <span class="ux-expand-icon">&#9662;</span>
+            </button>
+            <div class="ux-expand-content">
+              Keynote: NFT and Tokenization of Real-World Assets (RWA)
             </div>
-            <div class="mt-1">
-              <a href="https://blockchain.ieee.org/images/files/pdf/2024/india/pune/5_Dr_BK_Murthy.pdf" target="_blank" rel="noopener" class="news-card-link">Download Presentation PDF &rsaquo;</a>
-            </div>
+          </div>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/images/files/pdf/2024/india/pune/5_Dr_BK_Murthy.pdf" target="_blank" rel="noopener" class="btn-primary btn-sm">Presentation PDF</a>
           </div>
         </article>
 
-        <!-- Speaker 3: Dr. Rajesh Ingle -->
-        <article class="speaker-card">
-          <div class="speaker-card-header">
-            <div class="committee-avatar speaker-avatar-margin">RI</div>
-            <h2 class="speaker-name">Dr. Rajesh Ingle</h2>
-            <span class="brand-badge speaker-badge cyan">General Chair</span>
+        <article class="ux-card-modern ux-filterable-card" data-category="panel">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar">RI</div>
+            <span class="ux-tag cyan">Panel</span>
           </div>
-          <div class="speaker-card-body">
-            <p class="content-card-info">
-              <strong>Affiliation:</strong> General Chair, IEEE ICBDS 2026 &bull; Chair, IEEE CS Pune Chapter
-            </p>
-            <div class="speaker-card-topic">
-              <strong>Topic:</strong> Distributed Systems Security, Consensus Protocols &amp; ICBDS Research Directions
-            </div>
+          <h2 class="ux-card-title">Dr. Rajesh Ingle</h2>
+          <p class="ux-card-desc"><strong>General Chair, IEEE ICBDS 2026</strong> &bull; Chair, IEEE CS Pune Chapter</p>
+          <div class="ux-chip-row">
+            <span class="ux-tag">Distributed Systems Security</span>
+            <span class="ux-tag">Consensus</span>
           </div>
+          <p class="ux-card-desc ux-fs-sm">Topic: Distributed Systems Security, Consensus Protocols &amp; ICBDS Research Directions</p>
         </article>
 
-        <!-- Speaker 4: Dr. Sonali D. Patil -->
-        <article class="speaker-card">
-          <div class="speaker-card-header">
-            <div class="committee-avatar speaker-avatar-margin">SP</div>
-            <h2 class="speaker-name">Dr. Sonali D. Patil</h2>
-            <span class="brand-badge speaker-badge accent">Symposium Chair</span>
+        <article class="ux-card-modern ux-filterable-card" data-category="panel">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar">SP</div>
+            <span class="ux-tag cyan">Panel</span>
           </div>
-          <div class="speaker-card-body">
-            <p class="content-card-info">
-              <strong>Affiliation:</strong> Chair, IEEE Pune Blockchain Group &bull; Region 10 Coordinator &bull; PCCOE Pune
-            </p>
-            <div class="speaker-card-topic">
-              <strong>Topic:</strong> IEEE Blockchain Standards, Academic Curricula &amp; Regional Ecosystem
-            </div>
+          <h2 class="ux-card-title">Dr. Sonali D. Patil</h2>
+          <p class="ux-card-desc"><strong>Chair, IEEE Pune Blockchain Group</strong> &bull; Region 10 Coordinator &bull; PCCOE Pune</p>
+          <div class="ux-chip-row">
+            <span class="ux-tag gold">Standards</span>
+            <span class="ux-tag">Curricula</span>
           </div>
+          <p class="ux-card-desc ux-fs-sm">Topic: IEEE Blockchain Standards, Academic Curricula &amp; Regional Ecosystem</p>
         </article>
 
-        <!-- Speaker 5: Dr. Parikshit Mahalle -->
-        <article class="speaker-card">
-          <div class="speaker-card-header">
-            <div class="committee-avatar speaker-avatar-margin">PM</div>
-            <h2 class="speaker-name">Dr. Parikshit Mahalle</h2>
-            <span class="brand-badge speaker-badge cyan">General Co-Chair</span>
+        <article class="ux-card-modern ux-filterable-card" data-category="panel">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar">PM</div>
+            <span class="ux-tag cyan">Panel</span>
           </div>
-          <div class="speaker-card-body">
-            <p class="content-card-info">
-              <strong>Affiliation:</strong> General Co-Chair, IEEE ICBDS 2026 &bull; Head AI &amp; DS, VIIT Pune
-            </p>
-            <div class="speaker-card-topic">
-              <strong>Topic:</strong> AI and Blockchain Convergence: Verifiable Computation &amp; Trust Frameworks
-            </div>
+          <h2 class="ux-card-title">Dr. Parikshit Mahalle</h2>
+          <p class="ux-card-desc"><strong>General Co-Chair, IEEE ICBDS 2026</strong> &bull; Head AI &amp; DS, VIIT Pune</p>
+          <div class="ux-chip-row">
+            <span class="ux-tag green">AI + Blockchain</span>
+            <span class="ux-tag">Trust</span>
           </div>
+          <p class="ux-card-desc ux-fs-sm">Topic: AI and Blockchain Convergence — Verifiable Computation &amp; Trust Frameworks</p>
         </article>
 
-        <!-- Speaker 6: Dr. Vivek Deshpande -->
-        <article class="speaker-card">
-          <div class="speaker-card-header">
-            <div class="committee-avatar speaker-avatar-margin">VD</div>
-            <h2 class="speaker-name">Dr. Vivek Deshpande</h2>
-            <span class="brand-badge speaker-badge cyan">General Chair</span>
+        <article class="ux-card-modern ux-filterable-card" data-category="panel">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar">VD</div>
+            <span class="ux-tag cyan">Panel</span>
           </div>
-          <div class="speaker-card-body">
-            <p class="content-card-info">
-              <strong>Affiliation:</strong> General Chair, IEEE ICBDS 2026 &bull; IEEE Computer Society Pune Chapter
-            </p>
-            <div class="speaker-card-topic">
-              <strong>Topic:</strong> Distributed Ledger Architectures &amp; Scalability Frameworks
-            </div>
+          <h2 class="ux-card-title">Dr. Vivek Deshpande</h2>
+          <p class="ux-card-desc"><strong>General Chair, IEEE ICBDS 2026</strong> &bull; IEEE Computer Society Pune Chapter</p>
+          <div class="ux-chip-row">
+            <span class="ux-tag">DLT Architectures</span>
+            <span class="ux-tag">Scalability</span>
           </div>
+          <p class="ux-card-desc ux-fs-sm">Topic: Distributed Ledger Architectures &amp; Scalability Frameworks</p>
         </article>
 
-        <!-- Speaker 7: Dr. Rohini Pise -->
-        <article class="speaker-card">
-          <div class="speaker-card-header">
-            <div class="committee-avatar speaker-avatar-margin">RP</div>
-            <h2 class="speaker-name">Dr. Rohini Pise</h2>
-            <span class="brand-badge speaker-badge plain">Track Chair</span>
+        <article class="ux-card-modern ux-filterable-card" data-category="workshop">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar">RP</div>
+            <span class="ux-tag green">Workshop</span>
           </div>
-          <div class="speaker-card-body">
-            <p class="content-card-info">
-              <strong>Affiliation:</strong> Track Chair (Track 10: Blockchain), IEEE ICCUBEA &bull; PCCOE Pune
-            </p>
-            <div class="speaker-card-topic">
-              <strong>Topic:</strong> Smart Contract Vulnerability Detection &amp; Automated Auditing
-            </div>
+          <h2 class="ux-card-title">Dr. Rohini Pise</h2>
+          <p class="ux-card-desc"><strong>Track Chair (Track 10: Blockchain), IEEE ICCUBEA</strong> &bull; PCCOE Pune</p>
+          <div class="ux-chip-row">
+            <span class="ux-tag cyan">Smart Contracts</span>
+            <span class="ux-tag">Auditing</span>
           </div>
+          <p class="ux-card-desc ux-fs-sm">Topic: Smart Contract Vulnerability Detection &amp; Automated Auditing</p>
         </article>
 
-        <!-- Speaker 8: Dr. Asmita Manna -->
-        <article class="speaker-card">
-          <div class="speaker-card-header">
-            <div class="committee-avatar speaker-avatar-margin">AM</div>
-            <h2 class="speaker-name">Dr. Asmita Manna</h2>
-            <span class="brand-badge speaker-badge plain">Track Co-Chair</span>
+        <article class="ux-card-modern ux-filterable-card" data-category="workshop">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar">AM</div>
+            <span class="ux-tag green">Workshop</span>
           </div>
-          <div class="speaker-card-body">
-            <p class="content-card-info">
-              <strong>Affiliation:</strong> Track Co-Chair, IEEE ICCUBEA Track 10 &bull; PCCOE Pune
-            </p>
-            <div class="speaker-card-topic">
-              <strong>Topic:</strong> Blockchain Applications in Cybersecurity &amp; Privacy-Preserving Computing
-            </div>
+          <h2 class="ux-card-title">Dr. Asmita Manna</h2>
+          <p class="ux-card-desc"><strong>Track Co-Chair, IEEE ICCUBEA Track 10</strong> &bull; PCCOE Pune</p>
+          <div class="ux-chip-row">
+            <span class="ux-tag">Cybersecurity</span>
+            <span class="ux-tag">Privacy</span>
           </div>
+          <p class="ux-card-desc ux-fs-sm">Topic: Blockchain Applications in Cybersecurity &amp; Privacy-Preserving Computing</p>
         </article>
 
       </div>
 
-      <!-- Speaker Nomination CTA -->
-      <section class="proposal-card">
-        <h2 class="proposal-card-title">
-          Interested in Delivering a Keynote or Leading a Workshop at ICBDS 2026?
-        </h2>
-        <p class="proposal-card-text">
-          We welcome proposals from distinguished academic researchers, core protocol developers, and blockchain security practitioners for keynote presentations, tutorial sessions, and panel discussions.
-        </p>
-        <div class="btn-group">
-          <a href="contact.html" class="btn-primary">Submit a Speaker Proposal &rarr;</a>
-          <a href="events.html#icbds" class="btn-secondary btn-outline">ICBDS 2026 Details</a>
-          <a href="proceedings.html" class="btn-secondary btn-outline">View Past Proceedings</a>
+      <div class="ux-card-modern ux-mb-md ux-text-center">
+        <h2 class="ux-card-title">Keynote or Workshop at ICBDS 2026?</h2>
+        <p class="ux-card-desc">Proposals welcome from academic researchers, protocol developers, and blockchain security practitioners for keynotes, tutorials, and panels.</p>
+        <div class="ux-card-footer ux-justify-center ux-footer-flush">
+          <a href="contact.html" class="btn-primary btn-sm">Submit a Speaker Proposal</a>
+          <a href="events.html#icbds" class="btn-secondary btn-sm btn-outline">ICBDS 2026 Details</a>
+          <a href="proceedings.html" class="btn-secondary btn-sm btn-outline">Past Proceedings</a>
         </div>
-      </section>
-
+      </div>
     </div>
   </main>
 
@@ -390,5 +390,6 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/compact-ux.js"></script>
 </body>
 </html>

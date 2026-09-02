@@ -8,34 +8,34 @@
   --ux-glass-bg: rgba(255, 255, 255, 0.82);
   --ux-glass-dark: rgba(10, 25, 47, 0.88);
   --ux-glass-border: rgba(226, 232, 240, 0.8);
-  --ux-card-shadow: 0 10px 30px -5px rgba(0, 40, 85, 0.07), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
-  --ux-hover-shadow: 0 20px 40px -10px rgba(0, 102, 153, 0.18);
+  --ux-card-shadow: 0 2px 8px -2px rgba(0, 40, 85, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --ux-hover-shadow: 0 8px 18px -6px rgba(0, 102, 153, 0.18);
   --ux-accent-gradient: linear-gradient(135deg, #006699 0%, #00b4d8 100%);
   --ux-glow-cyan: 0 0 20px rgba(0, 180, 216, 0.25);
   --ux-radius-pill: 9999px;
-  --ux-radius-card: 14px;
+  --ux-radius-card: 12px;
 }
 
 /* ==========================================================================
    1. INTERACTIVE TAB SYSTEM (Eliminates Vertical Bloat)
    ========================================================================== */
 .ux-tabs-wrapper {
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-top: var(--space-4, 1rem);
+  margin-bottom: var(--space-6, 1.5rem);
 }
 
 .ux-tab-nav {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   background: var(--bg-secondary);
-  padding: 0.35rem;
+  padding: 0.3rem;
   border-radius: var(--ux-radius-pill);
   border: 1px solid var(--border-light);
   overflow-x: auto;
   scrollbar-width: none;
   max-width: fit-content;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto var(--space-5, 1.25rem) auto;
 }
 .ux-tab-nav::-webkit-scrollbar {
   display: none;
@@ -44,10 +44,10 @@
 .ux-tab-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.25rem;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
   font-family: var(--font-heading);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-muted);
   background: transparent;
@@ -92,6 +92,10 @@
   display: block;
 }
 
+.ux-tab-pane[hidden] {
+  display: none !important;
+}
+
 @keyframes uxTabFadeIn {
   from {
     opacity: 0;
@@ -104,20 +108,34 @@
 }
 
 /* ==========================================================================
-   2. COMPACT CARDS & GLASSMORPHIC CONTAINERS
+   2. UNIFIED COMPACT CARD SYSTEM
    ========================================================================== */
 .ux-grid-compact {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+  gap: var(--grid-gap, 1rem);
+}
+
+.ux-card-modern,
+.content-card,
+.info-card,
+.track-card,
+.committee-card,
+.speaker-card,
+.news-card,
+.proposal-card,
+.milestones-card,
+.milestones-panel,
+.resource-card,
+.timeline-card {
+  border-radius: var(--ux-radius-card);
+  box-shadow: var(--ux-card-shadow);
 }
 
 .ux-card-modern {
   background: var(--bg-primary);
   border: 1px solid var(--border-light);
-  border-radius: var(--ux-radius-card);
-  padding: 1.5rem;
-  box-shadow: var(--ux-card-shadow);
+  padding: var(--card-pad, 1.15rem);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
   display: flex;
   flex-direction: column;
@@ -138,7 +156,7 @@
 }
 
 .ux-card-modern:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: var(--ux-hover-shadow);
   border-color: rgba(0, 180, 216, 0.4);
 }
@@ -147,11 +165,72 @@
   opacity: 1;
 }
 
+.committee-avatar--primary {
+  background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue)) !important;
+}
+
+/* Utility helpers replacing common inline styles */
+.ux-mb-0 { margin-bottom: 0 !important; }
+.ux-mt-auto { margin-top: auto; }
+.ux-max-fit { max-width: fit-content; }
+.ux-fs-sm { font-size: 0.75rem; }
+.ux-fs-xs { font-size: 0.7rem; }
+.ux-title-md { font-size: 1.2rem !important; }
+.ux-gap-sm { gap: var(--grid-gap, 1rem) !important; }
+.ux-align-stretch { align-items: stretch !important; }
+.ux-section-tight { padding-top: var(--section-y, 2rem) !important; padding-bottom: var(--section-y, 2rem) !important; }
+.ux-chip-cyan {
+  background: rgba(0, 180, 216, 0.12) !important;
+  color: #0077b6 !important;
+}
+
+.ux-btn-ghost-cyan {
+  background: rgba(0, 180, 216, 0.2) !important;
+  border: 1px solid rgba(0, 180, 216, 0.6) !important;
+  color: #fff !important;
+}
+
+.ux-text-center { text-align: center; }
+.ux-pad-lg { padding: 1.5rem !important; }
+.ux-mb-sm { margin-bottom: 0.75rem !important; }
+.ux-mb-md { margin-bottom: 1.25rem !important; }
+.ux-mx-auto { margin-left: auto; margin-right: auto; }
+.ux-max-600 { max-width: 600px; }
+.ux-justify-center { justify-content: center !important; }
+.ux-status-sm { font-size: 0.72rem !important; }
+.ux-mt-1 { margin-top: 1rem !important; }
+.ux-mt-2 { margin-top: 2rem !important; }
+.ux-w-full { max-width: 100% !important; width: 100%; }
+.ux-footer-flush { border-top: none !important; padding-top: 0 !important; }
+.ux-section-heading-gap { margin: 1.5rem 0 0.75rem !important; }
+
+.ux-filter-empty {
+  display: none;
+  text-align: center;
+  padding: var(--space-6, 1.5rem);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border: 1px dashed var(--border-light);
+  border-radius: var(--ux-radius-card);
+  background: var(--bg-secondary);
+}
+
+.ux-filter-empty.visible {
+  display: block;
+}
+
+.ux-filter-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
 .ux-card-header-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.55rem;
   gap: 0.5rem;
 }
 
@@ -185,18 +264,18 @@
 
 .ux-card-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--ieee-blue-deep);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   line-height: 1.35;
 }
 
 .ux-card-desc {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
+  line-height: 1.45;
+  margin-bottom: 0.85rem;
   flex-grow: 1;
 }
 
@@ -205,8 +284,10 @@
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid var(--border-light);
-  padding-top: 1rem;
+  padding-top: 0.75rem;
   margin-top: auto;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 /* ==========================================================================
@@ -258,9 +339,10 @@
 }
 
 .ux-expand-content.open {
-  max-height: 500px;
+  max-height: min(80vh, 1200px);
   opacity: 1;
   padding: 0.85rem 1rem;
+  overflow: auto;
 }
 
 /* ==========================================================================
@@ -269,10 +351,10 @@
 .ux-milestone-ribbon {
   background: linear-gradient(135deg, #001e3d 0%, #002855 100%);
   border-radius: var(--ux-radius-card);
-  padding: 1.5rem 2rem;
+  padding: var(--space-5, 1.25rem) var(--space-6, 1.5rem);
   color: #ffffff;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 12px 30px rgba(0, 30, 61, 0.25);
+  margin-bottom: var(--space-6, 1.5rem);
+  box-shadow: 0 8px 20px rgba(0, 30, 61, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -353,10 +435,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.75rem;
+  gap: 0.75rem;
+  margin-bottom: var(--space-5, 1.25rem);
   background: var(--bg-secondary);
-  padding: 0.85rem 1.25rem;
+  padding: 0.65rem 1rem;
   border-radius: var(--ux-radius-card);
   border: 1px solid var(--border-light);
 }
@@ -489,19 +571,202 @@
 }
 
 /* Responsive Adjustments */
+
+/* Tablet: keep a 2-column compact grid between ~520px and 768px */
+@media (min-width: 520px) and (max-width: 768px) {
+  .ux-grid-compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  .ux-filter-toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .ux-search-box {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .ux-tab-nav {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+    /* Keep horizontal scroll but hint overflow with fade */
+    -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+    mask-image: linear-gradient(to right, #000 85%, transparent);
+  }
+
+  .ux-filter-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.15rem;
+  }
+
+  .ux-filter-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ux-filter-pill {
+    flex: 0 0 auto;
+  }
+
+  .ux-milestone-ribbon {
+    padding: var(--space-4, 1rem) var(--space-5, 1.25rem);
+  }
+
+  .ux-milestone-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.65rem;
+  }
+
+  .ux-card-footer {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 519px) {
   .ux-grid-compact {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 480px) {
+  .ux-card-modern {
+    padding: 1rem;
+  }
+
+  .ux-card-title {
+    font-size: 1rem;
+  }
+
+  .ux-card-desc {
+    font-size: 0.85rem;
+  }
+
   .ux-filter-toolbar {
+    padding: 0.55rem 0.75rem;
+  }
+
+  .ux-tab-btn {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .ux-milestone-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ux-milestone-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ux-card-footer {
     flex-direction: column;
     align-items: stretch;
   }
-  .ux-search-box {
-    max-width: 100%;
+
+  .ux-card-footer .btn-primary,
+  .ux-card-footer .btn-secondary {
+    justify-content: center;
+    text-align: center;
   }
-  .ux-tab-nav {
-    width: 100%;
-    justify-content: flex-start;
+}
+
+@media (max-width: 360px) {
+  .ux-milestone-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ux-tab-btn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  .ux-filter-pill {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+  }
+
+  .ux-card-modern {
+    padding: 0.85rem;
+  }
+}
+
+/* Touch-friendly tap targets without inflating fine-pointer desktop */
+@media (pointer: coarse) {
+  .ux-tab-btn,
+  .ux-filter-pill,
+  .ux-expand-trigger {
+    min-height: 44px;
+  }
+
+  .ux-expand-trigger {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Compact scannable lists */
+.ux-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding-left: 1.1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  line-height: 1.45;
+}
+
+.ux-bullet-list li {
+  list-style: disc;
+}
+
+.ux-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ux-tab-pane,
+  .ux-card-modern,
+  .news-card,
+  .activity-card,
+  .track-card,
+  .committee-card,
+  .speaker-card,
+  .resource-card {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .ux-card-modern:hover,
+  .news-card:hover,
+  .activity-card:hover,
+  .track-card:hover,
+  .committee-card:hover,
+  .speaker-card:hover,
+  .resource-card:hover {
+    transform: none !important;
   }
 }

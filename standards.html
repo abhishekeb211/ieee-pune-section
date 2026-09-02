@@ -86,6 +86,7 @@
           <ul class="simple-dropdown">
             <li><a href="about.html" class="simple-dropdown-link">About IEEE Blockchain Pune</a></li>
             <li><a href="committee.html" class="simple-dropdown-link">Executive Committee</a></li>
+            <li><a href="about.html#milestones" class="simple-dropdown-link">Section Milestones &amp; Charter</a></li>
             <li><a href="india-ecosystem.html" class="simple-dropdown-link">India Blockchain Ecosystem</a></li>
             <li><a href="contact.html" class="simple-dropdown-link">Contact Section Office</a></li>
           </ul>
@@ -161,7 +162,7 @@
         <p class="content-card-text">
           Founded <strong>5 September 2019</strong>, the IEEE Blockchain and Distributed Ledgers Standards Committee (C/BDLSC) oversees all IEEE blockchain standards development. The committee manages published standards, active working groups, and new project proposals.
         </p>
-        <p class="content-card-text" style="margin-top:0.5rem">
+        <p class="content-card-text">
           <strong>Chair:</strong> Ming Li (<a href="mailto:li.ming@ieee.org">li.ming@ieee.org</a>) &bull;
           <strong>IEEE Staff:</strong> Michael D. Kipness (<a href="mailto:m.kipness@ieee.org">m.kipness@ieee.org</a>)
         </p>
@@ -173,7 +174,7 @@
       </section>
 
       <!-- Interactive Live Standards Discovery Hub -->
-      <section class="committee-group-section" id="standards-directory" style="margin-top: 1.5rem;">
+      <section class="committee-group-section ux-mb-md" id="standards-directory">
         <h2 class="committee-group-title">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           Interactive Standards Directory (Published &amp; Developing)
@@ -184,6 +185,7 @@
           <div class="ux-filter-pills">
             <button type="button" class="ux-filter-pill active" data-category="all">All Standards (30+)</button>
             <button type="button" class="ux-filter-pill" data-category="published">Published</button>
+            <button type="button" class="ux-filter-pill" data-category="developing" id="developing">Developing (P3201–P3230)</button>
             <button type="button" class="ux-filter-pill" data-category="identity">Identity &amp; Assets</button>
             <button type="button" class="ux-filter-pill" data-category="security">Security &amp; Zero-Trust</button>
             <button type="button" class="ux-filter-pill" data-category="carbon">Carbon &amp; Energy</button>
@@ -202,13 +204,13 @@
           <div class="ux-card-modern ux-filterable-card" data-category="published architecture">
             <div class="ux-card-header-row">
               <span class="ux-tag cyan">Published Standard</span>
-              <span class="news-date" style="font-size:0.75rem">Dec 23, 2020</span>
+              <span class="news-date ux-fs-sm">Dec 23, 2020</span>
             </div>
             <h3 class="ux-card-title">IEEE 2418.2-2020</h3>
             <p class="ux-card-desc">Standard for Data Format for Blockchain Systems. Ensures cross-chain data interoperability and standard storage formats.</p>
             <div class="ux-card-footer">
               <a href="https://standards.ieee.org/ieee/2418.2/10323/" target="_blank" rel="noopener" class="btn-primary btn-sm">IEEE SA Record &rarr;</a>
-              <span class="status-badge active" style="font-size:0.72rem">Active</span>
+              <span class="status-badge active ux-status-sm">Active</span>
             </div>
           </div>
 
@@ -216,13 +218,13 @@
           <div class="ux-card-modern ux-filterable-card" data-category="published architecture">
             <div class="ux-card-header-row">
               <span class="ux-tag gold">Published Standard</span>
-              <span class="news-date" style="font-size:0.75rem">Oct 28, 2021</span>
+              <span class="news-date ux-fs-sm">Oct 28, 2021</span>
             </div>
             <h3 class="ux-card-title">IEEE 2418.7-2021</h3>
             <p class="ux-card-desc">Standard for Use of Blockchain in Supply Chain Finance. Framework for transaction workflows, credit records, and verification.</p>
             <div class="ux-card-footer">
               <a href="https://standards.ieee.org/ieee/2418.7/10324/" target="_blank" rel="noopener" class="btn-primary btn-sm">IEEE SA Record &rarr;</a>
-              <span class="status-badge active" style="font-size:0.72rem">Active</span>
+              <span class="status-badge active ux-status-sm">Active</span>
             </div>
           </div>
 
@@ -230,7 +232,7 @@
           <div class="ux-card-modern ux-filterable-card" data-category="security developing">
             <div class="ux-card-header-row">
               <span class="ux-tag green">Developing WG</span>
-              <span class="news-date" style="font-size:0.75rem">P3201</span>
+              <span class="news-date ux-fs-sm">P3201</span>
             </div>
             <h3 class="ux-card-title">Blockchain Access Control</h3>
             <p class="ux-card-desc">Standardizes fine-grained role-based and attribute-based access control policies across distributed ledger systems.</p>
@@ -243,7 +245,7 @@
           <div class="ux-card-modern ux-filterable-card" data-category="architecture developing">
             <div class="ux-card-header-row">
               <span class="ux-tag green">Developing WG</span>
-              <span class="news-date" style="font-size:0.75rem">P3203 / P3204</span>
+              <span class="news-date ux-fs-sm">P3203 / P3204</span>
             </div>
             <h3 class="ux-card-title">Interoperability &amp; Consistency</h3>
             <p class="ux-card-desc">Blockchain Interoperability Naming Protocol &amp; Cross-Chain Transaction Consistency Protocols for heterogeneous networks.</p>
@@ -256,7 +258,7 @@
           <div class="ux-card-modern ux-filterable-card" data-category="identity developing">
             <div class="ux-card-header-row">
               <span class="ux-tag cyan">Developing WG</span>
-              <span class="news-date" style="font-size:0.75rem">P3206–P3208</span>
+              <span class="news-date ux-fs-sm">P3206–P3208</span>
             </div>
             <h3 class="ux-card-title">Digital Asset Frameworks</h3>
             <p class="ux-card-desc">Comprehensive classification, identification, and exchange models for tokenized and cryptographic digital assets.</p>
@@ -269,7 +271,7 @@
           <div class="ux-card-modern ux-filterable-card" data-category="identity security developing">
             <div class="ux-card-header-row">
               <span class="ux-tag gold">Developing WG</span>
-              <span class="news-date" style="font-size:0.75rem">P3209 / P3210</span>
+              <span class="news-date ux-fs-sm">P3209 / P3210</span>
             </div>
             <h3 class="ux-card-title">Digital Identity &amp; Key Mgmt</h3>
             <p class="ux-card-desc">Blockchain identity key management and decentralized identity (DID) system frameworks for verifiable credentials.</p>
@@ -282,7 +284,7 @@
           <div class="ux-card-modern ux-filterable-card" data-category="carbon developing">
             <div class="ux-card-header-row">
               <span class="ux-tag green">Developing WG</span>
-              <span class="news-date" style="font-size:0.75rem">P3218 / P3224</span>
+              <span class="news-date ux-fs-sm">P3218 / P3224</span>
             </div>
             <h3 class="ux-card-title">Carbon Trading &amp; Green Power</h3>
             <p class="ux-card-desc">Standards for carbon credit verification, low-carbon zones evaluation, and green energy provenance on distributed ledgers.</p>
@@ -295,7 +297,7 @@
           <div class="ux-card-modern ux-filterable-card" data-category="security developing">
             <div class="ux-card-header-row">
               <span class="ux-tag cyan">Developing WG</span>
-              <span class="news-date" style="font-size:0.75rem">P3219</span>
+              <span class="news-date ux-fs-sm">P3219</span>
             </div>
             <h3 class="ux-card-title">Zero-Trust Framework for IoT</h3>
             <p class="ux-card-desc">Decentralized zero-trust security architectures protecting edge IoT devices and sensor data via cryptographic ledgers.</p>
@@ -308,7 +310,7 @@
           <div class="ux-card-modern ux-filterable-card" data-category="architecture developing">
             <div class="ux-card-header-row">
               <span class="ux-tag gold">Developing WG</span>
-              <span class="news-date" style="font-size:0.75rem">P3222 / P3223</span>
+              <span class="news-date ux-fs-sm">P3222 / P3223</span>
             </div>
             <h3 class="ux-card-title">Blockchain-as-a-Service (BaaS)</h3>
             <p class="ux-card-desc">Reference architectures for cloud BaaS provisioning, node virtualization, and Blockchain Fusion Server infrastructure.</p>
@@ -321,7 +323,7 @@
       </section>
 
       <!-- Quick Portals Ribbon -->
-      <section class="proposal-card align-left" style="margin-top: 2rem;">
+      <section class="proposal-card align-left ux-mt-2">
         <h2 class="proposal-card-title">Official IEEE Standards Resource Portals</h2>
         <div class="btn-group">
           <a href="https://blockchain.ieee.org/standards/" target="_blank" rel="noopener" class="btn-primary">IEEE BCTC Standards &rarr;</a>

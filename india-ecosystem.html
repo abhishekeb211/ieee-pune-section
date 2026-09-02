@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mega-menu.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/compact-ux.css">
 </head>
 <body>
 
@@ -76,53 +77,100 @@
         <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
+
       <ul class="main-nav-menu">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item dropdown-relative has-children active">
-          <a href="about.html" class="nav-link">About <span class="nav-arrow">&#9662;</span></a>
+        
+        <!-- About Dropdown -->
+        <li class="nav-item dropdown-relative has-children active"><a href="about.html" class="nav-link">
+            About <span class="nav-arrow">&#9662;</span>
+          </a>
           <ul class="simple-dropdown">
             <li><a href="about.html" class="simple-dropdown-link">About IEEE Blockchain Pune</a></li>
             <li><a href="committee.html" class="simple-dropdown-link">Executive Committee</a></li>
+            <li><a href="about.html#milestones" class="simple-dropdown-link">Section Milestones &amp; Charter</a></li>
             <li><a href="india-ecosystem.html" class="simple-dropdown-link">India Blockchain Ecosystem</a></li>
             <li><a href="contact.html" class="simple-dropdown-link">Contact Section Office</a></li>
           </ul>
         </li>
+
+        <!-- Focus Areas / Tracks Dropdown -->
         <li class="nav-item dropdown-relative has-children">
-          <a href="tracks.html" class="nav-link">Focus Areas <span class="nav-arrow">&#9662;</span></a>
+          <a href="tracks.html" class="nav-link">
+            Focus Areas <span class="nav-arrow">&#9662;</span>
+          </a>
           <ul class="simple-dropdown">
             <li><a href="tracks.html#systems" class="simple-dropdown-link">Blockchain Components &amp; Systems</a></li>
             <li><a href="tracks.html#integration" class="simple-dropdown-link">Technology Integration</a></li>
             <li><a href="tracks.html#applications" class="simple-dropdown-link">Blockchain Applications</a></li>
             <li><a href="tracks.html#security" class="simple-dropdown-link">Security &amp; Privacy</a></li>
+            <li><a href="tracks.html#distributed" class="simple-dropdown-link">Distributed Computing Systems</a></li>
+            <li><a href="tracks.html#management" class="simple-dropdown-link">System Design &amp; Management</a></li>
           </ul>
         </li>
+
+        <!-- Events Mega Menu -->
         <li class="nav-item has-children">
-          <a href="events.html" class="nav-link">Events <span class="nav-arrow">&#9662;</span></a>
+          <a href="events.html" class="nav-link">
+            Events <span class="nav-arrow">&#9662;</span>
+          </a>
           <div class="mega-menu">
             <div class="container">
               <div class="mega-menu-inner">
                 <div class="mega-menu-links">
-                  <a href="events.html#icbds" class="mega-link-item"><span class="mega-link-icon">&#9658;</span><div class="mega-link-text"><span class="mega-link-title">IEEE ICBDS 2026</span><span class="mega-link-desc">Blockchain &amp; Distributed Systems Security</span></div></a>
-                  <a href="events.html#iccubea" class="mega-link-item"><span class="mega-link-icon">&#9658;</span><div class="mega-link-text"><span class="mega-link-title">IEEE ICCUBEA 2026</span><span class="mega-link-desc">Blockchain &amp; Cyber Security Track</span></div></a>
+                  <a href="events.html#icbds" class="mega-link-item">
+                    <span class="mega-link-icon">&#9658;</span>
+                    <div class="mega-link-text">
+                      <span class="mega-link-title">IEEE ICBDS 2026</span>
+                      <span class="mega-link-desc">5th Intl. Conference on Blockchain &amp; Distributed Systems Security</span>
+                    </div>
+                  </a>
+                  <a href="events.html#iccubea" class="mega-link-item">
+                    <span class="mega-link-icon">&#9658;</span>
+                    <div class="mega-link-text">
+                      <span class="mega-link-title">IEEE ICCUBEA 2026</span>
+                      <span class="mega-link-desc">10th Intl. Conference — Blockchain &amp; Cyber Security Track</span>
+                    </div>
+                  </a>
+                  <a href="events.html#icdlt" class="mega-link-item">
+                    <span class="mega-link-icon">&#9658;</span>
+                    <div class="mega-link-text">
+                      <span class="mega-link-title">IEEE ICDLT 2025</span>
+                      <span class="mega-link-desc">Intl. Conference on Distributed Ledger Technologies, MCCIA Pune</span>
+                    </div>
+                  </a>
+                  <a href="speakers.html" class="mega-link-item">
+                    <span class="mega-link-icon">&#9658;</span>
+                    <div class="mega-link-text">
+                      <span class="mega-link-title">Speakers &amp; Presenters</span>
+                      <span class="mega-link-desc">Distinguished keynote speakers &amp; blockchain researchers</span>
+                    </div>
+                  </a>
                 </div>
                 <div class="mega-menu-featured">
                   <span class="mega-featured-badge">Upcoming 2026</span>
                   <h4 class="mega-featured-title">IEEE ICBDS 2026</h4>
-                  <p class="mega-featured-text">23–25 October 2026, Pune, India.</p>
-                  <a href="events.html#icbds" class="mega-featured-btn">View Details &rarr;</a>
+                  <p class="mega-featured-text">5th IEEE International Conference on Blockchain and Distributed Systems Security — 23–25 October 2026, Pune, India. Hybrid mode. IEEE Conference Record #71591.</p>
+                  <a href="events.html#icbds" class="mega-featured-btn">View Conference Details &rarr;</a>
                 </div>
               </div>
             </div>
           </div>
         </li>
+
+        <!-- Standards & Research Dropdown -->
         <li class="nav-item dropdown-relative has-children">
-          <a href="standards.html" class="nav-link">Standards <span class="nav-arrow">&#9662;</span></a>
+          <a href="standards.html" class="nav-link">
+            Standards <span class="nav-arrow">&#9662;</span>
+          </a>
           <ul class="simple-dropdown">
             <li><a href="standards.html" class="simple-dropdown-link">Published IEEE Standards</a></li>
+            <li><a href="standards.html#developing" class="simple-dropdown-link">Active Standards Projects (P3201–P3230)</a></li>
             <li><a href="proceedings.html" class="simple-dropdown-link">Conference Proceedings</a></li>
             <li><a href="resources.html" class="simple-dropdown-link">Full Resource Directory</a></li>
           </ul>
         </li>
+
         <li class="nav-item"><a href="membership.html" class="nav-link">Membership</a></li>
         <li class="nav-item"><a href="speakers.html" class="nav-link">Speakers</a></li>
         <li class="nav-item"><a href="venue.html" class="nav-link">Venue</a></li>
@@ -144,191 +192,270 @@
   </section>
 
   <!-- Main Content -->
-  <main class="section-activities section-alt">
+  <main class="section-activities section-alt ux-section-tight">
     <div class="container">
 
-      <!-- Ecosystem Structure -->
-      <section class="proposal-card align-left">
-        <h2 class="proposal-card-title">IEEE Blockchain India Organizational Structure</h2>
-        <p class="content-card-text">
-          There is no conventional geographic IEEE organizational unit formally called an "IEEE Blockchain India Section." Instead, blockchain activity in India operates through the following structure:
-        </p>
-        <p class="content-card-text" style="margin-top:0.75rem; font-family: var(--font-body); line-height: 2;">
-          <strong>IEEE</strong> → <strong>IEEE Blockchain Technical Community (BCTC)</strong> → <strong>IEEE Region 10</strong> → <strong>India-based Local Blockchain Groups</strong> → <strong>IEEE Geographic Sections</strong> → <strong>Society Chapters</strong> → <strong>Student Branches</strong> → <strong>University Blockchain Clubs</strong> → <strong>Conferences &amp; Summits</strong>
-        </p>
-        <div class="btn-group">
-          <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-primary">BCTC Communities Directory &rarr;</a>
-          <a href="https://india-council.ieee.org/" target="_blank" rel="noopener" class="btn-secondary btn-outline">IEEE India Council</a>
-          <a href="https://www.ieeer10.org/" target="_blank" rel="noopener" class="btn-secondary btn-outline">IEEE Region 10</a>
+      <div class="ux-card-modern ux-mb-0 ux-mb-md">
+        <div class="ux-card-header-row">
+          <span class="ux-tag cyan">Org Structure</span>
         </div>
-      </section>
-
-      <!-- India Blockchain Groups -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          India-Based IEEE Blockchain Groups
-        </h2>
-        <p class="content-card-text" style="margin-bottom: 1.5rem;">
-          The IEEE Blockchain Technical Community's Region 10 community listing identifies the following India-related groups. Group statuses may change — the <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener">official BCTC directory</a> remains the authoritative source.
-        </p>
-
-        <div class="committee-grid">
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">BG</div>
-            <h3 class="committee-name">IEEE Bangalore Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Karnataka</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">CH</div>
-            <h3 class="committee-name">IEEE Chennai Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Tamil Nadu</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">CK</div>
-            <h3 class="committee-name">IEEE CU Kengeri Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Karnataka</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">DL</div>
-            <h3 class="committee-name">IEEE Delhi Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Delhi NCR</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">GJ</div>
-            <h3 class="committee-name">IEEE Gujarat Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Gujarat</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">HY</div>
-            <h3 class="committee-name">IEEE Hyderabad Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Telangana</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">KL</div>
-            <h3 class="committee-name">IEEE Kerala Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Kerala</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">MH</div>
-            <h3 class="committee-name">IEEE Maharashtra Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Maharashtra</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">PN</div>
-            <h3 class="committee-name">IEEE Pune Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Maharashtra</p>
-            <p class="committee-affiliation">Chair: Dr. Sonali D. Patil &bull; Region 10 Coordinator</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-accent));">RP</div>
-            <h3 class="committee-name">IEEE Raipur Blockchain Group</h3>
-            <p class="committee-role">Region 10 &bull; Chhattisgarh</p>
-          </div>
+        <h2 class="ux-card-title">IEEE Blockchain India</h2>
+        <p class="ux-card-desc">No formal “IEEE Blockchain India Section.” Activity flows: IEEE → BCTC → Region 10 → India local groups → Geographic Sections → Society Chapters → Student Branches → University clubs → Conferences &amp; Summits.</p>
+        <div class="ux-chip-row">
+          <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-primary btn-sm">BCTC Directory &rarr;</a>
+          <a href="https://india-council.ieee.org/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">India Council</a>
+          <a href="https://www.ieeer10.org/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">Region 10</a>
         </div>
-      </section>
+      </div>
 
-      <!-- Student Blockchain Groups -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-          Blockchain Student Groups at IITs
-        </h2>
-        <p class="content-card-text" style="margin-bottom: 1.5rem;">
-          IEEE Blockchain community listings have included student blockchain organizations associated with India's premier Indian Institutes of Technology. These are student/community entities rather than geographic IEEE Sections.
-        </p>
-        <div class="sponsor-strip">
-          <div class="sponsor-pill"><span class="brand-badge">IIT-B</span> IIT Bombay</div>
-          <div class="sponsor-pill"><span class="brand-badge">IIT-D</span> IIT Delhi</div>
-          <div class="sponsor-pill"><span class="brand-badge">IIT-KGP</span> IIT Kharagpur</div>
-          <div class="sponsor-pill"><span class="brand-badge">IIT-M</span> IIT Madras</div>
-          <div class="sponsor-pill"><span class="brand-badge">IIT-R</span> IIT Roorkee</div>
+      <div class="ux-filter-toolbar" data-filter-target="#india-ecosystem-grid .ux-filterable-card">
+        <div class="ux-filter-pills">
+          <button type="button" class="ux-filter-pill active" data-category="all">All</button>
+          <button type="button" class="ux-filter-pill" data-category="bangalore">Bangalore</button>
+          <button type="button" class="ux-filter-pill" data-category="chennai">Chennai</button>
+          <button type="button" class="ux-filter-pill" data-category="delhi">Delhi</button>
+          <button type="button" class="ux-filter-pill" data-category="gujarat">Gujarat</button>
+          <button type="button" class="ux-filter-pill" data-category="hyderabad">Hyderabad</button>
+          <button type="button" class="ux-filter-pill" data-category="kerala">Kerala</button>
+          <button type="button" class="ux-filter-pill" data-category="maharashtra">Maharashtra</button>
+          <button type="button" class="ux-filter-pill" data-category="raipur">Raipur</button>
+          <button type="button" class="ux-filter-pill" data-category="students">IIT Students</button>
+          <button type="button" class="ux-filter-pill" data-category="forums">Forums</button>
+          <button type="button" class="ux-filter-pill" data-category="summits">Summits</button>
+          <button type="button" class="ux-filter-pill" data-category="timeline">Timeline</button>
         </div>
-      </section>
+        <div class="ux-search-box">
+          <svg class="ux-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Search groups, cities, events..." aria-label="Filter India ecosystem">
+        </div>
+      </div>
 
-      <!-- India Blockchain Forums -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-          IEEE India Blockchain Forums
-        </h2>
-        <div class="news-grid">
-          <article class="news-card">
-            <div class="news-card-body">
-              <span class="news-date">8–9 September 2023 &bull; IISc Bengaluru</span>
-              <h3 class="news-card-title">IEEE India Blockchain Forum 2023</h3>
-              <p class="news-card-text">Held at Satish Dhawan Auditorium, Indian Institute of Science, Bengaluru. Themes: Blockchain, Web3, distributed ledgers, digital assets, metaverse, public-sector blockchain, National Blockchain Framework, regulations, startups, and research adoption.</p>
-              <a href="https://in.explara.com/e/ieee-india-blockchain-forum-1" target="_blank" rel="noopener" class="news-card-link">Event Page &rsaquo;</a>
+      <div class="ux-grid-compact" id="india-ecosystem-grid">
+
+        <article class="ux-card-modern ux-filterable-card" data-category="bangalore">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">BG</div>
+            <span class="ux-tag cyan">Karnataka</span>
+          </div>
+          <h3 class="ux-card-title">IEEE Bangalore Blockchain Group</h3>
+          <p class="ux-card-desc">Region 10 local BCTC group.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="chennai">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">CH</div>
+            <span class="ux-tag cyan">Tamil Nadu</span>
+          </div>
+          <h3 class="ux-card-title">IEEE Chennai Blockchain Group</h3>
+          <p class="ux-card-desc">Region 10 local BCTC group.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="bangalore">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">CK</div>
+            <span class="ux-tag gold">Karnataka</span>
+          </div>
+          <h3 class="ux-card-title">IEEE CU Kengeri Blockchain Group</h3>
+          <p class="ux-card-desc">Region 10 &bull; CHRIST University Kengeri area.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="delhi">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">DL</div>
+            <span class="ux-tag cyan">Delhi NCR</span>
+          </div>
+          <h3 class="ux-card-title">IEEE Delhi Blockchain Group</h3>
+          <p class="ux-card-desc">Region 10 local BCTC group.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="gujarat">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">GJ</div>
+            <span class="ux-tag cyan">Gujarat</span>
+          </div>
+          <h3 class="ux-card-title">IEEE Gujarat Blockchain Group</h3>
+          <p class="ux-card-desc">Region 10 local BCTC group.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="hyderabad">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">HY</div>
+            <span class="ux-tag cyan">Telangana</span>
+          </div>
+          <h3 class="ux-card-title">IEEE Hyderabad Blockchain Group</h3>
+          <p class="ux-card-desc">Region 10 local BCTC group.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="kerala">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">KL</div>
+            <span class="ux-tag cyan">Kerala</span>
+          </div>
+          <h3 class="ux-card-title">IEEE Kerala Blockchain Group</h3>
+          <p class="ux-card-desc">Region 10 local BCTC group.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="maharashtra">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">MH</div>
+            <span class="ux-tag cyan">Maharashtra</span>
+          </div>
+          <h3 class="ux-card-title">IEEE Maharashtra Blockchain Group</h3>
+          <p class="ux-card-desc">Region 10 local BCTC group.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="maharashtra">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">PN</div>
+            <span class="ux-tag green">Pune</span>
+          </div>
+          <h3 class="ux-card-title">IEEE Pune Blockchain Group</h3>
+          <p class="ux-card-desc">Chair: Dr. Sonali D. Patil &bull; Region 10 Coordinator.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-primary btn-sm">BCTC Directory &rarr;</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="raipur">
+          <div class="ux-card-header-row">
+            <div class="committee-avatar committee-avatar--primary">RP</div>
+            <span class="ux-tag cyan">Chhattisgarh</span>
+          </div>
+          <h3 class="ux-card-title">IEEE Raipur Blockchain Group</h3>
+          <p class="ux-card-desc">Region 10 local BCTC group.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="students">
+          <div class="ux-card-header-row">
+            <span class="ux-tag gold">IIT Network</span>
+          </div>
+          <h3 class="ux-card-title">Blockchain Student Groups at IITs</h3>
+          <p class="ux-card-desc">Student/community entities (not geographic Sections). Status may change — see BCTC directory.</p>
+          <div class="ux-chip-row">
+            <span class="brand-badge">IIT Bombay</span>
+            <span class="brand-badge">IIT Delhi</span>
+            <span class="brand-badge">IIT Kharagpur</span>
+            <span class="brand-badge">IIT Madras</span>
+            <span class="brand-badge">IIT Roorkee</span>
+          </div>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener" class="btn-secondary btn-sm btn-outline">BCTC Directory</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="forums bangalore">
+          <div class="ux-card-header-row">
+            <span class="ux-tag cyan">Forum</span>
+            <span class="news-date ux-fs-sm">8–9 Sep 2023</span>
+          </div>
+          <h3 class="ux-card-title">IEEE India Blockchain Forum 2023</h3>
+          <p class="ux-card-desc">Satish Dhawan Auditorium, IISc Bengaluru.</p>
+          <ul class="ux-bullet-list">
+            <li>Themes: Blockchain, Web3, DLTs, digital assets, metaverse</li>
+            <li>Public-sector blockchain, National Blockchain Framework</li>
+            <li>Regulations, startups, research adoption</li>
+          </ul>
+          <div class="ux-card-footer">
+            <a href="https://in.explara.com/e/ieee-india-blockchain-forum-1" target="_blank" rel="noopener" class="btn-primary btn-sm">Event Page &rarr;</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="forums bangalore">
+          <div class="ux-card-header-row">
+            <span class="ux-tag gold">Forum</span>
+            <span class="news-date ux-fs-sm">20–21 Sep 2024</span>
+          </div>
+          <h3 class="ux-card-title">Second IEEE India Blockchain Forum — 2024</h3>
+          <p class="ux-card-desc">CHRIST (Deemed to be University), Kengeri, Bengaluru.</p>
+          <div class="ux-card-footer">
+            <a href="https://blockchain.ieee.org/events/" target="_blank" rel="noopener" class="btn-primary btn-sm">BCTC Events Archive &rarr;</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="summits students">
+          <div class="ux-card-header-row">
+            <span class="ux-tag cyan">Summit</span>
+            <span class="news-date ux-fs-sm">4–6 Dec 2025</span>
+          </div>
+          <h3 class="ux-card-title">Blockchain Kaigi 2025</h3>
+          <p class="ux-card-desc">IIT Bombay &bull; IEEE BCTC Knowledge Partner. Research, industry sessions, student activities.</p>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="summits students">
+          <div class="ux-card-header-row">
+            <span class="ux-tag gold">Summit</span>
+            <span class="news-date ux-fs-sm">17–18 Jan 2026</span>
+          </div>
+          <h3 class="ux-card-title">East India Blockchain Summit 2.0</h3>
+          <p class="ux-card-desc">IIT Kharagpur &bull; IEEE BCTC Knowledge Partner. Second edition.</p>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="summits maharashtra">
+          <div class="ux-card-header-row">
+            <span class="ux-tag green">Flagship</span>
+            <span class="news-date ux-fs-sm">5–7 Nov 2025</span>
+          </div>
+          <h3 class="ux-card-title">IEEE ICDLT 2025</h3>
+          <p class="ux-card-desc">MCCIA, Pune &bull; IEEE BCTC flagship. 200+ attendees. Hybrid mode.</p>
+          <div class="ux-card-footer">
+            <a href="https://www.ieeeicdlt.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">ICDLT Portal &rarr;</a>
+          </div>
+        </article>
+
+        <article class="ux-card-modern ux-filterable-card" data-category="timeline">
+          <div class="ux-card-header-row">
+            <span class="ux-tag cyan">Timeline</span>
+          </div>
+          <h3 class="ux-card-title">Major India IEEE Blockchain Events</h3>
+          <div class="ux-expandable">
+            <button type="button" class="ux-expand-trigger" aria-expanded="false">
+              <span>Show full timeline (2023–2026)</span>
+              <span class="ux-expand-icon">&#9662;</span>
+            </button>
+            <div class="ux-expand-content">
+              <ul class="ux-bullet-list">
+                <li><strong>8–9 Sep 2023</strong> — IEEE India Blockchain Forum &bull; IISc Bengaluru</li>
+                <li><strong>2 Feb 2024</strong> — IEEE Pune Blockchain Symposium &bull; PCCOE, Pune</li>
+                <li><strong>20–21 Sep 2024</strong> — Second IEEE India Blockchain Forum &bull; CHRIST University, Bengaluru</li>
+                <li><strong>17–19 Oct 2024</strong> — IEEE ICBDS 2024 &bull; VIIT, Pune</li>
+                <li><strong>5–7 Nov 2025</strong> — IEEE ICDLT 2025 &bull; MCCIA, Pune</li>
+                <li><strong>4–6 Dec 2025</strong> — Blockchain Kaigi 2025 &bull; IIT Bombay</li>
+                <li><strong>17–18 Jan 2026</strong> — East India Blockchain Summit 2.0 &bull; IIT Kharagpur</li>
+                <li><strong>21–22 Aug 2026</strong> — IEEE ICCUBEA 2026 &bull; PCCOE, Pune</li>
+                <li><strong>23–25 Oct 2026</strong> — IEEE ICBDS 2026 &bull; Pune</li>
+              </ul>
             </div>
-          </article>
-          <article class="news-card">
-            <div class="news-card-body">
-              <span class="news-date">20–21 September 2024 &bull; CHRIST University, Bengaluru</span>
-              <h3 class="news-card-title">Second IEEE India Blockchain Forum — 2024</h3>
-              <p class="news-card-text">The second IEEE India Blockchain Forum was associated with CHRIST (Deemed to be University), Kengeri, Bengaluru. Activities across 20–21 September 2024.</p>
-              <a href="https://blockchain.ieee.org/events/" target="_blank" rel="noopener" class="news-card-link">BCTC Events Archive &rsaquo;</a>
-            </div>
-          </article>
-        </div>
-      </section>
+          </div>
+        </article>
 
-      <!-- India Blockchain Summits -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          India Blockchain Summits &amp; Events
-        </h2>
-        <div class="news-grid">
-          <article class="news-card">
-            <div class="news-card-body">
-              <span class="news-date">4–6 December 2025 &bull; IIT Bombay</span>
-              <h3 class="news-card-title">Blockchain Kaigi 2025</h3>
-              <p class="news-card-text">IEEE BCTC Knowledge Partner. Blockchain research, industry sessions, and student activities at IIT Bombay.</p>
-            </div>
-          </article>
-          <article class="news-card">
-            <div class="news-card-body">
-              <span class="news-date">17–18 January 2026 &bull; IIT Kharagpur</span>
-              <h3 class="news-card-title">East India Blockchain Summit 2.0</h3>
-              <p class="news-card-text">IEEE BCTC Knowledge Partner. Second edition of the East India Blockchain Summit at IIT Kharagpur.</p>
-            </div>
-          </article>
-          <article class="news-card">
-            <div class="news-card-body">
-              <span class="news-date">5–7 November 2025 &bull; MCCIA, Pune</span>
-              <h3 class="news-card-title">IEEE ICDLT 2025</h3>
-              <p class="news-card-text">IEEE BCTC flagship conference. International Conference on Distributed Ledger Technologies. 200+ attendees. Hybrid mode.</p>
-              <a href="https://www.ieeeicdlt.org/" target="_blank" rel="noopener" class="news-card-link">ICDLT Portal &rsaquo;</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Major India Event Timeline -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          Major India IEEE Blockchain Event Timeline
-        </h2>
-        <div class="standards-table-wrapper">
-          <table class="standards-table">
-            <thead>
-              <tr><th>Date</th><th>Event</th><th>Location</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>8–9 Sep 2023</td><td>IEEE India Blockchain Forum</td><td>IISc Bengaluru</td></tr>
-              <tr><td>2 Feb 2024</td><td>IEEE Pune Blockchain Symposium</td><td>PCCOE, Pune</td></tr>
-              <tr><td>20–21 Sep 2024</td><td>Second IEEE India Blockchain Forum</td><td>CHRIST University, Bengaluru</td></tr>
-              <tr><td>17–19 Oct 2024</td><td>IEEE ICBDS 2024</td><td>VIIT, Pune</td></tr>
-              <tr><td>5–7 Nov 2025</td><td>IEEE ICDLT 2025</td><td>MCCIA, Pune</td></tr>
-              <tr><td>4–6 Dec 2025</td><td>Blockchain Kaigi 2025</td><td>IIT Bombay</td></tr>
-              <tr><td>17–18 Jan 2026</td><td>East India Blockchain Summit 2.0</td><td>IIT Kharagpur</td></tr>
-              <tr><td>21–22 Aug 2026</td><td>IEEE ICCUBEA 2026</td><td>PCCOE, Pune</td></tr>
-              <tr><td>23–25 Oct 2026</td><td>IEEE ICBDS 2026</td><td>Pune</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      </div>
 
     </div>
   </main>
@@ -395,5 +522,6 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/compact-ux.js"></script>
 </body>
 </html>

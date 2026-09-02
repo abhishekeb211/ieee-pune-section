@@ -82,11 +82,13 @@
   z-index: 1002;
 }
 
-.nav-item:hover .mega-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
+@media (hover: hover) and (pointer: fine) {
+  .nav-item:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 }
 
 .mega-menu-inner {
@@ -211,11 +213,13 @@
   padding: 0.5rem 0;
 }
 
-.nav-item.dropdown-relative:hover .simple-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
+@media (hover: hover) and (pointer: fine) {
+  .nav-item.dropdown-relative:hover .simple-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 }
 
 .simple-dropdown-link {

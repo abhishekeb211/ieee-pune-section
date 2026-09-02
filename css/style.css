@@ -55,6 +55,19 @@
   --border-radius-sm: 6px;
   --border-radius-md: 10px;
   --border-radius-lg: 16px;
+
+  /* Compact density scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --section-y: clamp(1.75rem, 3.5vw, 2.75rem);
+  --card-pad: 1.15rem;
+  --grid-gap: 1rem;
 }
 
 /* Reset & Base Styles */
@@ -331,12 +344,12 @@ ul {
   position: relative;
   background-color: var(--ieee-navy);
   overflow: hidden;
-  min-height: clamp(360px, 60vh, 520px);
+  min-height: clamp(280px, 42vh, 400px);
 }
 
 .hero-slider-container {
   position: relative;
-  height: clamp(360px, 60vh, 520px);
+  height: clamp(280px, 42vh, 400px);
   width: 100%;
 }
 
@@ -525,13 +538,13 @@ ul {
    4. SECTION: LATEST FROM IEEE PUNE SECTION
    ========================================================================== */
 .section-latest-news {
-  padding: 4.5rem 0;
+  padding: var(--section-y) 0;
   background-color: var(--bg-secondary);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: var(--space-6);
 }
 
 .section-title {
@@ -558,8 +571,8 @@ ul {
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--grid-gap);
 }
 
 .news-card {
@@ -574,20 +587,20 @@ ul {
 }
 
 .news-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
   border-color: var(--border-blue);
 }
 
 .news-card-img {
-  height: 190px;
+  height: 140px;
   width: 100%;
   object-fit: cover;
   background-color: var(--ieee-navy);
 }
 
 .news-card-body {
-  padding: 1.5rem;
+  padding: var(--card-pad);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -637,19 +650,19 @@ ul {
    5. SECTION: MESSAGE FROM SECTION CHAIR
    ========================================================================== */
 .section-chair-message {
-  padding: 4.5rem 0;
+  padding: var(--section-y) 0;
   background-color: #ffffff;
 }
 
 .chair-message-wrapper {
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 3.5rem;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-6);
   align-items: center;
   background: linear-gradient(135deg, #ffffff 0%, var(--bg-secondary) 100%);
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-lg);
-  padding: 2.5rem;
+  padding: var(--space-6);
   box-shadow: var(--shadow-md);
 }
 
@@ -660,7 +673,7 @@ ul {
 
 .chair-portrait {
   width: 100%;
-  height: 380px;
+  height: 230px;
   object-fit: cover;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
@@ -723,14 +736,14 @@ ul {
    6. SECTION: ACTIVITIES IN PUNE SECTION
    ========================================================================== */
 .section-activities {
-  padding: 4.5rem 0;
+  padding: var(--section-y) 0;
   background-color: var(--bg-secondary);
 }
 
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--grid-gap);
 }
 
 .activity-card {
@@ -745,18 +758,18 @@ ul {
 }
 
 .activity-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
   border-color: var(--border-blue);
 }
 
 .activity-card-header {
-  height: 160px;
+  height: 110px;
   background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-navy));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: var(--card-pad);
   position: relative;
   overflow: hidden;
 }
@@ -776,7 +789,7 @@ ul {
 }
 
 .activity-card-body {
-  padding: 1.75rem;
+  padding: var(--card-pad);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -802,7 +815,7 @@ ul {
    7. SECTION: PUNE SECTION AT A GLANCE (METRIC COUNTERS)
    ========================================================================== */
 .section-glance {
-  padding: 5rem 0;
+  padding: var(--section-y) 0;
   background: linear-gradient(135deg, var(--ieee-navy) 0%, var(--ieee-blue-deep) 100%);
   color: #ffffff;
   position: relative;
@@ -819,9 +832,9 @@ ul {
 
 .glance-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2.5rem 1.5rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-5) var(--grid-gap);
+  margin-top: var(--space-6);
 }
 
 .glance-item {
@@ -829,7 +842,7 @@ ul {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.5rem;
+  padding: var(--card-pad);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius-md);
@@ -875,7 +888,7 @@ ul {
    8. SECTION: LIFE AT IEEE PUNE SECTION (GALLERY CAROUSEL)
    ========================================================================== */
 .section-gallery {
-  padding: 4.5rem 0;
+  padding: var(--section-y) 0;
   background-color: #ffffff;
 }
 
@@ -927,15 +940,15 @@ ul {
 .site-footer {
   background-color: var(--bg-dark);
   color: #cbd5e1;
-  padding: 4.5rem 0 0;
+  padding: var(--section-y) 0 0;
   border-top: 4px solid var(--ieee-blue);
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1.5fr repeat(3, 1fr) 1.25fr;
-  gap: 2.5rem;
-  margin-bottom: 3.5rem;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
 }
 
 .footer-col-title {
@@ -1067,15 +1080,15 @@ ul {
 }
 
 .section-timeline {
-  padding: 4.5rem 0;
+  padding: var(--section-y) 0;
   background-color: #ffffff;
 }
 
 .timeline-compact {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--grid-gap);
+  margin-top: var(--space-5);
 }
 
 .timeline-card {
@@ -1110,16 +1123,16 @@ ul {
 /* Track Cards Grid */
 .tracks-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--grid-gap);
+  margin-top: var(--space-6);
 }
 
 .track-card {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
-  padding: 2rem;
+  padding: var(--card-pad);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
   position: relative;
@@ -1128,9 +1141,9 @@ ul {
 }
 
 .track-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-2px);
   border-color: var(--ieee-accent);
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-md);
 }
 
 .track-card-icon {
@@ -1172,15 +1185,15 @@ ul {
 
 /* Committee Cards */
 .committee-group-section {
-  margin-bottom: 3.5rem;
+  margin-bottom: var(--space-6);
 }
 
 .committee-group-title {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--ieee-blue-deep);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-4);
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--border-light);
   display: flex;
@@ -1190,34 +1203,34 @@ ul {
 
 .committee-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: var(--grid-gap);
 }
 
 .committee-card {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
-  padding: 1.75rem;
+  padding: var(--card-pad);
   box-shadow: var(--shadow-sm);
   text-align: center;
   transition: all var(--transition-normal);
 }
 
 .committee-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   border-color: var(--ieee-blue);
 }
 
 .committee-avatar {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-accent));
   color: #ffffff;
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: 1.35rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -1250,9 +1263,9 @@ ul {
 /* Speakers Grid */
 .speakers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: var(--grid-gap);
+  margin-top: var(--space-5);
 }
 
 .speaker-card {
@@ -1265,20 +1278,20 @@ ul {
 }
 
 .speaker-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
   border-color: var(--ieee-accent);
 }
 
 .speaker-card-header {
-  padding: 1.75rem;
+  padding: var(--card-pad);
   background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));
   color: #ffffff;
   text-align: center;
 }
 
 .speaker-card-body {
-  padding: 1.5rem;
+  padding: var(--card-pad);
 }
 
 .speaker-card-topic {
@@ -1293,7 +1306,7 @@ ul {
 
 /* Sponsors & Partners Strip */
 .section-sponsors {
-  padding: 3.5rem 0;
+  padding: var(--section-y) 0;
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
@@ -1304,17 +1317,17 @@ ul {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
-  margin-top: 2rem;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
 }
 
 .sponsor-pill {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: 50px;
-  padding: 0.75rem 1.75rem;
+  padding: 0.55rem 1.15rem;
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--ieee-blue-deep);
   box-shadow: var(--shadow-sm);
@@ -1398,28 +1411,28 @@ body.nav-open {
 .page-banner {
   background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));
   color: #ffffff;
-  padding: 4rem 0 3.5rem;
+  padding: 1.75rem 0 1.5rem;
   text-align: center;
 }
 
 .page-banner .brand-badge {
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .page-banner-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 4vw + 0.5rem, 2.75rem);
+  font-size: clamp(1.5rem, 3.5vw + 0.5rem, 2.25rem);
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .page-banner-desc {
-  max-width: 750px;
+  max-width: 720px;
   margin: 0 auto;
   color: #cbd5e1;
-  font-size: 1.15rem;
-  line-height: 1.6;
+  font-size: 0.98rem;
+  line-height: 1.55;
 }
 
 /* ==========================================================================
@@ -1429,7 +1442,7 @@ body.nav-open {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
-  padding: 2.25rem;
+  padding: var(--card-pad);
   box-shadow: var(--shadow-sm);
   min-width: 0;
   max-width: 100%;
@@ -1464,10 +1477,10 @@ body.nav-open {
 }
 
 .content-card-text {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text-main);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .content-card-text:last-child {
@@ -1492,7 +1505,7 @@ body.nav-open {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: var(--space-6);
 }
 
 /* ==========================================================================
@@ -1500,9 +1513,9 @@ body.nav-open {
    ========================================================================== */
 .content-2col {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--grid-gap);
+  align-items: stretch;
 }
 
 /* ==========================================================================
@@ -1511,7 +1524,7 @@ body.nav-open {
 .content-sidebar {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 2.5rem;
+  gap: var(--space-6);
   align-items: start;
   min-width: 0;
 }
@@ -1523,7 +1536,7 @@ body.nav-open {
 .content-sidebar-stack {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: var(--space-5);
   min-width: 0;
   max-width: 100%;
 }
@@ -1531,7 +1544,7 @@ body.nav-open {
 .sidebar-stack {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--grid-gap);
   min-width: 0;
 }
 
@@ -1541,23 +1554,23 @@ body.nav-open {
 .cta-box {
   background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));
   border-radius: var(--border-radius-md);
-  padding: 3rem;
+  padding: var(--space-6);
   text-align: center;
   color: #ffffff;
 }
 
 .cta-box-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.35rem, 2.5vw + 0.5rem, 2rem);
+  font-size: clamp(1.2rem, 2vw + 0.5rem, 1.65rem);
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .cta-box-desc {
   max-width: 650px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1rem;
   color: #cbd5e1;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
 .cta-box-actions {
@@ -1689,7 +1702,7 @@ body.nav-open {
    23. SECTION PADDING UTILITY
    ========================================================================== */
 .section-padded {
-  padding: 4.5rem 0;
+  padding: var(--section-y) 0;
 }
 
 /* ==========================================================================
@@ -1725,29 +1738,29 @@ body.nav-open {
    ========================================================================== */
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--grid-gap);
 }
 
 .info-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
-  padding: 2rem;
+  padding: var(--card-pad);
   box-shadow: var(--shadow-sm);
 }
 
 .info-card-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .info-card-title {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--ieee-blue-deep);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .info-card-text {
@@ -1772,11 +1785,11 @@ body.nav-open {
    27. PROPOSAL/NOMINATION CTA CARD
    ========================================================================== */
 .proposal-card {
-  margin-top: 3.5rem;
+  margin-top: var(--space-8);
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
-  padding: 2.5rem;
+  padding: 1.4rem;
   text-align: center;
   box-shadow: var(--shadow-sm);
 }
@@ -1821,7 +1834,7 @@ body.nav-open {
 .sidebar-cta {
   background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));
   border-radius: var(--border-radius-md);
-  padding: 2rem;
+  padding: var(--card-pad);
   color: #ffffff;
   text-align: center;
 }
@@ -1862,8 +1875,8 @@ body.nav-open {
   background: var(--bg-secondary);
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
-  padding: 2.25rem;
-  box-shadow: var(--shadow-md);
+  padding: var(--card-pad);
+  box-shadow: var(--shadow-sm);
 }
 
 .milestones-title {
@@ -1930,9 +1943,9 @@ body.nav-open {
    ========================================================================== */
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--grid-gap);
+  margin-bottom: var(--space-8);
 }
 
 .news-card-title.lg {
@@ -1957,13 +1970,13 @@ body.nav-open {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
-  padding: 2.5rem;
+  padding: var(--card-pad);
   box-shadow: var(--shadow-sm);
 }
 
 .milestones-panel-title {
   font-family: var(--font-heading);
-  font-size: 1.85rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--ieee-blue-deep);
   margin-bottom: 0.5rem;
@@ -1971,7 +1984,7 @@ body.nav-open {
 
 .milestones-panel-desc {
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-5);
 }
 
 /* ==========================================================================
@@ -2093,12 +2106,12 @@ body.nav-open {
    ========================================================================== */
 .resource-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: var(--grid-gap);
 }
 
 .resource-grid-compact {
-  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
 }
 
 .resource-card {
@@ -2108,7 +2121,7 @@ body.nav-open {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
-  padding: 1.35rem 1.5rem;
+  padding: var(--card-pad);
   box-shadow: var(--shadow-sm);
   text-decoration: none;
   color: inherit;
@@ -2117,7 +2130,7 @@ body.nav-open {
 }
 
 .resource-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   border-color: rgba(0, 102, 153, 0.35);
   color: inherit;

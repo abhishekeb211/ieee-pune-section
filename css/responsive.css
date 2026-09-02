@@ -33,23 +33,23 @@
 @media (max-width: 1024px) {
   /* Hero */
   .hero-slider-section {
-    min-height: 460px;
+    min-height: clamp(260px, 40vh, 360px);
   }
 
   .hero-slider-container {
-    height: 460px;
+    height: clamp(260px, 40vh, 360px);
   }
 
   /* Chair Message */
   .chair-message-wrapper {
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
+    grid-template-columns: 240px 1fr;
+    gap: var(--space-5, 1.25rem);
   }
 
   /* Footer */
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: var(--space-5, 1.25rem);
   }
 
   .footer-grid > div:first-child {
@@ -72,7 +72,7 @@
 
   /* Page Banner */
   .page-banner {
-    padding: 3rem 0 2.5rem;
+    padding: 1.5rem 0 1.25rem;
   }
 
   /* Section Padding */
@@ -83,12 +83,12 @@
   .section-gallery,
   .section-sponsors,
   .section-chair-message {
-    padding: 3.5rem 0;
+    padding: var(--section-y) 0;
   }
 
   /* CTA Box */
   .cta-box {
-    padding: 2.5rem;
+    padding: var(--space-6, 1.5rem);
   }
 
   /* Content Narrow */
@@ -117,6 +117,12 @@
    Major layout shifts happen here
    ========================================================================== */
 @media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+  }
+
   /* ---- UTILITY BAR ---- */
   .top-utility-bar {
     display: none;
@@ -348,16 +354,16 @@
 
   /* ---- HERO SECTION ---- */
   .hero-slider-section {
-    min-height: 400px;
+    min-height: clamp(240px, 38vh, 320px);
   }
 
   .hero-slider-container {
     height: auto;
-    min-height: 400px;
+    min-height: clamp(240px, 38vh, 320px);
   }
 
   .hero-content {
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
   }
 
   .hero-description {
@@ -385,11 +391,11 @@
   .section-sponsors,
   .section-chair-message,
   .section-padded {
-    padding: 3rem 0;
+    padding: var(--section-y) 0;
   }
 
   .section-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: var(--space-5, 1.25rem);
   }
 
   /* ---- CHAIR MESSAGE ---- */
@@ -467,25 +473,25 @@
 
   /* ---- PAGE BANNER ---- */
   .page-banner {
-    padding: 2.5rem 0 2rem;
+    padding: 1.5rem 0 1.25rem;
   }
 
   .page-banner-desc {
-    font-size: 1rem;
+    font-size: 0.98rem;
   }
 
   /* ---- CONTENT CARDS ---- */
   .content-card {
-    padding: 1.75rem;
+    padding: var(--card-pad, 1.15rem);
   }
 
   .content-card-text {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   /* ---- CTA BOX ---- */
   .cta-box {
-    padding: 2rem;
+    padding: var(--space-6, 1.5rem);
   }
 
   /* ---- FOOTER ---- */
@@ -498,7 +504,7 @@
   }
 
   .site-footer {
-    padding: 3rem 0 0;
+    padding: var(--section-y) 0 0;
   }
 
   /* ---- GALLERY ---- */
@@ -530,8 +536,8 @@
 
   /* ---- PROPOSAL CARD ---- */
   .proposal-card {
-    padding: 2rem;
-    margin-top: 2.5rem;
+    padding: 1.4rem;
+    margin-top: var(--space-8, 2rem);
   }
 
   /* ---- LOCAL IDENTITY ---- */
@@ -559,7 +565,6 @@
   .resource-grid-compact {
     grid-template-columns: 1fr;
   }
-}
 
   /* Header: search returns on its own line */
   .header-inner {
@@ -585,15 +590,15 @@
 
   /* Hero */
   .hero-slider-section {
-    min-height: 360px;
+    min-height: 260px;
   }
 
   .hero-slider-container {
-    min-height: 360px;
+    min-height: 260px;
   }
 
   .hero-content {
-    padding: 2rem 0;
+    padding: 1.25rem 0;
   }
 
   .hero-buttons {
@@ -634,16 +639,16 @@
   .section-sponsors,
   .section-chair-message,
   .section-padded {
-    padding: 2rem 0;
+    padding: var(--section-y) 0;
   }
 
   .section-header {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-5, 1.25rem);
   }
 
   /* Page Banner */
   .page-banner {
-    padding: 2rem 0 1.5rem;
+    padding: 1.5rem 0 1.25rem;
   }
 
   .page-banner-desc {
@@ -652,7 +657,7 @@
 
   /* Content Card */
   .content-card {
-    padding: 1.5rem;
+    padding: var(--card-pad, 1.15rem);
   }
 
   .content-card-title {
@@ -833,12 +838,12 @@
 @media (max-height: 500px) and (orientation: landscape) {
   .hero-slider-section,
   .hero-slider-container {
-    min-height: 320px;
+    min-height: 220px;
     height: auto;
   }
 
   .hero-content {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
 }
 
