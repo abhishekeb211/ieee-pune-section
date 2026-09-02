@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mega-menu.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/compact-ux.css">
 </head>
 <body>
 
@@ -155,100 +156,220 @@
   </section>
 
   <!-- Main Content -->
-  <main class="section-activities section-alt">
+  <main class="section-activities section-alt" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
     <div class="container">
-      
-      <div class="tracks-grid">
-        <!-- Track 1: Blockchain Components and Systems -->
-        <article class="track-card" id="systems">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+
+      <!-- ICBDS 2026 Milestone Ribbon -->
+      <div class="ux-milestone-ribbon">
+        <div class="ux-milestone-header">
+          <div class="ux-milestone-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            ICBDS 2026 Submission Tracks &bull; IEEE Record #71591
           </div>
-          <h2 class="track-card-title">Track 1: Blockchain Components &amp; Systems</h2>
-          <p class="track-card-desc">Core blockchain system architecture, cryptographic primitives, distributed consensus protocols, smart contract execution engines, Layer-2 scaling solutions, and performance benchmarking.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> Consensus algorithms (PoS, PBFT, Raft), EVM execution, Layer-2 rollups, state channels, sharding, zero-knowledge scalability
+          <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm" style="background: rgba(0, 180, 216, 0.2); border: 1px solid rgba(0, 180, 216, 0.6); color: #fff;">
+            Submit Paper (Deadline: June 30) &rarr;
+          </a>
+        </div>
+
+        <div class="ux-milestone-grid">
+          <div class="ux-milestone-item">
+            <div class="ux-milestone-date">Format</div>
+            <div class="ux-milestone-desc">4–6 Pages IEEE Two-Column</div>
+          </div>
+          <div class="ux-milestone-item">
+            <div class="ux-milestone-date">Notification</div>
+            <div class="ux-milestone-desc">30 July 2026</div>
+          </div>
+          <div class="ux-milestone-item">
+            <div class="ux-milestone-date">Indexing</div>
+            <div class="ux-milestone-desc">IEEE Xplore &amp; Scopus</div>
+          </div>
+          <div class="ux-milestone-item">
+            <div class="ux-milestone-date">Mode</div>
+            <div class="ux-milestone-desc">Hybrid (Pune + Virtual)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Interactive Track Filter Bar -->
+      <div class="ux-filter-toolbar" data-filter-target="#tracks-master-grid .ux-filterable-card">
+        <div class="ux-filter-pills">
+          <button type="button" class="ux-filter-pill active" data-category="all">All 6 Tracks</button>
+          <button type="button" class="ux-filter-pill" data-category="systems">Systems &amp; Architecture</button>
+          <button type="button" class="ux-filter-pill" data-category="ai">AI &amp; Integration</button>
+          <button type="button" class="ux-filter-pill" data-category="apps">DeFi &amp; Apps</button>
+          <button type="button" class="ux-filter-pill" data-category="security">Security &amp; Privacy</button>
+          <button type="button" class="ux-filter-pill" data-category="distributed">Distributed Systems</button>
+          <button type="button" class="ux-filter-pill" data-category="governance">BaaS &amp; Governance</button>
+        </div>
+        <div class="ux-search-box">
+          <svg class="ux-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Filter research topics (e.g. rollups, DeFi, zero-trust)..." aria-label="Search Tracks">
+        </div>
+      </div>
+      
+      <div class="ux-grid-compact" id="tracks-master-grid">
+        
+        <!-- Track 1: Blockchain Components and Systems -->
+        <article class="ux-card-modern ux-filterable-card" id="systems" data-category="systems">
+          <div class="ux-card-header-row">
+            <span class="ux-tag cyan">Track 01</span>
+            <span class="news-date" style="font-size:0.75rem">Core Protocols</span>
+          </div>
+          <h2 class="ux-card-title">Blockchain Components &amp; Systems</h2>
+          <p class="ux-card-desc">Core blockchain system architecture, cryptographic primitives, distributed consensus protocols, smart contract execution engines, Layer-2 scaling solutions, and performance benchmarking.</p>
+          <div class="ux-expandable">
+            <button type="button" class="ux-expand-trigger" aria-expanded="false">
+              <span>View Key Focus Topics</span>
+              <span class="ux-expand-icon">&#9662;</span>
+            </button>
+            <div class="ux-expand-content">
+              &bull; Consensus algorithms (PoS, PBFT, Raft, DAG)<br>
+              &bull; EVM &amp; WASM execution environments<br>
+              &bull; Layer-2 rollups, state channels, sharding<br>
+              &bull; Zero-knowledge scalability &amp; cryptographic proofs
+            </div>
+          </div>
+          <div class="ux-card-footer">
+            <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Submit to Track 1 &rarr;</a>
           </div>
         </article>
 
         <!-- Track 2: Technology Integration -->
-        <article class="track-card" id="integration">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        <article class="ux-card-modern ux-filterable-card" id="integration" data-category="ai systems">
+          <div class="ux-card-header-row">
+            <span class="ux-tag gold">Track 02</span>
+            <span class="news-date" style="font-size:0.75rem">AI &bull; IoT &bull; 5G</span>
           </div>
-          <h2 class="track-card-title">Track 2: Technology Integration</h2>
-          <p class="track-card-desc">Integration of blockchain and DLTs with complementary emerging technologies — Artificial Intelligence, Machine Learning, IoT sensor networks, Cloud/Edge computing, and 5G/6G networks.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> Decentralized AI, on-chain verifiable ML, IoT device authentication, edge-blockchain nodes, federated learning on blockchain
+          <h2 class="ux-card-title">Technology Integration</h2>
+          <p class="ux-card-desc">Integration of blockchain and DLTs with complementary emerging technologies — Artificial Intelligence, Machine Learning, IoT sensor networks, Cloud/Edge computing, and 5G/6G networks.</p>
+          <div class="ux-expandable">
+            <button type="button" class="ux-expand-trigger" aria-expanded="false">
+              <span>View Key Focus Topics</span>
+              <span class="ux-expand-icon">&#9662;</span>
+            </button>
+            <div class="ux-expand-content">
+              &bull; Decentralized AI &amp; verifiable on-chain ML<br>
+              &bull; IoT device authentication &amp; edge nodes<br>
+              &bull; Federated learning on blockchain<br>
+              &bull; 5G/6G network slicing &amp; ledger accounting
+            </div>
+          </div>
+          <div class="ux-card-footer">
+            <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Submit to Track 2 &rarr;</a>
           </div>
         </article>
 
         <!-- Track 3: Blockchain Applications -->
-        <article class="track-card" id="applications">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        <article class="ux-card-modern ux-filterable-card" id="applications" data-category="apps">
+          <div class="ux-card-header-row">
+            <span class="ux-tag green">Track 03</span>
+            <span class="news-date" style="font-size:0.75rem">DeFi &bull; Supply Chain</span>
           </div>
-          <h2 class="track-card-title">Track 3: Blockchain Applications</h2>
-          <p class="track-card-desc">Domain-specific deployments across FinTech, decentralized finance (DeFi), Central Bank Digital Currencies (CBDC), supply chain finance, electronic health records, carbon trading, and digital identity.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> Supply chain traceability (IEEE 2418.7), carbon credit markets (P3218), digital identity (P3210), CBDC architecture, healthcare data provenance
+          <h2 class="ux-card-title">Blockchain Applications</h2>
+          <p class="ux-card-desc">Domain-specific deployments across FinTech, decentralized finance (DeFi), Central Bank Digital Currencies (CBDC), supply chain finance, electronic health records, carbon trading, and digital identity.</p>
+          <div class="ux-expandable">
+            <button type="button" class="ux-expand-trigger" aria-expanded="false">
+              <span>View Key Focus Topics</span>
+              <span class="ux-expand-icon">&#9662;</span>
+            </button>
+            <div class="ux-expand-content">
+              &bull; Supply chain traceability (IEEE 2418.7)<br>
+              &bull; Carbon credit markets &amp; green power (P3218)<br>
+              &bull; Decentralized identity (P3210)<br>
+              &bull; CBDC architecture &amp; cross-border settlement
+            </div>
+          </div>
+          <div class="ux-card-footer">
+            <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Submit to Track 3 &rarr;</a>
           </div>
         </article>
 
         <!-- Track 4: Security and Privacy -->
-        <article class="track-card" id="security">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <article class="ux-card-modern ux-filterable-card" id="security" data-category="security">
+          <div class="ux-card-header-row">
+            <span class="ux-tag cyan">Track 04</span>
+            <span class="news-date" style="font-size:0.75rem">Auditing &bull; Zero Trust</span>
           </div>
-          <h2 class="track-card-title">Track 4: Security &amp; Privacy</h2>
-          <p class="track-card-desc">Threat modeling, vulnerability scanning in smart contracts, formal verification, zero-knowledge proofs (zk-SNARKs/STARKs), privacy-preserving computation, and post-quantum cryptographic defenses.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> Smart contract auditing, reentrancy detection, formal verification, differential privacy, zero-trust IoT architectures (P3219)
+          <h2 class="ux-card-title">Security &amp; Privacy</h2>
+          <p class="ux-card-desc">Threat modeling, vulnerability scanning in smart contracts, formal verification, zero-knowledge proofs (zk-SNARKs/STARKs), privacy-preserving computation, and post-quantum cryptographic defenses.</p>
+          <div class="ux-expandable">
+            <button type="button" class="ux-expand-trigger" aria-expanded="false">
+              <span>View Key Focus Topics</span>
+              <span class="ux-expand-icon">&#9662;</span>
+            </button>
+            <div class="ux-expand-content">
+              &bull; Smart contract auditing &amp; reentrancy defenses<br>
+              &bull; Formal verification &amp; symbolic execution<br>
+              &bull; Differential privacy &amp; secure multiparty computation<br>
+              &bull; Zero-trust IoT architectures (P3219)
+            </div>
+          </div>
+          <div class="ux-card-footer">
+            <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Submit to Track 4 &rarr;</a>
           </div>
         </article>
 
         <!-- Track 5: Distributed Computing Systems -->
-        <article class="track-card" id="distributed">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        <article class="ux-card-modern ux-filterable-card" id="distributed" data-category="distributed">
+          <div class="ux-card-header-row">
+            <span class="ux-tag gold">Track 05</span>
+            <span class="news-date" style="font-size:0.75rem">P2P &bull; IPFS</span>
           </div>
-          <h2 class="track-card-title">Track 5: Distributed Computing Systems</h2>
-          <p class="track-card-desc">Peer-to-peer networking topologies, Byzantine fault tolerance, state-machine replication, distributed ledger storage optimization, decentralized indexing, and IPFS/Filecoin integration.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> P2P routing protocols, decentralized storage, gossip algorithms, DAG-based ledgers, high-throughput consensus
+          <h2 class="ux-card-title">Distributed Computing Systems</h2>
+          <p class="ux-card-desc">Peer-to-peer networking topologies, Byzantine fault tolerance, state-machine replication, distributed ledger storage optimization, decentralized indexing, and IPFS/Filecoin integration.</p>
+          <div class="ux-expandable">
+            <button type="button" class="ux-expand-trigger" aria-expanded="false">
+              <span>View Key Focus Topics</span>
+              <span class="ux-expand-icon">&#9662;</span>
+            </button>
+            <div class="ux-expand-content">
+              &bull; P2P routing &amp; gossip protocols<br>
+              &bull; Decentralized storage &amp; pinning services<br>
+              &bull; DAG-based ledgers &amp; asynchronous BFT<br>
+              &bull; High-throughput sharded consensus
+            </div>
+          </div>
+          <div class="ux-card-footer">
+            <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Submit to Track 5 &rarr;</a>
           </div>
         </article>
 
         <!-- Track 6: System Design and Management -->
-        <article class="track-card" id="management">
-          <div class="track-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        <article class="ux-card-modern ux-filterable-card" id="management" data-category="governance systems">
+          <div class="ux-card-header-row">
+            <span class="ux-tag green">Track 06</span>
+            <span class="news-date" style="font-size:0.75rem">BaaS &bull; Governance</span>
           </div>
-          <h2 class="track-card-title">Track 6: System Design &amp; Management</h2>
-          <p class="track-card-desc">Cross-chain interoperability standards (P3203, P3204), on-chain governance mechanisms, compliance with global data protection frameworks (GDPR, DPDP Act), and Blockchain-as-a-Service (BaaS) architectures.</p>
-          <div class="track-card-examples">
-            <strong>Key Focus:</strong> Cross-chain protocols, blockchain governance (P3212), BaaS reference architecture (P3222), regulatory sandboxes, SLA management
+          <h2 class="ux-card-title">System Design &amp; Management</h2>
+          <p class="ux-card-desc">Cross-chain interoperability standards (P3203, P3204), on-chain governance mechanisms, compliance with global data protection frameworks (GDPR, DPDP Act), and Blockchain-as-a-Service (BaaS) architectures.</p>
+          <div class="ux-expandable">
+            <button type="button" class="ux-expand-trigger" aria-expanded="false">
+              <span>View Key Focus Topics</span>
+              <span class="ux-expand-icon">&#9662;</span>
+            </button>
+            <div class="ux-expand-content">
+              &bull; Cross-chain bridges &amp; naming protocols<br>
+              &bull; Blockchain governance models (P3212)<br>
+              &bull; BaaS reference architecture (P3222)<br>
+              &bull; Regulatory compliance &amp; sandbox testing
+            </div>
+          </div>
+          <div class="ux-card-footer">
+            <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Submit to Track 6 &rarr;</a>
           </div>
         </article>
       </div>
 
-      <!-- Paper Submission Info for ICBDS 2026 -->
-      <section class="proposal-card align-left">
-        <h2 class="proposal-card-title">Call for Papers — IEEE ICBDS 2026</h2>
+      <!-- Compact Submission Banner -->
+      <section class="proposal-card align-left" style="margin-top: 2rem;">
+        <h2 class="proposal-card-title">Call for Papers — IEEE ICBDS 2026 (Pune)</h2>
         <p class="content-card-text">
-          Original, unpublished research papers across all 6 technical tracks are invited for submission to the <strong>5th IEEE International Conference on Blockchain and Distributed Systems Security (ICBDS 2026)</strong>.
+          Original, unpublished research papers across all 6 technical tracks are invited for submission. IEEE Conference Record #71591. Proceedings indexed in IEEE Xplore &amp; Scopus.
         </p>
-        <ul class="milestones-list" style="margin: 1rem 0;">
-          <li><strong>Paper Format:</strong> 4–6 pages, IEEE Conference format (two-column standard)</li>
-          <li><strong>Submission Deadline:</strong> 30 June 2026</li>
-          <li><strong>Acceptance Notification:</strong> 30 July 2026</li>
-          <li><strong>Camera-Ready Deadline:</strong> 5 August 2026</li>
-          <li><strong>Conference Dates:</strong> 23–25 October 2026 &bull; Pune, India (Hybrid)</li>
-          <li><strong>IEEE Conference Record:</strong> #71591 &bull; Proceedings indexed in IEEE Xplore &amp; Scopus</li>
-        </ul>
         <div class="btn-group">
           <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary">ICBDS Submission Portal &rarr;</a>
-          <a href="proceedings.html" class="btn-secondary btn-outline">Past Proceedings (2022–2024)</a>
+          <a href="proceedings.html" class="btn-secondary btn-outline">Past Proceedings</a>
           <a href="standards.html" class="btn-secondary btn-outline">IEEE Standards Directory</a>
         </div>
       </section>
@@ -328,5 +449,6 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/compact-ux.js"></script>
 </body>
 </html>

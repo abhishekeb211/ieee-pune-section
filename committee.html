@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mega-menu.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/compact-ux.css">
 </head>
 <body>
 
@@ -155,212 +156,187 @@
   </section>
 
   <!-- Committee Section -->
-  <main class="section-activities section-alt">
+  <main class="section-activities section-alt" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
     <div class="container">
 
-      <!-- Group 1: IEEE Pune Blockchain Group & Region 10 Leadership -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          IEEE Pune Blockchain Group Leadership
-        </h2>
-        <div class="committee-grid">
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));">SP</div>
-            <h3 class="committee-name">Dr. Sonali D. Patil</h3>
-            <p class="committee-role">Chair, IEEE Pune Blockchain Group</p>
-            <p class="committee-affiliation">Region 10 Coordinator for IEEE Blockchain Groups &bull; Professor, PCCOE Pune</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));">RR</div>
-            <h3 class="committee-name">Dr. Ramesh Ramadoss</h3>
-            <p class="committee-role">Chair, IEEE Blockchain Technical Community</p>
-            <p class="committee-affiliation">IEEE Blockchain Technical Community (BCTC) &bull; Global Chair</p>
-          </div>
+      <!-- Interactive Tabbed Committee Hub -->
+      <div class="ux-tabs-wrapper">
+        <div class="ux-tab-nav" role="tablist">
+          <button class="ux-tab-btn active" data-tab="tab-comm-blockchain" role="tab" aria-selected="true">
+            <span>&#127759; Blockchain Group Leads</span>
+            <span class="ux-badge-count">2</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-comm-execom" role="tab" aria-selected="false">
+            <span>&#127963; Pune Section ExeCom</span>
+            <span class="ux-badge-count">4</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-comm-cs" role="tab" aria-selected="false">
+            <span>&#128187; CS Chapter &amp; ICBDS</span>
+            <span class="ux-badge-count">3</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-comm-faculty" role="tab" aria-selected="false">
+            <span>&#128104;&#8205;&#127979; Faculty Advisors</span>
+            <span class="ux-badge-count">4</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-comm-students" role="tab" aria-selected="false">
+            <span>&#127891; Student &amp; Tech Leads</span>
+            <span class="ux-badge-count">11</span>
+          </button>
         </div>
-      </section>
 
-      <!-- Group 2: IEEE Pune Section Executive Committee 2026 -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-          IEEE Pune Section — Executive Committee (2026)
-        </h2>
-        <div class="committee-grid">
-          <div class="committee-card">
-            <div class="committee-avatar">AB</div>
-            <h3 class="committee-name">Dr. Amar Buchade</h3>
-            <p class="committee-role">Chair, IEEE Pune Section</p>
-            <p class="committee-affiliation">IEEE Pune Section ExeCom 2026 &bull; TPC Co-Chair ICBDS</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">MB</div>
-            <h3 class="committee-name">Dr. Mandar Bhawalkar</h3>
-            <p class="committee-role">Vice-Chair, IEEE Pune Section</p>
-            <p class="committee-affiliation">IEEE Pune Section ExeCom 2026 &bull; TPC Co-Chair ICBDS</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">AK</div>
-            <h3 class="committee-name">Abhijit Khurape</h3>
-            <p class="committee-role">Secretary, IEEE Pune Section</p>
-            <p class="committee-affiliation">IEEE Pune Section ExeCom 2026</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">DB</div>
-            <h3 class="committee-name">Dr. D. G. Bhalke</h3>
-            <p class="committee-role">Treasurer, IEEE Pune Section</p>
-            <p class="committee-affiliation">IEEE Pune Section ExeCom 2026</p>
+        <!-- Global Filter Toolbar for Committee -->
+        <div class="ux-filter-toolbar" data-filter-target=".committee-grid .committee-card">
+          <div class="ux-search-box" style="max-width: 100%;">
+            <svg class="ux-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" placeholder="Live search committee (e.g. Patil, Buchade, Ingle, PCCOE)..." aria-label="Search Committee">
           </div>
         </div>
-      </section>
 
-      <!-- Group 3: IEEE Computer Society & Conference Leadership -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-          IEEE Computer Society Pune Chapter &amp; Conference Chairs
-        </h2>
-        <div class="committee-grid">
-          <div class="committee-card">
-            <div class="committee-avatar">RI</div>
-            <h3 class="committee-name">Dr. Rajesh Ingle</h3>
-            <p class="committee-role">Chair, IEEE CS Pune Chapter</p>
-            <p class="committee-affiliation">General Chair, IEEE ICBDS 2026 &bull; Former Chair, IEEE Pune Section</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">VD</div>
-            <h3 class="committee-name">Dr. Vivek Deshpande</h3>
-            <p class="committee-role">General Chair, IEEE ICBDS 2026</p>
-            <p class="committee-affiliation">IEEE Computer Society Pune Chapter</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">PM</div>
-            <h3 class="committee-name">Dr. Parikshit Mahalle</h3>
-            <p class="committee-role">General Co-Chair, IEEE ICBDS 2026</p>
-            <p class="committee-affiliation">IEEE Pune Section &bull; Head, AI &amp; DS Dept, VIIT Pune</p>
+        <!-- Tab 1: Blockchain Leadership -->
+        <div class="ux-tab-pane active" id="tab-comm-blockchain" role="tabpanel">
+          <div class="committee-grid">
+            <div class="committee-card">
+              <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));">SP</div>
+              <h3 class="committee-name">Dr. Sonali D. Patil</h3>
+              <p class="committee-role">Chair, IEEE Pune Blockchain Group</p>
+              <p class="committee-affiliation">Region 10 Coordinator for IEEE Blockchain Groups &bull; Professor, PCCOE Pune</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar" style="background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));">RR</div>
+              <h3 class="committee-name">Dr. Ramesh Ramadoss</h3>
+              <p class="committee-role">Chair, IEEE Blockchain Technical Community</p>
+              <p class="committee-affiliation">IEEE Blockchain Technical Community (BCTC) &bull; Global Chair</p>
+            </div>
           </div>
         </div>
-      </section>
 
-      <!-- Group 4: Institutional Advisors & SIG Leads -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
-          Faculty Advisors &amp; Special Interest Leads
-        </h2>
-        <div class="committee-grid">
-          <div class="committee-card">
-            <div class="committee-avatar">JK</div>
-            <h3 class="committee-name">Dr. Jayashree V. Katti</h3>
-            <p class="committee-role">Faculty Advisor</p>
-            <p class="committee-affiliation">Information Technology Committee, IEEE Blockchain Pune Section</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">SG</div>
-            <h3 class="committee-name">Dr. Santwana Gudadhe</h3>
-            <p class="committee-role">Chapter Coordinator &amp; Advisor</p>
-            <p class="committee-affiliation">IEEE CS Coordinator, IEEE Blockchain Pune Section</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">RP</div>
-            <h3 class="committee-name">Dr. Rohini Pise</h3>
-            <p class="committee-role">Blockchain SIG Lead &amp; Track Chair</p>
-            <p class="committee-affiliation">Track Chair (Blockchain), IEEE ICCUBEA &bull; PCCOE Pune</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">AM</div>
-            <h3 class="committee-name">Dr. Asmita Manna</h3>
-            <p class="committee-role">Track Co-Chair (Blockchain)</p>
-            <p class="committee-affiliation">IEEE ICCUBEA Blockchain Track &bull; PCCOE Pune</p>
+        <!-- Tab 2: Pune Section ExeCom 2026 -->
+        <div class="ux-tab-pane" id="tab-comm-execom" role="tabpanel">
+          <div class="committee-grid">
+            <div class="committee-card">
+              <div class="committee-avatar">AB</div>
+              <h3 class="committee-name">Dr. Amar Buchade</h3>
+              <p class="committee-role">Chair, IEEE Pune Section</p>
+              <p class="committee-affiliation">IEEE Pune Section ExeCom 2026 &bull; TPC Co-Chair ICBDS</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">MB</div>
+              <h3 class="committee-name">Dr. Mandar Bhawalkar</h3>
+              <p class="committee-role">Vice-Chair, IEEE Pune Section</p>
+              <p class="committee-affiliation">IEEE Pune Section ExeCom 2026 &bull; TPC Co-Chair ICBDS</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">AK</div>
+              <h3 class="committee-name">Abhijit Khurape</h3>
+              <p class="committee-role">Secretary, IEEE Pune Section</p>
+              <p class="committee-affiliation">IEEE Pune Section ExeCom 2026</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">DB</div>
+              <h3 class="committee-name">Dr. D. G. Bhalke</h3>
+              <p class="committee-role">Treasurer, IEEE Pune Section</p>
+              <p class="committee-affiliation">IEEE Pune Section ExeCom 2026</p>
+            </div>
           </div>
         </div>
-      </section>
 
-      <!-- Group 5: Student Branch Officers -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          Student Branch Officers
-        </h2>
-        <div class="committee-grid">
-          <div class="committee-card">
-            <div class="committee-avatar">AH</div>
-            <h3 class="committee-name">Abhiraj Hiwale</h3>
-            <p class="committee-role">Chair</p>
-            <p class="committee-affiliation">IEEE CS Student Branch</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">DB</div>
-            <h3 class="committee-name">Diksha Bhosale</h3>
-            <p class="committee-role">Vice Chair</p>
-            <p class="committee-affiliation">IEEE CS Student Branch</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">PM</div>
-            <h3 class="committee-name">Prithviraj More</h3>
-            <p class="committee-role">Vice Chair</p>
-            <p class="committee-affiliation">IEEE CS Student Branch</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">HR</div>
-            <h3 class="committee-name">Harshal Raut</h3>
-            <p class="committee-role">Secretary &amp; Treasurer</p>
-            <p class="committee-affiliation">IEEE CS Student Branch</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">AR</div>
-            <h3 class="committee-name">Ananya Rajankar</h3>
-            <p class="committee-role">Secretary</p>
-            <p class="committee-affiliation">IEEE CS Student Branch</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">OP</div>
-            <h3 class="committee-name">Om Pangaokar</h3>
-            <p class="committee-role">Treasurer</p>
-            <p class="committee-affiliation">IEEE CS Student Branch</p>
+        <!-- Tab 3: CS Chapter & ICBDS -->
+        <div class="ux-tab-pane" id="tab-comm-cs" role="tabpanel">
+          <div class="committee-grid">
+            <div class="committee-card">
+              <div class="committee-avatar">RI</div>
+              <h3 class="committee-name">Dr. Rajesh Ingle</h3>
+              <p class="committee-role">Chair, IEEE CS Pune Chapter</p>
+              <p class="committee-affiliation">General Chair, IEEE ICBDS 2026 &bull; Former Chair, IEEE Pune Section</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">VD</div>
+              <h3 class="committee-name">Dr. Vivek Deshpande</h3>
+              <p class="committee-role">General Chair, IEEE ICBDS 2026</p>
+              <p class="committee-affiliation">IEEE Computer Society Pune Chapter</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">PM</div>
+              <h3 class="committee-name">Dr. Parikshit Mahalle</h3>
+              <p class="committee-role">General Co-Chair, IEEE ICBDS 2026</p>
+              <p class="committee-affiliation">IEEE Pune Section &bull; Head, AI &amp; DS Dept, VIIT Pune</p>
+            </div>
           </div>
         </div>
-      </section>
 
-      <!-- Group 6: Technical Blockchain Leads -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-          Technical Blockchain Lead Committee
-        </h2>
-        <div class="committee-grid">
-          <div class="committee-card">
-            <div class="committee-avatar">ES</div>
-            <h3 class="committee-name">Eshal Shaikh</h3>
-            <p class="committee-role">Blockchain Project Lead</p>
-            <p class="committee-affiliation">IEEE Blockchain Pune Section</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">OK</div>
-            <h3 class="committee-name">Omkar Kumbhar</h3>
-            <p class="committee-role">Smart Contract Architect</p>
-            <p class="committee-affiliation">IEEE Blockchain Pune Section</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">HP</div>
-            <h3 class="committee-name">Harshal Patil</h3>
-            <p class="committee-role">DApp Lead</p>
-            <p class="committee-affiliation">IEEE Blockchain Pune Section</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">GK</div>
-            <h3 class="committee-name">Girish Kanoje</h3>
-            <p class="committee-role">Research Analyst</p>
-            <p class="committee-affiliation">IEEE Blockchain Pune Section</p>
-          </div>
-          <div class="committee-card">
-            <div class="committee-avatar">SG</div>
-            <h3 class="committee-name">Shaktisingh Girase</h3>
-            <p class="committee-role">Community Outreach</p>
-            <p class="committee-affiliation">IEEE Blockchain Pune Section</p>
+        <!-- Tab 4: Faculty Advisors -->
+        <div class="ux-tab-pane" id="tab-comm-faculty" role="tabpanel">
+          <div class="committee-grid">
+            <div class="committee-card">
+              <div class="committee-avatar">JK</div>
+              <h3 class="committee-name">Dr. Jayashree V. Katti</h3>
+              <p class="committee-role">Faculty Advisor</p>
+              <p class="committee-affiliation">Information Technology Committee, IEEE Blockchain Pune Section</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">SG</div>
+              <h3 class="committee-name">Dr. Santwana Gudadhe</h3>
+              <p class="committee-role">Chapter Coordinator &amp; Advisor</p>
+              <p class="committee-affiliation">IEEE CS Coordinator, IEEE Blockchain Pune Section</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">RP</div>
+              <h3 class="committee-name">Dr. Rohini Pise</h3>
+              <p class="committee-role">Blockchain SIG Lead &amp; Track Chair</p>
+              <p class="committee-affiliation">Track Chair (Blockchain), IEEE ICCUBEA &bull; PCCOE Pune</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">AM</div>
+              <h3 class="committee-name">Dr. Asmita Manna</h3>
+              <p class="committee-role">Track Co-Chair (Blockchain)</p>
+              <p class="committee-affiliation">IEEE ICCUBEA Blockchain Track &bull; PCCOE Pune</p>
+            </div>
           </div>
         </div>
-      </section>
+
+        <!-- Tab 5: Student & Tech Leads -->
+        <div class="ux-tab-pane" id="tab-comm-students" role="tabpanel">
+          <div class="committee-grid">
+            <div class="committee-card">
+              <div class="committee-avatar">AH</div>
+              <h3 class="committee-name">Abhiraj Hiwale</h3>
+              <p class="committee-role">Chair, Student Branch</p>
+              <p class="committee-affiliation">IEEE CS Student Branch</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">DB</div>
+              <h3 class="committee-name">Diksha Bhosale</h3>
+              <p class="committee-role">Vice Chair</p>
+              <p class="committee-affiliation">IEEE CS Student Branch</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">PM</div>
+              <h3 class="committee-name">Prithviraj More</h3>
+              <p class="committee-role">Vice Chair</p>
+              <p class="committee-affiliation">IEEE CS Student Branch</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">HR</div>
+              <h3 class="committee-name">Harshal Raut</h3>
+              <p class="committee-role">Secretary &amp; Treasurer</p>
+              <p class="committee-affiliation">IEEE CS Student Branch</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">ES</div>
+              <h3 class="committee-name">Eshal Shaikh</h3>
+              <p class="committee-role">Blockchain Project Lead</p>
+              <p class="committee-affiliation">IEEE Blockchain Pune Section</p>
+            </div>
+            <div class="committee-card">
+              <div class="committee-avatar">OK</div>
+              <h3 class="committee-name">Omkar Kumbhar</h3>
+              <p class="committee-role">Smart Contract Architect</p>
+              <p class="committee-affiliation">IEEE Blockchain Pune Section</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
   </main>
@@ -431,5 +407,6 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/compact-ux.js"></script>
 </body>
 </html>

@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mega-menu.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/compact-ux.css">
 </head>
 <body>
 
@@ -151,218 +152,190 @@
   </section>
 
   <!-- Main Content -->
-  <main class="section-activities section-alt">
+  <main class="section-activities section-alt" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
     <div class="container">
 
-      <!-- Section 1: Core IEEE Blockchain Community Links -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          IEEE Blockchain Technical Community (BCTC) Portals
-        </h2>
-        <div class="standards-table-wrapper">
-          <table class="standards-table">
-            <thead>
-              <tr><th>Resource Area</th><th>Description</th><th>Link</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>BCTC Homepage</strong></td>
-                <td>Global portal, initiatives, news, and community highlights</td>
-                <td><a href="https://blockchain.ieee.org/" target="_blank" rel="noopener">blockchain.ieee.org</a></td>
-              </tr>
-              <tr>
-                <td><strong>BCTC Standards</strong></td>
-                <td>IEEE SA blockchain standardisation projects, frameworks, and committees</td>
-                <td><a href="https://blockchain.ieee.org/standards/" target="_blank" rel="noopener">blockchain.ieee.org/standards</a></td>
-              </tr>
-              <tr>
-                <td><strong>BCTC Events Calendar</strong></td>
-                <td>Global calendar of IEEE blockchain conferences, summits, and webinars</td>
-                <td><a href="https://blockchain.ieee.org/events/" target="_blank" rel="noopener">blockchain.ieee.org/events</a></td>
-              </tr>
-              <tr>
-                <td><strong>BCTC Communities Directory</strong></td>
-                <td>Directory of local blockchain groups across Region 10 and worldwide</td>
-                <td><a href="https://blockchain.ieee.org/communities/" target="_blank" rel="noopener">blockchain.ieee.org/communities</a></td>
-              </tr>
-              <tr>
-                <td><strong>BCTC Membership</strong></td>
-                <td>Free membership subscription to the IEEE Blockchain Technical Community</td>
-                <td><a href="https://blockchain.ieee.org/membership" target="_blank" rel="noopener">blockchain.ieee.org/membership</a></td>
-              </tr>
-              <tr>
-                <td><strong>BCTC Publications</strong></td>
-                <td>Whitepapers, special issues, and technical articles</td>
-                <td><a href="https://blockchain.ieee.org/publications" target="_blank" rel="noopener">blockchain.ieee.org/publications</a></td>
-              </tr>
-              <tr>
-                <td><strong>BCTC Education</strong></td>
-                <td>Courses, webinars, eLearning modules, and tutorials</td>
-                <td><a href="https://blockchain.ieee.org/education" target="_blank" rel="noopener">blockchain.ieee.org/education</a></td>
-              </tr>
-              <tr>
-                <td><strong>BCTC Podcasts</strong></td>
-                <td>Podcast series featuring global blockchain leaders and researchers</td>
-                <td><a href="https://blockchain.ieee.org/podcasts" target="_blank" rel="noopener">blockchain.ieee.org/podcasts</a></td>
-              </tr>
-              <tr>
-                <td><strong>IEEE Collabratec</strong></td>
-                <td>Professional collaboration platform &amp; blockchain activity group</td>
-                <td><a href="https://ieee-collabratec.ieee.org/app/community/102/Blockchain/activities" target="_blank" rel="noopener">IEEE Collabratec</a></td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Interactive Tabbed Resource Hub -->
+      <div class="ux-tabs-wrapper">
+        <div class="ux-tab-nav" role="tablist">
+          <button class="ux-tab-btn active" data-tab="tab-bctc-portals" role="tab" aria-selected="true">
+            <span>&#127760; BCTC Portals</span>
+            <span class="ux-badge-count">9</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-standards-res" role="tab" aria-selected="false">
+            <span>&#128220; Standards Initiatives</span>
+            <span class="ux-badge-count">3</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-conf-portals" role="tab" aria-selected="false">
+            <span>&#127891; Conference Portals</span>
+            <span class="ux-badge-count">5</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-xplore-res" role="tab" aria-selected="false">
+            <span>&#128218; IEEE Xplore Searches</span>
+            <span class="ux-badge-count">9</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-partner-portals" role="tab" aria-selected="false">
+            <span>&#127979; Pune Academic Labs</span>
+            <span class="ux-badge-count">6</span>
+          </button>
         </div>
-      </section>
 
-      <!-- Section 2: Standards Committees & Organizations -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Standards Committees &amp; Initiatives
-        </h2>
-        <div class="standards-table-wrapper">
-          <table class="standards-table">
-            <thead>
-              <tr><th>Organization / Committee</th><th>Scope</th><th>Link</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>IEEE SA Blockchain/DLT Standards Committee</strong></td>
-                <td>C/BDLSC — oversees all IEEE blockchain standards (P3201–P3230)</td>
-                <td><a href="https://sagroups.ieee.org/bdlsc/" target="_blank" rel="noopener">sagroups.ieee.org/bdlsc</a></td>
-              </tr>
-              <tr>
-                <td><strong>IEEE SA Blockchain Topic</strong></td>
-                <td>IEEE Standards Association official topic hub for blockchain &amp; DLT</td>
-                <td><a href="https://standards.ieee.org/topics/blockchain/" target="_blank" rel="noopener">standards.ieee.org/topics/blockchain</a></td>
-              </tr>
-              <tr>
-                <td><strong>IEEE Standards Association</strong></td>
-                <td>Global standardization body for technology standards</td>
-                <td><a href="https://standards.ieee.org/" target="_blank" rel="noopener">standards.ieee.org</a></td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Tab 1: BCTC Portals -->
+        <div class="ux-tab-pane active" id="tab-bctc-portals" role="tabpanel">
+          <div class="ux-filter-toolbar" data-filter-target="#bctc-grid .ux-filterable-card">
+            <div class="ux-filter-pills">
+              <button type="button" class="ux-filter-pill active" data-category="all">All Portals</button>
+              <button type="button" class="ux-filter-pill" data-category="community">Community &amp; Join</button>
+              <button type="button" class="ux-filter-pill" data-category="learn">Learning &amp; Podcasts</button>
+            </div>
+            <div class="ux-search-box">
+              <svg class="ux-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" placeholder="Live filter portals..." aria-label="Filter Portals">
+            </div>
+          </div>
+
+          <div class="ux-grid-compact" id="bctc-grid">
+            <div class="ux-card-modern ux-filterable-card" data-category="community">
+              <div class="ux-card-header-row"><span class="ux-tag cyan">Global Hub</span></div>
+              <h3 class="ux-card-title">IEEE BCTC Global Portal</h3>
+              <p class="ux-card-desc">Official worldwide portal for the IEEE Blockchain Technical Community, newsletters, and global announcements.</p>
+              <div class="ux-card-footer"><a href="https://blockchain.ieee.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Open Portal &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern ux-filterable-card" data-category="community">
+              <div class="ux-card-header-row"><span class="ux-tag green">Free Sub</span></div>
+              <h3 class="ux-card-title">BCTC Membership Subscription</h3>
+              <p class="ux-card-desc">Complimentary membership subscription to the IEEE Blockchain Technical Community network.</p>
+              <div class="ux-card-footer"><a href="https://blockchain.ieee.org/membership" target="_blank" rel="noopener" class="btn-primary btn-sm">Subscribe Free &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern ux-filterable-card" data-category="learn">
+              <div class="ux-card-header-row"><span class="ux-tag gold">Education</span></div>
+              <h3 class="ux-card-title">BCTC Educational Modules</h3>
+              <p class="ux-card-desc">Curated blockchain fundamentals, smart contract security tutorials, and eLearning courses.</p>
+              <div class="ux-card-footer"><a href="https://blockchain.ieee.org/education" target="_blank" rel="noopener" class="btn-primary btn-sm">Start Learning &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern ux-filterable-card" data-category="learn">
+              <div class="ux-card-header-row"><span class="ux-tag cyan">Audio &amp; Media</span></div>
+              <h3 class="ux-card-title">IEEE Blockchain Podcasts</h3>
+              <p class="ux-card-desc">Podcast series featuring discussions with pioneering blockchain researchers and enterprise builders.</p>
+              <div class="ux-card-footer"><a href="https://blockchain.ieee.org/podcasts" target="_blank" rel="noopener" class="btn-primary btn-sm">Listen Now &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern ux-filterable-card" data-category="community">
+              <div class="ux-card-header-row"><span class="ux-tag gold">Collaboration</span></div>
+              <h3 class="ux-card-title">IEEE Collabratec Community</h3>
+              <p class="ux-card-desc">Professional networking forum and technical exchange group for IEEE blockchain members.</p>
+              <div class="ux-card-footer"><a href="https://ieee-collabratec.ieee.org/app/community/102/Blockchain/activities" target="_blank" rel="noopener" class="btn-primary btn-sm">Join Forum &rarr;</a></div>
+            </div>
+          </div>
         </div>
-      </section>
 
-      <!-- Section 3: Conference Portals -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          Flagship Blockchain Conference Portals
-        </h2>
-        <div class="standards-table-wrapper">
-          <table class="standards-table">
-            <thead>
-              <tr><th>Conference</th><th>Scope &amp; Edition</th><th>Portal Link</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>IEEE ICBDS 2026</strong></td>
-                <td>5th Intl. Conf. on Blockchain &amp; Distributed Systems Security, Pune (Record #71591)</td>
-                <td><a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener">icbds.ieeepunesection.org</a></td>
-              </tr>
-              <tr>
-                <td><strong>IEEE ICDLT 2025</strong></td>
-                <td>Intl. Conf. on Distributed Ledger Technologies, MCCIA Pune</td>
-                <td><a href="https://www.ieeeicdlt.org/" target="_blank" rel="noopener">ieeeicdlt.org</a></td>
-              </tr>
-              <tr>
-                <td><strong>IEEE ICCUBEA 2026</strong></td>
-                <td>10th IEEE ICCUBEA (Track 10: Blockchain &amp; Cyber Security, PCCOE Pune)</td>
-                <td><a href="https://iccubea.pccoepune.com/" target="_blank" rel="noopener">iccubea.pccoepune.com</a></td>
-              </tr>
-              <tr>
-                <td><strong>IEEE Blockchain 2025</strong></td>
-                <td>8th IEEE International Conference on Blockchain</td>
-                <td><a href="https://ieee-cybermatics.org/2025/blockchain/" target="_blank" rel="noopener">ieee-cybermatics.org</a></td>
-              </tr>
-              <tr>
-                <td><strong>IEEE ICBC 2027</strong></td>
-                <td>IEEE International Conference on Blockchain and Cryptocurrency, Toronto</td>
-                <td><a href="https://www.comsoc.org/conferences-events/ieee-international-conference-blockchain-and-cryptocurrency-2027" target="_blank" rel="noopener">comsoc.org</a></td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Tab 2: Standards Initiatives -->
+        <div class="ux-tab-pane" id="tab-standards-res" role="tabpanel">
+          <div class="ux-grid-compact">
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag cyan">C/BDLSC</span></div>
+              <h3 class="ux-card-title">IEEE SA Blockchain Standards Committee</h3>
+              <p class="ux-card-desc">Oversees all IEEE blockchain standards working groups (P3201–P3230) and project development.</p>
+              <div class="ux-card-footer"><a href="https://sagroups.ieee.org/bdlsc/" target="_blank" rel="noopener" class="btn-primary btn-sm">BDLSC Portal &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag gold">Topic Hub</span></div>
+              <h3 class="ux-card-title">IEEE SA Blockchain Topic</h3>
+              <p class="ux-card-desc">Official topic landing page for IEEE Standards Association blockchain and DLT programs.</p>
+              <div class="ux-card-footer"><a href="https://standards.ieee.org/topics/blockchain/" target="_blank" rel="noopener" class="btn-primary btn-sm">IEEE SA Topic &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag green">Standards Directory</span></div>
+              <h3 class="ux-card-title">Section Standards Directory</h3>
+              <p class="ux-card-desc">Browse our interactive filterable table of published (2418.x) and developing (P3201–P3230) standards.</p>
+              <div class="ux-card-footer"><a href="standards.html" class="btn-primary btn-sm">Explore Standards &rarr;</a></div>
+            </div>
+          </div>
         </div>
-      </section>
 
-      <!-- Section 4: IEEE Xplore Research Queries -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-          IEEE Xplore Blockchain Research Searches
-        </h2>
-        <div class="standards-table-wrapper">
-          <table class="standards-table">
-            <thead>
-              <tr><th>Domain</th><th>Search Query</th><th>Direct Link</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>General</td><td>Blockchain</td><td><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain" target="_blank" rel="noopener">Search IEEE Xplore</a></td></tr>
-              <tr><td>Regional</td><td>Blockchain India</td><td><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain+india" target="_blank" rel="noopener">Search IEEE Xplore</a></td></tr>
-              <tr><td>Regional</td><td>Blockchain Pune</td><td><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain+pune" target="_blank" rel="noopener">Search IEEE Xplore</a></td></tr>
-              <tr><td>Security</td><td>Smart Contract Security</td><td><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=smart+contract+security" target="_blank" rel="noopener">Search IEEE Xplore</a></td></tr>
-              <tr><td>AI Integration</td><td>Blockchain Federated Learning</td><td><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain+federated+learning" target="_blank" rel="noopener">Search IEEE Xplore</a></td></tr>
-              <tr><td>IoT</td><td>Blockchain IoT</td><td><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain+IoT" target="_blank" rel="noopener">Search IEEE Xplore</a></td></tr>
-              <tr><td>Healthcare</td><td>Blockchain Healthcare</td><td><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain+healthcare" target="_blank" rel="noopener">Search IEEE Xplore</a></td></tr>
-              <tr><td>Identity</td><td>Blockchain Digital Identity</td><td><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain+digital+identity" target="_blank" rel="noopener">Search IEEE Xplore</a></td></tr>
-              <tr><td>Supply Chain</td><td>Blockchain Supply Chain</td><td><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain+supply+chain" target="_blank" rel="noopener">Search IEEE Xplore</a></td></tr>
-            </tbody>
-          </table>
+        <!-- Tab 3: Conference Portals -->
+        <div class="ux-tab-pane" id="tab-conf-portals" role="tabpanel">
+          <div class="ux-grid-compact">
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag cyan">Record #71591</span><span class="news-date" style="font-size:0.75rem">Oct 23–25, 2026</span></div>
+              <h3 class="ux-card-title">IEEE ICBDS 2026 Portal</h3>
+              <p class="ux-card-desc">5th Intl. Conference on Blockchain &amp; Distributed Systems Security, Pune. Hybrid conference.</p>
+              <div class="ux-card-footer"><a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Open Portal &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag gold">MCCIA Pune</span></div>
+              <h3 class="ux-card-title">IEEE ICDLT Portal</h3>
+              <p class="ux-card-desc">International Conference on Distributed Ledger Technologies hosted at MCCIA Pune with 200+ attendees.</p>
+              <div class="ux-card-footer"><a href="https://www.ieeeicdlt.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Open Portal &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag green">Track 10</span><span class="news-date" style="font-size:0.75rem">Aug 21–22, 2026</span></div>
+              <h3 class="ux-card-title">IEEE ICCUBEA 2026</h3>
+              <p class="ux-card-desc">10th International Conference at PCCOE Pune — Blockchain &amp; Cyber Security Track.</p>
+              <div class="ux-card-footer"><a href="https://iccubea.pccoepune.com/" target="_blank" rel="noopener" class="btn-primary btn-sm">Open Portal &rarr;</a></div>
+            </div>
+          </div>
         </div>
-      </section>
 
-      <!-- Section 5: Regional & Institutional Infrastructure -->
-      <section class="committee-group-section">
-        <h2 class="committee-group-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-          Pune Section &amp; Partner Institutional Portals
-        </h2>
-        <div class="standards-table-wrapper">
-          <table class="standards-table">
-            <thead>
-              <tr><th>Entity</th><th>Role</th><th>Link</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>IEEE Pune Section</strong></td>
-                <td>Section portal for Region 10 governance, events, and chapters</td>
-                <td><a href="https://ieeepunesection.org/" target="_blank" rel="noopener">ieeepunesection.org</a></td>
-              </tr>
-              <tr>
-                <td><strong>IEEE Region 10</strong></td>
-                <td>Asia-Pacific regional governing body of IEEE</td>
-                <td><a href="https://www.ieeer10.org/" target="_blank" rel="noopener">ieeer10.org</a></td>
-              </tr>
-              <tr>
-                <td><strong>IEEE India Council</strong></td>
-                <td>Umbrella organization coordinating IEEE Sections across India</td>
-                <td><a href="https://india-council.ieee.org/" target="_blank" rel="noopener">india-council.ieee.org</a></td>
-              </tr>
-              <tr>
-                <td><strong>PCCOE Pune</strong></td>
-                <td>Host institution for IEEE ICCUBEA &amp; IEEE Pune Blockchain Symposium</td>
-                <td><a href="https://www.pccoepune.com/" target="_blank" rel="noopener">pccoepune.com</a></td>
-              </tr>
-              <tr>
-                <td><strong>VIIT Pune</strong></td>
-                <td>Host institution for IEEE ICBDS 2024</td>
-                <td><a href="https://www.viit.ac.in/" target="_blank" rel="noopener">viit.ac.in</a></td>
-              </tr>
-              <tr>
-                <td><strong>MMCOE Pune</strong></td>
-                <td>Host institution for Centre of Excellence: Blockchain Technology Lab</td>
-                <td><a href="https://www.mmcoe.edu.in/" target="_blank" rel="noopener">mmcoe.edu.in</a></td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Tab 4: IEEE Xplore Searches -->
+        <div class="ux-tab-pane" id="tab-xplore-res" role="tabpanel">
+          <div class="ux-grid-compact">
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag cyan">IEEE Xplore</span></div>
+              <h3 class="ux-card-title">Smart Contract Security</h3>
+              <p class="ux-card-desc">Scholarly papers on smart contract auditing, vulnerability scanning, and verification.</p>
+              <div class="ux-card-footer"><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=smart+contract+security" target="_blank" rel="noopener" class="btn-primary btn-sm">Query Xplore &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag gold">IEEE Xplore</span></div>
+              <h3 class="ux-card-title">Blockchain &amp; Federated AI</h3>
+              <p class="ux-card-desc">Papers covering privacy-preserving on-chain machine learning and federated training.</p>
+              <div class="ux-card-footer"><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain+federated+learning" target="_blank" rel="noopener" class="btn-primary btn-sm">Query Xplore &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag green">IEEE Xplore</span></div>
+              <h3 class="ux-card-title">Decentralized Identity (DID)</h3>
+              <p class="ux-card-desc">Research on self-sovereign identity, verifiable credentials, and key management frameworks.</p>
+              <div class="ux-card-footer"><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=blockchain+digital+identity" target="_blank" rel="noopener" class="btn-primary btn-sm">Query Xplore &rarr;</a></div>
+            </div>
+          </div>
         </div>
-      </section>
 
+        <!-- Tab 5: Institutional Labs -->
+        <div class="ux-tab-pane" id="tab-partner-portals" role="tabpanel">
+          <div class="ux-grid-compact">
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag cyan">Academic Hub</span></div>
+              <h3 class="ux-card-title">PCCOE Pune</h3>
+              <p class="ux-card-desc">Host institution for IEEE ICCUBEA and IEEE Pune Blockchain Technical activities.</p>
+              <div class="ux-card-footer"><a href="https://www.pccoepune.com/" target="_blank" rel="noopener" class="btn-primary btn-sm">Visit PCCOE &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag gold">CoE Lab</span></div>
+              <h3 class="ux-card-title">MMCOE Centre of Excellence</h3>
+              <p class="ux-card-desc">Host of the Blockchain Technology Lab in collaboration with IEEE Pune Blockchain Group.</p>
+              <div class="ux-card-footer"><a href="https://www.mmcoe.edu.in/" target="_blank" rel="noopener" class="btn-primary btn-sm">Visit MMCOE &rarr;</a></div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row"><span class="ux-tag green">Academic Hub</span></div>
+              <h3 class="ux-card-title">VIIT Pune</h3>
+              <p class="ux-card-desc">Host institution for IEEE ICBDS 2024 and blockchain faculty development programs.</p>
+              <div class="ux-card-footer"><a href="https://www.viit.ac.in/" target="_blank" rel="noopener" class="btn-primary btn-sm">Visit VIIT &rarr;</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -409,6 +382,10 @@
             <span>ieeeicbds@gmail.com</span>
           </div>
           <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>tpc@icbds.ieeepunesection.org</span>
+          </div>
+          <div class="footer-contact-item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             <span>Pune, Maharashtra, India</span>
           </div>
@@ -434,5 +411,6 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/compact-ux.js"></script>
 </body>
 </html>

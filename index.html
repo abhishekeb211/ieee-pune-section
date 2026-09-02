@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mega-menu.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/compact-ux.css">
 </head>
 <body>
 
@@ -274,192 +275,309 @@
   </section>
 
   <!-- ==========================================================================
-       5. CHAPTER SNAPSHOT & PILLARS
+       5. COMPACT INTERACTIVE PORTAL HUB (Tabs, Milestones, & Scannable Cards)
        ========================================================================== -->
-  <section class="section-activities" id="overview">
+  <section class="section-activities" id="overview" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">About IEEE Blockchain Pune Section</h2>
-        <p class="section-lead">
-          The IEEE Pune Blockchain Group operates under the IEEE Blockchain Technical Community (BCTC) within IEEE Region 10. It connects the IEEE Pune Section, IEEE Computer Society Pune Chapter, and leading Pune institutions — PCCOE, VIIT, MMCOE — to advance blockchain research, standards, education, and professional collaboration across Maharashtra.
-        </p>
-      </div>
 
-      <div class="activities-grid">
-        <!-- Conferences & Events -->
-        <div class="activity-card">
-          <div class="activity-card-header blp">
-            <h3 class="activity-header-title">Conferences &amp; Events</h3>
+      <!-- ICBDS 2026 Milestone Ribbon (Key Dates at a Glance) -->
+      <div class="ux-milestone-ribbon">
+        <div class="ux-milestone-header">
+          <div class="ux-milestone-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            IEEE ICBDS 2026 &bull; Flagship Milestone Timeline (Pune)
           </div>
-          <div class="activity-card-body">
-            <h4 class="activity-card-title">ICBDS &bull; ICDLT &bull; ICCUBEA</h4>
-            <p class="activity-card-text">Flagship IEEE conferences hosted in Pune — including the International Conference on Blockchain and Distributed Systems Security (ICBDS), ICDLT, and ICCUBEA's Blockchain &amp; Cyber Security track — with IEEE Xplore proceedings.</p>
-            <a href="events.html" class="news-card-link">View Conferences &rsaquo;</a>
-          </div>
+          <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm" style="background: rgba(0, 180, 216, 0.2); border: 1px solid rgba(0, 180, 216, 0.6); color: #fff;">
+            Conf. Record #71591 &rarr;
+          </a>
         </div>
 
-        <!-- Standards & Publications -->
-        <div class="activity-card">
-          <div class="activity-card-header xplore">
-            <h3 class="activity-header-title">Standards &amp; Publications</h3>
+        <div class="ux-milestone-grid">
+          <div class="ux-milestone-item">
+            <div class="ux-milestone-date">June 30, 2026</div>
+            <div class="ux-milestone-desc">Paper Submission Deadline</div>
           </div>
-          <div class="activity-card-body">
-            <h4 class="activity-card-title">IEEE 2418.x &bull; P3201–P3230</h4>
-            <p class="activity-card-text">Active participation in IEEE Blockchain &amp; Distributed Ledger Standards — including published standards (IEEE 2418.2, IEEE 2418.7) and 30+ developing projects covering access control, interoperability, and digital assets.</p>
-            <a href="standards.html" class="news-card-link">Explore Standards &rsaquo;</a>
+          <div class="ux-milestone-item">
+            <div class="ux-milestone-date">July 30, 2026</div>
+            <div class="ux-milestone-desc">Acceptance Notification</div>
           </div>
-        </div>
-
-        <!-- Research & Education -->
-        <div class="activity-card">
-          <div class="activity-card-header standards">
-            <h3 class="activity-header-title">Research &amp; Education</h3>
+          <div class="ux-milestone-item">
+            <div class="ux-milestone-date">August 5, 2026</div>
+            <div class="ux-milestone-desc">Camera-Ready Submission</div>
           </div>
-          <div class="activity-card-body">
-            <h4 class="activity-card-title">IEEE Xplore &bull; Technical Briefs</h4>
-            <p class="activity-card-text">Scholarly publication pathways through IEEE Xplore, Technical Briefs 2025, blockchain fundamentals courses via IEEE Learning Network, and faculty development programs at Pune institutions.</p>
-            <a href="resources.html" class="news-card-link">View Resources &rsaquo;</a>
+          <div class="ux-milestone-item">
+            <div class="ux-milestone-date">August 21–22, 2026</div>
+            <div class="ux-milestone-desc">ICCUBEA 2026 (PCCOE)</div>
           </div>
-        </div>
-
-        <!-- Local Communities -->
-        <div class="activity-card">
-          <div class="activity-card-header philanthropy">
-            <h3 class="activity-header-title">India Communities</h3>
-          </div>
-          <div class="activity-card-body">
-            <h4 class="activity-card-title">10 India Blockchain Groups</h4>
-            <p class="activity-card-text">IEEE BCTC supports blockchain groups across India — Pune, Bangalore, Chennai, Delhi, Gujarat, Hyderabad, Kerala, Maharashtra, Raipur, and CU Kengeri — with student groups at IIT Bombay, Delhi, Kharagpur, Madras, and Roorkee.</p>
-            <a href="india-ecosystem.html" class="news-card-link">India Ecosystem &rsaquo;</a>
+          <div class="ux-milestone-item">
+            <div class="ux-milestone-date">October 23–25, 2026</div>
+            <div class="ux-milestone-desc">ICBDS 2026 Conference</div>
           </div>
         </div>
       </div>
+
+      <!-- Main Interactive Tabbed Section Switcher (No Infinite Scrolling) -->
+      <div class="ux-tabs-wrapper">
+        <div class="ux-tab-nav" role="tablist">
+          <button class="ux-tab-btn active" data-tab="tab-conferences" role="tab" aria-selected="true">
+            <span>&#127891; Conferences &amp; Events</span>
+            <span class="ux-badge-count">3</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-standards" role="tab" aria-selected="false">
+            <span>&#128220; Standards &amp; Projects</span>
+            <span class="ux-badge-count">30+</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-research" role="tab" aria-selected="false">
+            <span>&#128218; Research &amp; Education</span>
+            <span class="ux-badge-count">CoE</span>
+          </button>
+          <button class="ux-tab-btn" data-tab="tab-ecosystem" role="tab" aria-selected="false">
+            <span>&#127759; Pune &amp; India Ecosystem</span>
+            <span class="ux-badge-count">10 Groups</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: Conferences & Events -->
+        <div class="ux-tab-pane active" id="tab-conferences" role="tabpanel">
+          <div class="ux-grid-compact">
+            
+            <!-- Card 1: ICBDS 2026 -->
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row">
+                <span class="ux-tag cyan">Flagship Conference</span>
+                <span class="news-date" style="font-size:0.75rem">Oct 23–25, 2026</span>
+              </div>
+              <h3 class="ux-card-title">5th IEEE ICBDS 2026</h3>
+              <p class="ux-card-desc">
+                5th Intl. Conference on Blockchain &amp; Distributed Systems Security. Hybrid mode at Pune. IEEE Conf Record #71591 with IEEE Xplore proceedings &amp; Scopus indexing.
+              </p>
+              <div class="ux-expandable">
+                <button type="button" class="ux-expand-trigger" aria-expanded="false">
+                  <span>View 6 Technical Tracks</span>
+                  <span class="ux-expand-icon">&#9662;</span>
+                </button>
+                <div class="ux-expand-content">
+                  &bull; Blockchain Systems &amp; Protocols<br>
+                  &bull; Smart Contracts &amp; Security<br>
+                  &bull; AI &amp; Web3 Technology Integration<br>
+                  &bull; Distributed Computing &amp; Consensus<br>
+                  &bull; Privacy-Preserving Systems<br>
+                  &bull; System Design &amp; Management
+                </div>
+              </div>
+              <div class="ux-card-footer">
+                <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="btn-primary btn-sm">Portal &rarr;</a>
+                <a href="tracks.html" class="btn-secondary btn-sm btn-outline">Tracks Info</a>
+              </div>
+            </div>
+
+            <!-- Card 2: ICCUBEA 2026 -->
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row">
+                <span class="ux-tag gold">PCCOE Pune Track</span>
+                <span class="news-date" style="font-size:0.75rem">Aug 21–22, 2026</span>
+              </div>
+              <h3 class="ux-card-title">10th IEEE ICCUBEA 2026</h3>
+              <p class="ux-card-desc">
+                Track 10: Blockchain &amp; Cyber Security. Track chairs: Dr. Rohini Pise and Dr. Asmita Manna. BCTC Local Group Initiative at PCCOE. Conf. Record #69821.
+              </p>
+              <div class="ux-expandable">
+                <button type="button" class="ux-expand-trigger" aria-expanded="false">
+                  <span>Track Leadership</span>
+                  <span class="ux-expand-icon">&#9662;</span>
+                </button>
+                <div class="ux-expand-content">
+                  &bull; <strong>Chairs:</strong> Dr. Rohini Pise, Dr. Asmita Manna<br>
+                  &bull; <strong>Host:</strong> PCCOE, Pune<br>
+                  &bull; <strong>Topics:</strong> Zero Trust, Distributed Security, Cryptography
+                </div>
+              </div>
+              <div class="ux-card-footer">
+                <a href="https://iccubea.pccoepune.com/" target="_blank" rel="noopener" class="btn-primary btn-sm">Portal &rarr;</a>
+                <a href="events.html#iccubea" class="btn-secondary btn-sm btn-outline">Details</a>
+              </div>
+            </div>
+
+            <!-- Card 3: ICDLT 2025 / Kaigi -->
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row">
+                <span class="ux-tag green">BCTC Flagship</span>
+                <span class="news-date" style="font-size:0.75rem">MCCIA Pune</span>
+              </div>
+              <h3 class="ux-card-title">IEEE ICDLT &amp; Kaigi</h3>
+              <p class="ux-card-desc">
+                Intl. Conference on Distributed Ledger Technologies hosted at MCCIA Pune with 200+ delegates, alongside Blockchain Kaigi knowledge partnerships.
+              </p>
+              <div class="ux-expandable">
+                <button type="button" class="ux-expand-trigger" aria-expanded="false">
+                  <span>Organizing Partners</span>
+                  <span class="ux-expand-icon">&#9662;</span>
+                </button>
+                <div class="ux-expand-content">
+                  &bull; IEEE Blockchain Technical Community (BCTC)<br>
+                  &bull; IEEE Southern California Council<br>
+                  &bull; IEEE Computer Society Pune Chapter<br>
+                  &bull; IIT Bombay Knowledge Partner
+                </div>
+              </div>
+              <div class="ux-card-footer">
+                <a href="proceedings.html" class="btn-primary btn-sm">Proceedings &rarr;</a>
+                <a href="events.html" class="btn-secondary btn-sm btn-outline">All Events</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 2: Standards & Projects -->
+        <div class="ux-tab-pane" id="tab-standards" role="tabpanel">
+          <div class="ux-filter-toolbar" data-filter-target="#standards-tab-grid .ux-filterable-card">
+            <div class="ux-filter-pills">
+              <button type="button" class="ux-filter-pill active" data-category="all">All Standards</button>
+              <button type="button" class="ux-filter-pill" data-category="published">Published</button>
+              <button type="button" class="ux-filter-pill" data-category="supply-chain">Supply Chain</button>
+              <button type="button" class="ux-filter-pill" data-category="identity">Identity &amp; Assets</button>
+            </div>
+            <div class="ux-search-box">
+              <svg class="ux-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" placeholder="Live filter standards (e.g. 2418, P3201)..." aria-label="Filter Standards">
+            </div>
+          </div>
+
+          <div class="ux-grid-compact" id="standards-tab-grid">
+            <div class="ux-card-modern ux-filterable-card" data-category="published data-format">
+              <div class="ux-card-header-row">
+                <span class="ux-tag cyan">Active Standard</span>
+                <span class="news-date" style="font-size:0.75rem">IEEE 2418.2-2020</span>
+              </div>
+              <h3 class="ux-card-title">Data Format for Blockchain Systems</h3>
+              <p class="ux-card-desc">
+                Defines data format standards for blockchain systems, ensuring cross-chain interoperability and structured ledger consistency.
+              </p>
+              <div class="ux-card-footer">
+                <a href="standards.html" class="btn-primary btn-sm">Full Spec &rarr;</a>
+                <span class="brand-badge" style="font-size:0.7rem">Published</span>
+              </div>
+            </div>
+
+            <div class="ux-card-modern ux-filterable-card" data-category="published supply-chain">
+              <div class="ux-card-header-row">
+                <span class="ux-tag gold">Active Standard</span>
+                <span class="news-date" style="font-size:0.75rem">IEEE 2418.7-2021</span>
+              </div>
+              <h3 class="ux-card-title">Blockchain in Supply Chain Finance</h3>
+              <p class="ux-card-desc">
+                Comprehensive framework for applying DLT in supply chain finance, multi-tier invoicing workflows, and audit trails.
+              </p>
+              <div class="ux-card-footer">
+                <a href="standards.html" class="btn-primary btn-sm">Full Spec &rarr;</a>
+                <span class="brand-badge" style="font-size:0.7rem">Published</span>
+              </div>
+            </div>
+
+            <div class="ux-card-modern ux-filterable-card" data-category="developing identity supply-chain">
+              <div class="ux-card-header-row">
+                <span class="ux-tag green">30+ Working Groups</span>
+                <span class="news-date" style="font-size:0.75rem">P3201–P3230</span>
+              </div>
+              <h3 class="ux-card-title">Developing Blockchain Projects</h3>
+              <p class="ux-card-desc">
+                Active working groups spanning Decentralized Identity (P3210), Carbon Trading (P3218), Zero-Trust IoT (P3219), and Asset Classification.
+              </p>
+              <div class="ux-card-footer">
+                <a href="standards.html#developing" class="btn-primary btn-sm">Browse 30+ &rarr;</a>
+                <span class="brand-badge" style="font-size:0.7rem">Developing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Research & Education -->
+        <div class="ux-tab-pane" id="tab-research" role="tabpanel">
+          <div class="ux-grid-compact">
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row">
+                <span class="ux-tag cyan">Digital Library</span>
+                <span class="news-date" style="font-size:0.75rem">IEEE Xplore</span>
+              </div>
+              <h3 class="ux-card-title">Conference Proceedings &amp; Briefs</h3>
+              <p class="ux-card-desc">
+                Indexed publication records from ICBDS and ICDLT indexed in Scopus, IEEE Xplore, and IEEE Technical Briefs 2025.
+              </p>
+              <div class="ux-card-footer">
+                <a href="proceedings.html" class="btn-primary btn-sm">Proceedings &rarr;</a>
+                <a href="resources.html" class="btn-secondary btn-sm btn-outline">Resources</a>
+              </div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row">
+                <span class="ux-tag gold">Academic Lab</span>
+                <span class="news-date" style="font-size:0.75rem">MMCOE &bull; PCCOE &bull; VIIT</span>
+              </div>
+              <h3 class="ux-card-title">Centre of Excellence (CoE) Labs</h3>
+              <p class="ux-card-desc">
+                Collaborative research labs focused on Smart Contract Security, Zero-Knowledge Proofs, and Decentralized Applications in Pune.
+              </p>
+              <div class="ux-card-footer">
+                <a href="about.html#milestones" class="btn-primary btn-sm">View Labs &rarr;</a>
+                <a href="committee.html" class="btn-secondary btn-sm btn-outline">Faculty Lead</a>
+              </div>
+            </div>
+
+            <div class="ux-card-modern">
+              <div class="ux-card-header-row">
+                <span class="ux-tag green">Upskilling</span>
+                <span class="news-date" style="font-size:0.75rem">IEEE Learning</span>
+              </div>
+              <h3 class="ux-card-title">Faculty Development &amp; Student Tracks</h3>
+              <p class="ux-card-desc">
+                Hands-on Solidity workshops, BlockHack student hackathons, and IEEE Learning Network verified certification pathways.
+              </p>
+              <div class="ux-card-footer">
+                <a href="education.html" class="btn-primary btn-sm">Learning Portal &rarr;</a>
+                <a href="membership.html" class="btn-secondary btn-sm btn-outline">Join Section</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Pune & India Ecosystem -->
+        <div class="ux-tab-pane" id="tab-ecosystem" role="tabpanel">
+          <div class="content-2col" style="gap: 1.5rem; align-items: stretch;">
+            <div class="ux-card-modern" style="margin-bottom:0;">
+              <span class="brand-badge local-identity-badge" style="max-width:fit-content; margin-bottom:0.75rem;">Pune Regional Hub</span>
+              <h3 class="ux-card-title" style="font-size:1.3rem;">IEEE Pune Section Leadership</h3>
+              <p class="ux-card-desc">
+                Serving <strong>2,500+ members</strong> across <strong>24+ Student Branches</strong> in Pune. Led by <strong>Dr. Sonali D. Patil</strong> (IEEE Blockchain Pune Chair &amp; Region 10 Coordinator) and <strong>Dr. Rajesh Ingle</strong> (IEEE Computer Society Pune Chapter Chair).
+              </p>
+              <div class="btn-group" style="margin-top:auto;">
+                <a href="about.html" class="btn-primary btn-sm">About Section &rarr;</a>
+                <a href="committee.html" class="btn-secondary btn-sm btn-outline">View Committee</a>
+              </div>
+            </div>
+
+            <div class="ux-card-modern" style="margin-bottom:0;">
+              <span class="brand-badge" style="max-width:fit-content; margin-bottom:0.75rem; background:rgba(0,180,216,0.12); color:#0077b6;">Nationwide Network</span>
+              <h3 class="ux-card-title" style="font-size:1.3rem;">10 India Blockchain Groups</h3>
+              <p class="ux-card-desc">
+                Connected with BCTC chapters in Pune, Bangalore, Chennai, Delhi, Gujarat, Hyderabad, Kerala, Maharashtra, Raipur, and CU Kengeri &mdash; plus IIT student branches.
+              </p>
+              <div class="btn-group" style="margin-top:auto;">
+                <a href="india-ecosystem.html" class="btn-primary btn-sm">Ecosystem Map &rarr;</a>
+                <a href="contact.html" class="btn-secondary btn-sm btn-outline">Connect Office</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- ==========================================================================
-       6. LOCAL IDENTITY & SECTION MILESTONES
-       ========================================================================== -->
-  <section class="section-latest-news section-plain">
-    <div class="container">
-      <div class="content-2col">
-        <div>
-          <span class="brand-badge local-identity-badge">Pune Blockchain Ecosystem</span>
-          <h2 class="local-identity-title">
-            IEEE Blockchain Pune Section &amp; Regional Infrastructure
-          </h2>
-          <p class="local-identity-text">
-            The IEEE Pune Section belongs to <strong>IEEE Region 10 (Asia-Pacific)</strong>, serving the vibrant Pune metropolitan area with <strong>2,500+ members</strong>, <strong>24+ Student Branches</strong>, and <strong>15+ technical societies/chapters</strong>. Pune is a premier academic and technological epicentre hosting 100+ engineering colleges, major IT services companies, and FinTech centers.
-          </p>
-          <p class="local-identity-text">
-            The IEEE Pune Blockchain Group — chaired by <strong>Dr. Sonali D. Patil</strong> (also Region 10 Coordinator for IEEE Blockchain Groups) — operates at the intersection of Pune's research institutes and software industry. Activities span blockchain research, industry outreach, faculty development, student programs, smart contracts, cybersecurity, sustainability, and local institutional collaborations with PCCOE, VIIT, and MMCOE.
-          </p>
-          <div class="btn-group">
-            <a href="about.html" class="btn-primary">About Section &rarr;</a>
-            <a href="committee.html" class="btn-secondary btn-outline">View Committee</a>
-          </div>
-        </div>
-
-        <div class="milestones-card">
-          <h3 class="milestones-title">
-            Core Pune Blockchain Infrastructure
-          </h3>
-          <ul class="milestones-list">
-            <li><strong>IEEE Pune Blockchain Group:</strong> Listed under IEEE BCTC communities. Chair: Dr. Sonali D. Patil. Region 10 coordination role.</li>
-            <li><strong>IEEE Computer Society Pune Chapter:</strong> Chair: Dr. Rajesh Ingle. Organizes ICBDS flagship conference series.</li>
-            <li><strong>Centre of Excellence:</strong> MMCOE's Blockchain Technology Lab — IEEE Pune Blockchain Group collaboration.</li>
-            <li><strong>ICBDS Conference:</strong> Annual IEEE conference on Blockchain &amp; Distributed Systems Security. IEEE Xplore proceedings. Scopus indexed.</li>
-            <li><strong>ICDLT 2025:</strong> IEEE BCTC flagship conference hosted at MCCIA Pune. 200+ attendees. Hybrid mode.</li>
-            <li><strong>ICCUBEA:</strong> Track 10 — Blockchain &amp; Cyber Security at PCCOE. BCTC Local Group Initiative.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       7. UPCOMING EVENTS & ACTIVITIES
-       ========================================================================== -->
-  <section class="section-latest-news" id="events">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Upcoming IEEE Blockchain Events</h2>
-      </div>
-
-      <div class="news-grid">
-        <!-- Event 1: IEEE ICBDS 2026 -->
-        <article class="news-card">
-          <img class="news-card-img" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="IEEE ICBDS 2026">
-          <div class="news-card-body">
-            <span class="news-date">October 23–25, 2026 &bull; Pune, India &bull; Hybrid</span>
-            <h3 class="news-card-title">5th IEEE ICBDS 2026 — Blockchain &amp; Distributed Systems Security</h3>
-            <p class="news-card-text">Flagship conference of IEEE Computer Society Pune Chapter. 6 technical tracks covering blockchain architecture, smart contracts, security, AI integration, and distributed computing. Paper submission: 30 June 2026. IEEE Conf. Record #71591.</p>
-            <a href="https://icbds.ieeepunesection.org/" target="_blank" rel="noopener" class="news-card-link">Conference Portal &rsaquo;</a>
-          </div>
-        </article>
-
-        <!-- Event 2: IEEE ICCUBEA 2026 -->
-        <article class="news-card">
-          <img class="news-card-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="IEEE ICCUBEA 2026">
-          <div class="news-card-body">
-            <span class="news-date">August 21–22, 2026 &bull; PCCOE, Pune</span>
-            <h3 class="news-card-title">10th IEEE ICCUBEA 2026 — Blockchain &amp; Cyber Security Track</h3>
-            <p class="news-card-text">Track 10: Blockchain &amp; Cyber Security. Track chairs: Dr. Rohini Pise and Dr. Asmita Manna. Part of 10th IEEE International Conference on Computing, Communication, Control &amp; Automation. IEEE Conf. Record #69821.</p>
-            <a href="https://iccubea.pccoepune.com/" target="_blank" rel="noopener" class="news-card-link">ICCUBEA Portal &rsaquo;</a>
-          </div>
-        </article>
-
-        <!-- Event 3: Blockchain Kaigi 2025 -->
-        <article class="news-card">
-          <img class="news-card-img" src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=600&q=80" alt="Blockchain Kaigi 2025">
-          <div class="news-card-body">
-            <span class="news-date">December 4–6, 2025 &bull; IIT Bombay</span>
-            <h3 class="news-card-title">Blockchain Kaigi 2025 — IIT Bombay</h3>
-            <p class="news-card-text">IEEE BCTC Knowledge Partner event at IIT Bombay. Blockchain research presentations, industry sessions, and student activities across India's premier technology institute.</p>
-            <a href="https://blockchain.ieee.org/events/" target="_blank" rel="noopener" class="news-card-link">Event Calendar &rsaquo;</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       8. IMPORTANT DATES TIMELINE (ICBDS 2026)
-       ========================================================================== -->
-  <section class="section-timeline" id="dates">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Important Dates — IEEE ICBDS 2026</h2>
-        <p class="section-lead sm">Key milestones for the 5th IEEE International Conference on Blockchain and Distributed Systems Security, Pune.</p>
-      </div>
-
-      <div class="timeline-compact">
-        <div class="timeline-card">
-          <div class="timeline-date">June 30, 2026</div>
-          <div class="timeline-label">Paper Submission Deadline</div>
-        </div>
-        <div class="timeline-card">
-          <div class="timeline-date">July 30, 2026</div>
-          <div class="timeline-label">Acceptance Notification</div>
-        </div>
-        <div class="timeline-card">
-          <div class="timeline-date">August 5, 2026</div>
-          <div class="timeline-label">Camera-Ready Submission</div>
-        </div>
-        <div class="timeline-card">
-          <div class="timeline-date">August 21–22, 2026</div>
-          <div class="timeline-label">IEEE ICCUBEA 2026 — PCCOE, Pune</div>
-        </div>
-        <div class="timeline-card">
-          <div class="timeline-date">October 23–25, 2026</div>
-          <div class="timeline-label">IEEE ICBDS 2026 Conference — Pune</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       9. PUNE SECTION AT A GLANCE (METRIC COUNTERS)
+       6. PUNE SECTION AT A GLANCE (METRIC COUNTERS)
        ========================================================================== -->
   <section class="section-glance" id="glance">
     <div class="container">
@@ -511,46 +629,21 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       10. PUBLISHED IEEE BLOCKCHAIN STANDARDS
-       ========================================================================== -->
-  <section class="section-latest-news section-plain" id="standards-preview">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Published IEEE Blockchain Standards</h2>
-        <p class="section-lead sm">Active IEEE standards for blockchain and distributed ledger systems.</p>
-      </div>
-
-      <div class="news-grid">
-        <article class="news-card">
-          <div class="news-card-body">
-            <span class="news-date">IEEE 2418.2-2020 &bull; Active &bull; Published 23 Dec 2020</span>
-            <h3 class="news-card-title">Standard for Data Format for Blockchain Systems</h3>
-            <p class="news-card-text">Defines data format standards for blockchain systems, ensuring interoperability and data consistency across blockchain implementations and platforms.</p>
-            <a href="standards.html" class="news-card-link">View All Standards &rsaquo;</a>
-          </div>
-        </article>
-
-        <article class="news-card">
-          <div class="news-card-body">
-            <span class="news-date">IEEE 2418.7-2021 &bull; Active &bull; Published 28 Oct 2021</span>
-            <h3 class="news-card-title">Standard for Use of Blockchain in Supply Chain Finance</h3>
-            <p class="news-card-text">Framework for applying blockchain technology in supply chain finance operations, covering transaction workflows, data structures, and compliance protocols.</p>
-            <a href="standards.html" class="news-card-link">View All Standards &rsaquo;</a>
-          </div>
-        </article>
-
-        <article class="news-card">
-          <div class="news-card-body">
-            <span class="news-date">30+ Active Projects &bull; P3201–P3230</span>
-            <h3 class="news-card-title">Developing IEEE Blockchain Standards</h3>
-            <p class="news-card-text">Active standards projects spanning access control (P3201), interoperability (P3203), digital asset classification (P3206–P3208), identity systems (P3210), carbon trading (P3218), and IoT zero-trust frameworks (P3219).</p>
-            <a href="standards.html#developing" class="news-card-link">View All Developing Projects &rsaquo;</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+  <!-- Quick Floating Jump Rail for Instant Navigation -->
+  <aside class="ux-jump-rail" aria-label="Quick Page Jump">
+    <a href="#home" class="ux-jump-item" data-tooltip="Top Hero" aria-label="Top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+    </a>
+    <a href="#overview" class="ux-jump-item" data-tooltip="Hub &amp; Milestones" aria-label="Overview">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+    </a>
+    <a href="#glance" class="ux-jump-item" data-tooltip="Metrics" aria-label="Glance">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+    </a>
+    <a href="#footer" class="ux-jump-item" data-tooltip="Footer" aria-label="Footer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </aside>
 
   <!-- ==========================================================================
        11. SPONSORS AND PARTNERS
@@ -697,5 +790,6 @@
   <script src="js/slider.js"></script>
   <script src="js/counter.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/compact-ux.js"></script>
 </body>
 </html>
