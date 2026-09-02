@@ -555,10 +555,11 @@
    Everything goes single-column, buttons stack
    ========================================================================== */
 @media (max-width: 480px) {
-  /* Container */
-  .container {
-    padding: 0 1rem;
+  .resource-grid,
+  .resource-grid-compact {
+    grid-template-columns: 1fr;
   }
+}
 
   /* Header: search returns on its own line */
   .header-inner {

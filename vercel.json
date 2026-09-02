@@ -32,6 +32,10 @@
     { "src": "/contact", "dest": "/contact.html" },
     { "src": "/chapters", "dest": "/chapters.html" },
     { "src": "/education", "dest": "/education.html" },
+    { "src": "/resources", "dest": "/resources.html" },
+    { "src": "/standards", "dest": "/standards.html" },
+    { "src": "/proceedings", "dest": "/proceedings.html" },
+    { "src": "/india-ecosystem", "dest": "/india-ecosystem.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

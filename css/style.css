@@ -2088,3 +2088,192 @@ body.nav-open {
   margin-top: 1rem;
 }
 
+/* ==========================================================================
+   38. RESOURCE DIRECTORY (resources.html)
+   ========================================================================== */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 1.25rem;
+}
+
+.resource-grid-compact {
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  min-height: 44px;
+}
+
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 102, 153, 0.35);
+  color: inherit;
+}
+
+.resource-card.compact {
+  padding: 1rem 1.15rem;
+  justify-content: center;
+}
+
+.resource-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ieee-blue-deep);
+}
+
+.resource-card-url {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ieee-blue);
+  letter-spacing: 0.02em;
+}
+
+.resource-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0.35rem 0 0;
+}
+
+.section-intro {
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: none;
+  text-align: left;
+}
+
+.mt-1-5 {
+  margin-top: 1.5rem;
+}
+
+/* ==========================================================================
+   STANDARDS TABLE COMPONENT
+   ========================================================================== */
+
+.standards-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-light);
+  background: var(--bg-primary);
+}
+
+.standards-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.standards-table thead {
+  background: linear-gradient(135deg, var(--ieee-blue-deep), var(--ieee-blue));
+  color: var(--text-white);
+}
+
+.standards-table thead th {
+  padding: 0.85rem 1.2rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.standards-table tbody tr {
+  border-bottom: 1px solid var(--border-light);
+  transition: background-color var(--transition-fast);
+}
+
+.standards-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.standards-table tbody tr:hover {
+  background: rgba(0, 102, 153, 0.04);
+}
+
+.standards-table tbody td {
+  padding: 0.75rem 1.2rem;
+  color: var(--text-main);
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.standards-table tbody td a {
+  color: var(--ieee-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.standards-table tbody td a:hover {
+  color: var(--ieee-blue-dark);
+  text-decoration: underline;
+}
+
+.standards-table tbody tr:nth-child(even) {
+  background: var(--bg-secondary);
+}
+
+.standards-table tbody tr:nth-child(even):hover {
+  background: rgba(0, 102, 153, 0.06);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-badge.active {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.status-badge.developing {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.status-badge.draft {
+  background: rgba(99, 102, 241, 0.12);
+  color: #6366f1;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+/* Content text with links */
+.content-card-text a {
+  color: var(--ieee-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.content-card-text a:hover {
+  color: var(--ieee-blue-dark);
+  text-decoration: underline;
+}
+
